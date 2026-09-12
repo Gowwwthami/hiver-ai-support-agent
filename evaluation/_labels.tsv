@@ -1,0 +1,201 @@
+example_id	intent	intent_confidence	secondary_intent	resolution_observable	resolution_type	escalation_label	escalation_reason	noise_flag	ambiguity_flag	annotator_notes
+BA_1392	website_or_app_issue	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Online check-in blocked by visa-number prompt for an ESTA traveller; agent gave a cookie-bypass workaround in-thread.
+BA_6754	flight_disruption	medium	noise_or_off_topic_or_ack	APOLOGY_ONLY	empathy_only	ESCALATE	other	FALSE	multi_intent	Sarcastic thanks about a BA-caused cancellation and 4h layover; needs rebooking/compensation handling off-thread.
+BA_24151	flight_disruption	high	contact_or_human_escalation_request	INFORMATION_PROVIDED	status_update	ESCALATE	complaint_or_human_judgment	FALSE	multi_intent	Last-minute technical cancellation; demands an explanation; brand explained likely cause. Disruption plus complaint.
+BA_26002	information_or_policy	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	How to check booking class; requires account lookup so moved to DM.
+BA_28722	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Child-fare question; schedule not yet released but fare rule answered.
+BA_32439	baggage	high	information_or_policy	INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	none	Skateboard as hand luggage; allowed if within dimensions; link provided.
+BA_32854	contact_or_human_escalation_request	high		APOLOGY_ONLY	empathy_only	ESCALATE	complaint_or_human_judgment	FALSE	none	Business-class lounge food complaint with photo; apology plus feedback routing.
+BA_33704	contact_or_human_escalation_request	high	flight_disruption	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	none	Needs help with flight that day; one hour on phone with no help; DM offered.
+BA_34921	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Avios part-pay tier-point rule; answered in-thread.
+BA_40901	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Praise for a flight; resolution not applicable.
+BA_50332	baggage	high	information_or_policy	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	multi_intent	Two items each under allowance; answer: number of pieces counts, not combined weight. Borderline baggage/info.
+BA_50753	refund_or_compensation	low		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	truncated_captured	Later-position target; continuation of rejected flight-credit claim; message looks like a pasted email header supplying EC number/email after a DM request.
+BA_50768	refund_or_compensation	high	contact_or_human_escalation_request	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	compensation	FALSE	multi_intent	Claims staff misled re cancelled flight costing GBP190; asks to be contacted.
+BA_51492	information_or_policy	medium		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	unclear_intent	Puzzled why only one of two passports gets a boarding pass; explanation given about airport checks.
+BA_56521	noise_or_off_topic_or_ack	high		UNRESOLVED	none	AUTO_HANDLE		TRUE	other	Influencer-style promotional post for an in-flight entertainment feature; no customer-service need.
+BA_57162	noise_or_off_topic_or_ack	high	seat_or_upgrade	UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Thanks for a free upgrade to First; praise only.
+BA_62081	flight_disruption	high		INFORMATION_PROVIDED	status_update	AUTO_HANDLE		FALSE	none	Tonight's flight showing late; knock-on effect from a weather cancellation explained.
+BA_62154	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Long-haul economy menus are not published in advance.
+BA_66334	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Faint praise about punctuality; light banter.
+BA_70892	flight_disruption	high	contact_or_human_escalation_request	APOLOGY_ONLY	empathy_only	AUTO_HANDLE		FALSE	none	BA1456 multiple operational issues and delay; apology given; no action requested.
+BA_71047	refund_or_compensation	medium	contact_or_human_escalation_request	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	multi_intent	Charged USD30 for unused wifi and USD19 for tea; angry; DM offered for investigation.
+BA_71213	contact_or_human_escalation_request	medium		INFORMATION_PROVIDED	direct_answer	ESCALATE	complaint_or_human_judgment	FALSE	unclear_intent	Blames BA for Monarch passengers being stranded; brand factually explained CAA relief-flight plans.
+BA_71387	website_or_app_issue	medium		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Return Bcn-Lhr search shows only one flight; availability anomaly needs agent lookup via DM.
+BA_71985	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Scenery photo post on a clear day.
+BA_73767	booking_change_or_cancellation	high		INFORMATION_PROVIDED	direct_answer	ESCALATE	account_specific	FALSE	none	Can the car booking on a package be cancelled? Public answer plus BA Holidays phone hand-off.
+BA_76703	noise_or_off_topic_or_ack	medium		UNCLEAR	empathy_only	AUTO_HANDLE		FALSE	none	Joke about the safety video and a mild lounge-capacity note.
+BA_78616	refund_or_compensation	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	compensation	FALSE	none	Claiming missing Avios from a car rental; passed to Executive Club team via DM.
+BA_83067	baggage	high		INFORMATION_PROVIDED	link_or_reference	ESCALATE	other	FALSE	none	Left headphones on board; lost-and-found process via form link.
+BA_84220	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Praise of the safety videos.
+BA_90675	noise_or_off_topic_or_ack	high		UNRESOLVED	none	AUTO_HANDLE		TRUE	other	Joke about the Virgin Trains announcer; no brand reply captured after this turn.
+BA_95508	website_or_app_issue	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Only half of the website updated; brand says still rolling out.
+BA_97522	website_or_app_issue	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Cannot log into Manage My Booking; moved to DM for lookup.
+BA_98911	booking_change_or_cancellation	medium	website_or_app_issue	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	multi_intent	Tried to change the flight the night before but could not; now pricier; wants help. Reference reply truncated at 1/2.
+BA_105364	contact_or_human_escalation_request	medium		UNRESOLVED	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	unclear_intent	Vague performance complaint about BA113 JFK; brand asked for details.
+BA_106562	flight_disruption	high		INFORMATION_PROVIDED	status_update	AUTO_HANDLE		FALSE	none	Delayed LCY-EDI; brand explained system-update timing and gave the new departure time.
+BA_110245	information_or_policy	high	contact_or_human_escalation_request	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Avios-expiry policy (36-month inactivity) explained.
+BA_120790	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Thanks to the crew on BA1343.
+BA_122456	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Expired passport for a domestic flight is not valid photographic ID.
+BA_123629	information_or_policy	high		INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	none	Air-mile information; link provided.
+BA_125782	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Multi-country travel-day post plus lounge mention.
+BA_131149	contact_or_human_escalation_request	high	flight_disruption	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	multi_intent	Requests a call-back about un-contacted flight-time changes to their booking.
+BA_132217	account_or_security	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	security_or_identity	FALSE	none	Executive Club account hacked.
+BA_135900	contact_or_human_escalation_request	medium	refund_or_compensation	INFORMATION_PROVIDED	direct_answer	ESCALATE	payment_or_refund	FALSE	multi_intent	Later-position turn; continuation of a GBP20 reserve-price charge issue; asks how to DM (not followed).
+BA_147482	contact_or_human_escalation_request	high		INFORMATION_PROVIDED	direct_answer	ESCALATE	legal_or_regulatory_risk	FALSE	none	Friend's stolen ID blocks boarding; brand: cannot accept without correct travel documents.
+BA_150929	information_or_policy	high	booking_change_or_cancellation	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Fare-rule query about same-day changes; agent offered to call.
+BA_152445	contact_or_human_escalation_request	medium		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	unclear_intent	Dissatisfaction complaint with no specifics; brand asked for DM details.
+BA_154364	booking_change_or_cancellation	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Change the return date for only one passenger; Manage My Booking guidance.
+BA_155506	website_or_app_issue	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Online check-in blocked for tomorrow's flight; check in at the airport.
+BA_163041	contact_or_human_escalation_request	high	booking_change_or_cancellation	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	multi_intent	15-minute phone wait; asks about online chat; brand offers DM change help.
+BA_163928	flight_disruption	high		INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	none	Munich delay with no communication; brand pointed to the tracker link.
+BA_167682	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Praise of crew during a prolonged delay on BA434.
+BA_167696	contact_or_human_escalation_request	medium		UNRESOLVED	empathy_only	ESCALATE	complaint_or_human_judgment	FALSE	unclear_intent	Sarcastic vent about an Executive Club name change; no concrete request.
+BA_168706	flight_disruption	high	booking_change_or_cancellation	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	multi_intent	BA cancelled summer flights and offered an unattractive alternative; DM escalation for rebooking/compensation.
+BA_174566	baggage	high		UNRESOLVED	action_offered	ESCALATE	other	FALSE	none	Bags not arriving on the same flight twice; bag-return promised but no in-thread confirmation.
+BA_175984	website_or_app_issue	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Confirmation email went to the wrong ticket holder after award booking; DM investigation.
+BA_177915	booking_change_or_cancellation	medium		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	unclear_intent	Technical assistance with an error in the name on a booking; handled via DM.
+BA_179834	information_or_policy	high		INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	none	Model aircraft sold on board? Order link provided.
+BA_181319	refund_or_compensation	high	seat_or_upgrade	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	multi_intent	Flew without pre-purchased seats; explicitly asks for a refund of seat fees.
+BA_183788	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Off-topic travel tip about elastic laces.
+BA_193533	noise_or_off_topic_or_ack	medium	flight_disruption	APOLOGY_ONLY	empathy_only	AUTO_HANDLE		TRUE	none	Joking sarcasm about delay causes; no real request; brand apologised and asked which flight.
+BA_197365	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Scenery photo of the London Eye from a flight.
+BA_207161	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Nice-flight post.
+BA_213215	flight_disruption	high		INFORMATION_PROVIDED	status_update	AUTO_HANDLE		FALSE	none	Asks whether anything is wrong with a flight; route change confirmed and apology given.
+BA_216956	refund_or_compensation	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	none	One month since cancellation; taxes still not refunded; DM lookup requested.
+BA_231852	baggage	high	contact_or_human_escalation_request	INFORMATION_PROVIDED	link_or_reference	ESCALATE	other	FALSE	none	Bags not delivered and emails ignored; brand points to a bag-tracker link and asks if bags are still missing.
+BA_235380	flight_disruption	high		UNRESOLVED	action_offered	UNCERTAIN	other	FALSE	none	Delayed Linate flight; children could not make the US connection; brand asks whether rebooked.
+BA_236326	information_or_policy	low		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	unclear_intent	Later-position update: booked the special meal via a travel agency; no new actionable ask, thread is a special-meal request.
+BA_241606	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Event recap post praising the flight.
+BA_248481	booking_change_or_cancellation	high	website_or_app_issue	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	multi_intent	Needs to change a passport number on an upcoming booking; prior online help unanswered.
+BA_249521	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Airport traffic note plus safety-video praise.
+BA_252288	flight_disruption	high		INFORMATION_PROVIDED	status_update	AUTO_HANDLE		FALSE	none	Waiting for a connecting flight he believes is delayed; brand clarified the KUL flight is not delayed.
+BA_252735	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	WiFi/power outlets on LHR-LAX; brand says being worked on for the future.
+BA_255518	booking_change_or_cancellation	high	information_or_policy	INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	multi_intent	Who to contact to change an international flight date; MMB link given.
+BA_261585	flight_disruption	high	refund_or_compensation	UNRESOLVED	empathy_only	AUTO_HANDLE		FALSE	multi_intent	BA0775 delayed 2h; asks where to claim food/drink (EU261); reply does not answer clearly and is truncated at 1/2.
+BA_264086	booking_change_or_cancellation	medium		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	unclear_intent	Unable to add an Avios number to a booking; brand offers to update it via DM.
+BA_269432	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Fashion-show fun thanks.
+BA_272277	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Praise for a low-visibility landing.
+BA_278441	contact_or_human_escalation_request	medium		INFORMATION_PROVIDED	status_update	ESCALATE	complaint_or_human_judgment	FALSE	none	Complaint about reduced Belfast route frequency; brand explains schedule review.
+BA_288483	seat_or_upgrade	high		INFORMATION_PROVIDED	status_update	AUTO_HANDLE		FALSE	none	Reassigned seats; policy question answered (change of aircraft triggers robotic reassignment).
+BA_291361	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Can a booking hold both an Avios number and a frequent-flyer number? Answered.
+BA_294773	booking_change_or_cancellation	high	contact_or_human_escalation_request	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	multi_intent	Wants to cancel a return flight but cannot phone from abroad; asks for contact channel.
+BA_301699	website_or_app_issue	high		UNRESOLVED	action_offered	AUTO_HANDLE		FALSE	none	Website buggy in Chrome; brand asked for device/browser details.
+BA_307083	flight_disruption	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Status discrepancy (told delayed vs FlightAware landed); agent needs booking details via DM.
+BA_317554	flight_disruption	medium		APOLOGY_ONLY	empathy_only	AUTO_HANDLE		FALSE	none	Recurrent 2-hour delays; frustration vent; apology only.
+BA_318162	flight_disruption	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Impact of planned Italy strike on BA572; expected to operate normally.
+BA_321039	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Hooray for BA after another airline bumped his son.
+BA_331684	contact_or_human_escalation_request	high	seat_or_upgrade	UNRESOLVED	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	multi_intent	Filthy seat, careless service on a GBP6500 business ticket; product complaint, brand asked flight number.
+BA_334633	contact_or_human_escalation_request	high		APOLOGY_ONLY	empathy_only	ESCALATE	complaint_or_human_judgment	FALSE	none	Poor food and outdated entertainment on the 777 to St Lucia; product complaint.
+BA_336228	flight_disruption	medium		APOLOGY_ONLY	empathy_only	AUTO_HANDLE		FALSE	none	Stuck on an aircraft at Heathrow with a jokey bar request; apology only.
+BA_337964	contact_or_human_escalation_request	medium		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	unclear_intent	Snarky complaint that BA is now like a budget carrier; brand offers ticket-type review via DM.
+BA_349968	contact_or_human_escalation_request	high		INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	none	Best number to call in an emergency; contact-details link given.
+BA_351856	contact_or_human_escalation_request	high		INFORMATION_PROVIDED	direct_answer	ESCALATE	legal_or_regulatory_risk	FALSE	none	Filing a lawsuit; brand provided the Customer Relations address for legal correspondence.
+BA_358073	contact_or_human_escalation_request	medium		UNRESOLVED	action_offered	UNCERTAIN	complaint_or_human_judgment	FALSE	none	Disappointing connection experience; brand asked what went wrong.
+BA_358078	baggage	high	contact_or_human_escalation_request	INFORMATION_PROVIDED	status_update	ESCALATE	other	FALSE	none	Sarcastic well-done about a bag not loaded after early check-in; brand explained possible customs/security reason.
+BA_361147	flight_disruption	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Malta delay may cause a missed connection; brand explains airport rebooking handling.
+BA_362535	refund_or_compensation	high	flight_disruption	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	compensation	FALSE	multi_intent	Missed Moscow connection after BA66 late; downgrade plus tiny GBP1.52 compensation; DM call-back offered.
+BA_365162	flight_disruption	high		APOLOGY_ONLY	empathy_only	AUTO_HANDLE		FALSE	none	Fog delay at Newcastle; apology and sympathy.
+BA_375254	refund_or_compensation	high	flight_disruption	UNCLEAR	empathy_only	ESCALATE	compensation	FALSE	multi_intent	Out-of-pocket GBP105 train cost after weather cancellations; compensation-bound; reply truncated at 1/2.
+BA_379506	flight_disruption	high	contact_or_human_escalation_request	UNRESOLVED	action_offered	ESCALATE	other	FALSE	multi_intent	Stranded in Madrid trying to reach Havana; needs rebooking; brand asks if rebooked.
+BA_383968	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Flight attendant lookalike banter.
+BA_408652	flight_disruption	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Shuttle delay threatens an IAD connection; brand needs booking details via DM.
+BA_409290	baggage	high	information_or_policy	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Asks whether luggage is checked through and about connection; brand needs booking details.
+BA_409640	baggage	high		UNRESOLVED	action_offered	ESCALATE	other	FALSE	none	Bags failed to arrive in Lyon; bag-reunion promised, outcome not in thread.
+BA_410230	refund_or_compensation	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	none	Missing flight credits; DM details requested.
+BA_410381	contact_or_human_escalation_request	high		APOLOGY_ONLY	empathy_only	ESCALATE	complaint_or_human_judgment	FALSE	none	No USB ports and a faulty screen on BA219; brand passes feedback to the CX team.
+BA_417056	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Enjoying First-class seats; cheers post.
+BA_423824	seat_or_upgrade	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	other	FALSE	none	Later-position turn; medical back condition requires an inclineable non-exit-row seat; brand needs more info via DM.
+BA_424561	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Fast airport transit praise post.
+BA_440828	refund_or_compensation	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	none	Unexplained TOURVEST-BA charge on a day not flown.
+BA_442748	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Thanks for great assistance.
+BA_451515	website_or_app_issue	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Online check-in locked with a 24-hour message; check in at the airport instead.
+BA_465615	website_or_app_issue	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Only 3 of 4 legs visible in the account though the PNR has 4; brand needs DM details.
+BA_466171	contact_or_human_escalation_request	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	none	No proper response about poor conditions on last two flights; brand asked for case references.
+BA_470151	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Gluten-free meal needed on the return; unable as a request channel blocked; brand explains self-service via MMB 24h before.
+BA_472183	website_or_app_issue	medium		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	none	Booked a flight but no confirmation received; wants to avoid double-booking; brand looks up via DM.
+BA_475430	refund_or_compensation	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	none	Charged twice for the same flight.
+BA_477490	baggage	high	information_or_policy	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Laptop as hand luggage on both legs S.A.<->UK; answered.
+BA_479193	account_or_security	high	website_or_app_issue	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	account_specific	FALSE	multi_intent	Head of household cannot remove a name from the EC household account due to a repeated error; DM with screenshot requested.
+BA_481598	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	How to request a kosher meal on a JNB-CPT flight tomorrow; process answered.
+BA_481784	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Happy Halloween greeting.
+BA_485276	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Six-minute check-in and security praise post.
+BA_487360	flight_disruption	high	contact_or_human_escalation_request	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	multi_intent	BA7017 cancelled and customers abandoned at Bristol Airport; DM escalation.
+BA_492183	baggage	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Will the bag transfer automatically to T5 to AMS? Answered.
+BA_495495	contact_or_human_escalation_request	high		UNRESOLVED	none	UNCERTAIN	complaint_or_human_judgment	FALSE	none	Later-position turn; complaint that there was still no reply; thread ends unresolved.
+BA_496691	flight_disruption	high		APOLOGY_ONLY	empathy_only	AUTO_HANDLE		FALSE	none	BA0471 delayed 3+ hours with no food on board; apology about aircraft change.
+BA_505719	noise_or_off_topic_or_ack	high	flight_disruption	UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	multi_intent	Praises the crew despite a fog delay; dominant intent is positive feedback.
+BA_508011	flight_disruption	medium	noise_or_off_topic_or_ack	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Complains BA364 delayed; brand clarifies the flight actually departed on time.
+BA_509781	refund_or_compensation	high	flight_disruption	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	compensation	FALSE	multi_intent	Follow-up on a month-old delay-compensation claim; DM case reference requested.
+BA_510140	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Agrees the cabin crew are a credit to BA.
+BA_521268	website_or_app_issue	high		UNRESOLVED	action_offered	AUTO_HANDLE		FALSE	none	The site is full of problems; brand asked for specifics.
+BA_525809	flight_disruption	high	noise_or_off_topic_or_ack	UNRESOLVED	action_offered	ESCALATE	compensation	FALSE	multi_intent	Flight cancelled so had to drive instead; compensation-relevant; brand asked if an alternative was offered.
+BA_534245	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Love note for travelling with a less-able mum.
+BA_534669	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Avios validity and credit-card unexpirability questions before subscribing.
+BA_542508	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Smooth-journey and lounge recap post.
+BA_542898	contact_or_human_escalation_request	high		APOLOGY_ONLY	empathy_only	ESCALATE	complaint_or_human_judgment	FALSE	none	Lounge printer broken and staff unhelpful; feedback passed on.
+BA_544277	flight_disruption	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Potential missed connection DEL-LHR after feeder delay; airport rebooking process explained.
+BA_547282	refund_or_compensation	high	contact_or_human_escalation_request	UNRESOLVED	empathy_only	ESCALATE	compensation	FALSE	multi_intent	Flights lost then up-charged to get home; compensation-relevant complaint.
+BA_551416	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Off-topic cold-weather post from a flight.
+BA_567068	contact_or_human_escalation_request	high	information_or_policy	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	multi_intent	How to reach customer services abroad without calling; DM channel explained.
+BA_567093	refund_or_compensation	high	contact_or_human_escalation_request	UNRESOLVED	action_offered	ESCALATE	compensation	FALSE	multi_intent	Compensation-claim follow-up; shocking CR phone call and no clear answer; brand asks whether CR gave a reason.
+BA_568345	seat_or_upgrade	high	contact_or_human_escalation_request	INFORMATION_PROVIDED	status_update	ESCALATE	complaint_or_human_judgment	FALSE	multi_intent	Later-position turn; long rail about seat-pricing policy and legroom expectations; brand explains policy.
+BA_569197	website_or_app_issue	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Online check-in still failing despite a reported outage; airport check-in as the fallback.
+BA_569199	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Best crew praise.
+BA_577348	seat_or_upgrade	high		APOLOGY_ONLY	empathy_only	ESCALATE	complaint_or_human_judgment	FALSE	none	Legroom complaint with a photo; feedback forwarded.
+BA_578442	seat_or_upgrade	high		UNRESOLVED	action_offered	ESCALATE	other	FALSE	none	Upgrade payment declined despite seat availability; brand asked for reason.
+BA_579921	contact_or_human_escalation_request	high	information_or_policy	INFORMATION_PROVIDED	action_offered	AUTO_HANDLE		FALSE	multi_intent	US toll-free number failing; brand offers the DM channel instead.
+BA_584828	baggage	high	contact_or_human_escalation_request	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	other	FALSE	multi_intent	Damaged-bag claim form unavailable online and nobody answers the phone; DM offered.
+BA_587371	baggage	medium	information_or_policy	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	multi_intent	Fruit to be carried UK<->Germany; not allowed within the EU; borderline baggage/information.
+BA_623315	booking_change_or_cancellation	high		INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	none	Later-position turn; provides dates for an Avios/AA booking search; brand directs to online check or Sales team.
+BA_627007	contact_or_human_escalation_request	high		UNRESOLVED	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	none	Two-month wait, complaint not read, told to go via insurance; brand asked to reply via the blue link.
+BA_630270	booking_change_or_cancellation	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	multi_intent	Name transfers not allowed; cancellation subject to fare rules; policy given.
+BA_634124	booking_change_or_cancellation	high	refund_or_compensation	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	multi_intent	Wants to keep only the second leg of a return; brand explains change/service fee structure.
+BA_644309	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Great-service praise for BA0032.
+BA_649015	website_or_app_issue	high		UNRESOLVED	action_offered	AUTO_HANDLE		FALSE	none	Cannot log in for flight 0048; brand asks for the error message.
+BA_657039	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Later-position turn; after a prior complaint the customer now thanks the crew on BA108.
+BA_660366	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Credit-card fee question; answered (1% of booking cost).
+BA_661009	refund_or_compensation	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	compensation	FALSE	none	Later-position turn; GBP20 voucher deemed inadequate for a ruined holiday; CR team to contact via case reference.
+BA_665195	baggage	high		INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	multi_intent	Portable power packs and cables for a US flight; banned-and-restricted-items link given.
+BA_666022	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	First-time Business-class lounge wow post.
+BA_671128	website_or_app_issue	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Award-search tool down for 24h; brand suggests other browsers/devices.
+BA_671532	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Praises the transfer/security process discussion.
+BA_674305	website_or_app_issue	high		INFORMATION_PROVIDED	status_update	AUTO_HANDLE		FALSE	none	No reward availability after JAL moved to Amadeus; faults team already engaged.
+BA_675895	refund_or_compensation	medium		INFORMATION_PROVIDED	link_or_reference	AUTO_HANDLE		FALSE	none	Wrong tier-points/Avios on a future booking; EC contact link given.
+BA_688279	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Event night with a celebrity; charity recap post.
+BA_688502	website_or_app_issue	high	account_or_security	INFORMATION_PROVIDED	status_update	AUTO_HANDLE		FALSE	multi_intent	Site-wide login/access problems for two days; brand confirms known intermittent issue.
+BA_689051	contact_or_human_escalation_request	medium		UNRESOLVED	empathy_only	UNCERTAIN	complaint_or_human_judgment	FALSE	unclear_intent	Threat to drop BA altogether; no concrete request; brand asked for reasons via DM.
+BA_693943	refund_or_compensation	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	multi_intent	Refund shown as GBP30 on a GBP117 booking after holiday cancellation; disputes the amount.
+BA_693947	website_or_app_issue	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Cannot add a booking to the iOS app; enable calendar in settings fix.
+BA_705493	refund_or_compensation	high	information_or_policy	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	multi_intent	Unexplained duplicate GBP48.74 BA MOTO card charge; DM investigation.
+BA_705984	seat_or_upgrade	medium	noise_or_off_topic_or_ack	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	multi_intent	Joking claim that birthdays warrant a free upgrade; light answer given.
+BA_707914	seat_or_upgrade	high	website_or_app_issue	INFORMATION_PROVIDED	direct_answer	ESCALATE	account_specific	FALSE	multi_intent	Confirmed seat 4A switched to 15J at check-in twice; brand explains seats are not guaranteed.
+BA_712102	website_or_app_issue	high		UNRESOLVED	action_offered	AUTO_HANDLE		FALSE	none	Booking flow stuck at Step 3; Continue button does nothing; brand requests screenshot.
+BA_716033	website_or_app_issue	high		INFORMATION_PROVIDED	status_update	AUTO_HANDLE		FALSE	none	Flight+hotel booking site erroring for a week; reported to IT; Sales-team referral given.
+BA_716299	website_or_app_issue	high		UNRESOLVED	action_offered	AUTO_HANDLE		FALSE	none	Sarcastic app-UI bug report (CVV input); brand asks for device details.
+BA_719529	refund_or_compensation	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	payment_or_refund	FALSE	none	2.5-year unresolved refund saga; DM case reference requested.
+BA_725131	noise_or_off_topic_or_ack	medium		UNCLEAR	empathy_only	AUTO_HANDLE		FALSE	none	Compliment on business food despite prior complaints; dominant positive feedback.
+BA_729803	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Will BA fly to FNA again? No updates; monitor the website.
+BA_729813	account_or_security	high		HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	security_or_identity	FALSE	none	Later-position turn; EC log-in username lost and password-reset emails not arriving; passed to EC colleagues.
+BA_733794	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Joke about lounge refurbishment; first-world-problems.
+BA_737110	contact_or_human_escalation_request	medium	website_or_app_issue	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	complaint_or_human_judgment	FALSE	multi_intent	Won flights but the prize-booking process is a hassle; suspects the deadline is being missed on purpose.
+BA_749232	contact_or_human_escalation_request	high		INFORMATION_PROVIDED	status_update	ESCALATE	complaint_or_human_judgment	FALSE	none	Product feedback on tired 777-200 interiors and fees; brand confirms refurbishments starting next year.
+BA_753573	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Missing-family flight post.
+BA_755275	flight_disruption	medium		APOLOGY_ONLY	empathy_only	AUTO_HANDLE		FALSE	none	Delayed NCL-LHR informing colleagues; brand apologises.
+BA_755281	flight_disruption	high	contact_or_human_escalation_request	UNRESOLVED	action_offered	ESCALATE	other	FALSE	multi_intent	Removed from the gate at short notice after a prior cancellation; nobody knows the delay length.
+BA_755802	contact_or_human_escalation_request	medium		UNRESOLVED	action_offered	UNCERTAIN	complaint_or_human_judgment	FALSE	unclear_intent	Generic customer-service suck complaint; brand asked for details.
+BA_756799	baggage	high	information_or_policy	INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	multi_intent	DJI Spark drone battery in hand luggage from Heathrow; detailed battery rules provided.
+BA_760780	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	No staff at SFO check-in area; desks open three hours before departure.
+BA_765259	booking_change_or_cancellation	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Wants to cancel a booking; reference is not a BA one, so contact the third-party agent.
+BA_766761	flight_disruption	high	contact_or_human_escalation_request	UNRESOLVED	direct_answer	ESCALATE	complaint_or_human_judgment	FALSE	multi_intent	BA2273 cancelled and poorly handled; only rebook where availability exists; policy answer given.
+BA_769697	refund_or_compensation	high	contact_or_human_escalation_request	UNRESOLVED	action_offered	ESCALATE	payment_or_refund	FALSE	multi_intent	Duty-free charge on card when last travelled 27/09; brand asked clarifying questions.
+BA_772744	website_or_app_issue	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Manage My Booking gives Page Not Found; brand says no issues and suggests other browsers.
+BA_781052	refund_or_compensation	high		INFORMATION_PROVIDED	status_update	ESCALATE	compensation	FALSE	none	EU261 form for a 7-hour delay; CR works in receipt order; personal-data safety reminder.
+BA_783910	baggage	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Later-position turn; confirms the EUR50 excess-bag charge at Paphos in Euro Traveller.
+BA_784998	baggage	high	contact_or_human_escalation_request	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	other	FALSE	none	Bag returned in poor state and claim handling slow; DM details requested.
+BA_785861	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Aeroplane-toy photo post.
+BA_787976	contact_or_human_escalation_request	high		APOLOGY_ONLY	empathy_only	ESCALATE	complaint_or_human_judgment	FALSE	none	RSA domestic service complaint; feedback to be passed to operator Comair.
+BA_794863	noise_or_off_topic_or_ack	high		UNCLEAR	empathy_only	AUTO_HANDLE		TRUE	none	Thanks for a guest safety session.
+BA_796180	refund_or_compensation	high	website_or_app_issue	HANDOFF_OUTCOME_OFF_THREAD	action_offered	ESCALATE	compensation	FALSE	none	Cannot collect Avios from a flight under six months old; DM details requested.
+BA_797609	information_or_policy	high		INFORMATION_PROVIDED	direct_answer	AUTO_HANDLE		FALSE	none	Recommended arrival time at EDI; check-in closes 45 minutes before departure.
+BA_51310	noise_or_off_topic_or_ack	medium		APOLOGY_ONLY	empathy_only	AUTO_HANDLE		TRUE	none	Sarcastic thanks for the cancelled Skyflyer Solo programme; venting, no actionable request; brand replies with apology/context.

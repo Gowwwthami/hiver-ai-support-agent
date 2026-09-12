@@ -1,0 +1,21 @@
+text,count,share
+"@user this method has been used by airlines around the world for a number of years, including by our partners, american airlines, iberia and qatar. ^kieran {num}/{num}",23,0.00078
+"@user can you dm us your booking reference, full address and phone number? {num}/{num} ^danih",16,0.00054
+"@user can you dm us your booking reference, full name, full address and phone number? {num}/{num} ^danih",12,0.00041
+@user inconvenience caused. {num}/{num} ^linda,10,0.00034
+@user contact number. many thanks. ^lisa {num}/{num},7,0.00024
+"@user hi there, we are always looking for ways to improve and simplify the airport experience for our customers. next month we are introducing new boarding procedures to speed up the process and make it simpler for customers to understand. {num}/{num}",7,0.00024
+@user apologies for the inconvenience caused. {num}/{num} ^linda,6,0.0002
+@user number. many thanks. ^lisa {num}/{num},6,0.0002
+@user you'll be able to check in when you get to the airport. we're sorry for any inconvenience. have a great flight. {num}/{num} ^liz,6,0.0002
+@user thanks. ^lisa {num}/{num},5,0.00017
+@user and contact number. {num}/{num} ^linda,5,0.00017
+@user email and contact number. many thanks. ^lisa {num}/{num},5,0.00017
+@user you can dm if you need any assistance rebooking your flight. {num}/{num} ^l,5,0.00017
+@user .,5,0.00017
+"@user hi there, if you can dm us your full name, booking reference, email address and home address (inc postcode) we can look into this for you. ^cody",4,0.00014
+@user details of the seats you wish to select. we'll be in touch as soon as possible. {num}/{num} ^l,4,0.00014
+"@user can you dm us your case reference, full address and phone number? {num}/{num} ^danih",4,0.00014
+@user booking ref and contact number. many thanks. ^lisa {num}/{num},4,0.00014
+@user details of the changes you wish to make. one of the team will be in touch as soon as possible. {num}/{num} ^l,4,0.00014
+@user you can do so here: {url} {num}/{num} ^liz,4,0.00014

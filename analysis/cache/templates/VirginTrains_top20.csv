@@ -1,0 +1,21 @@
+text,count,share
+@user {url},47,0.00169
+@user we're awaiting an update as to when the lines will reopen. live updates can be found via {url} ^mm,47,0.00169
+@user delay repay compensation is available to those who have been caught up in disruption and delayed by over {num} minutes. please claim via our delay repay form here - {url} ^mm,34,0.00122
+@user we are awaiting an update as to when the line will reopen. live updates can be found via {url} ^mm,34,0.00122
+@user what issues are you having? ^pa,32,0.00115
+@user this can be escalated further with customer relations via the online complaints link - {url} ^mm,30,0.00108
+@user this is one for @user ^mm,28,0.00101
+@user some lines have now reopened to/from london euston. delays are expected until the end of service ^mm,25,0.0009
+@user we don't have an update on this service at the moment. live updates can be found via {url} ^mm,22,0.00079
+@user which service are you on? ^pa,22,0.00079
+@user you can write in via {url} ^pa,18,0.00065
+@user you can claim via {url} ^pa,17,0.00061
+@user which service are you on today? ^mw,16,0.00058
+@user which service are you on? ^cb,16,0.00058
+@user @user {url},15,0.00054
+@user were you looking to make a complaint today? ^mw,15,0.00054
+@user have a great journey. ^pa,15,0.00054
+@user we'll pass on your comments ^cb,14,0.0005
+"@user sorry to hear about your experience while travelling with us, this can be escalated further with customer relations via the online complaints link - {url} ^mm",14,0.0005
+@user all the information is here &gt; {url} ^ol,14,0.0005

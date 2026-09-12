@@ -1,0 +1,13 @@
+brand,n_brand_messages,n_conv_with_at_least_one_brand_response,brand_msgs_with_dm_phrase,brand_msgs_with_private_info_phrase,brand_msgs_with_either_dm_or_private_phrase,share_brand_msgs_dm_or_private
+AmazonHelp,169840,82556,15837,7133,22237,0.1309
+AppleSupport,106860,80717,59399,31021,59447,0.5563
+Uber_Support,56270,41923,43830,31363,44402,0.7891
+SpotifyCares,43265,28277,13694,10605,13853,0.3202
+AmericanAir,36764,26386,7397,784,7409,0.2015
+Delta,42253,26166,7681,407,7714,0.1826
+Tesco,38573,16722,10479,3733,10993,0.285
+British_Airways,29361,16452,4299,3701,4818,0.1641
+VirginTrains,27817,14851,760,627,878,0.0316
+XboxSupport,24557,13435,6115,2285,6130,0.2496
+VerizonSupport,17966,8447,2215,1592,2223,0.1237
+TMobileHelp,34317,22820,28602,11382,28621,0.834

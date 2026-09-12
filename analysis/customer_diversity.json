@@ -1,0 +1,1730 @@
+{
+  "AmazonHelp": {
+    "n_first_customer_messages": 82556,
+    "sampled": 19556,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 9381,
+        "share_of_first_customer_msgs_sampled": 0.4797,
+        "top_terms": [
+          "the",
+          "to",
+          "you",
+          "amazon",
+          "my",
+          "is",
+          "in",
+          "of",
+          "for",
+          "on"
+        ],
+        "representative_examples_original": [
+          "please stop cheating customers by delivering old products bought a new laptop this week whose warranty is valid only for 290 days instead of a year order id 405 5462082 7360357 need refund",
+          "is this from you",
+          "has been driving me crazy lately thank you so much for making my life a nightmare and wasting my precious time sincerely",
+          "icici gave me a gift card rs 100 which is invalid is it not a joke"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 5138,
+        "share_of_first_customer_msgs_sampled": 0.2627,
+        "top_terms": [
+          "it",
+          "my",
+          "to",
+          "delivery",
+          "for",
+          "the",
+          "and",
+          "order",
+          "day",
+          "is"
+        ],
+        "representative_examples_original": [
+          "my prime parcel has not been delivered in the original time slow why is this",
+          "why do i pay for prime when nothing is delivered the next day since when is thursday the next day when ordering something at 7pm monday",
+          "hi some items have arrived that i haven't ordered it's come on my name but it's not in my account how can i send it back",
+          "can eat a bag of dicks wait 4 days for my neighborz to get back and then it turns out they've sent me fault lights thanks"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 2097,
+        "share_of_first_customer_msgs_sampled": 0.1072,
+        "top_terms": [
+          "de",
+          "que",
+          "el",
+          "en",
+          "la",
+          "un",
+          "es",
+          "no",
+          "mi",
+          "por"
+        ],
+        "representative_examples_original": [
+          "alguien que haya comprado consola en si les aplica el cup n",
+          "amazonprime es incre ble muy satisfecho con el servicio y mis productos",
+          "minha melhor aquisi o nessa semana de black friday foi o livro do zaf n obrigada",
+          "meu deus meus livros que eu comprei na quarta ja chegaram eu te amo obrigada"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 1307,
+        "share_of_first_customer_msgs_sampled": 0.0668,
+        "top_terms": [
+          "service",
+          "customer",
+          "customer service",
+          "your",
+          "and",
+          "to",
+          "the",
+          "is",
+          "worst",
+          "care"
+        ],
+        "representative_examples_original": [
+          "is not able to provide service even to prime member tracking id 448105746025 still notdelivered evn aftr svral calls",
+          "pathetic service not expected from such a brand ordered phone 15 days back and no revert from them",
+          "what a disgrace your courier service is absolute liars to say you tried to attempt delivery when i've been in all",
+          "customer service keep putting me on hold"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 854,
+        "share_of_first_customer_msgs_sampled": 0.0437,
+        "top_terms": [
+          "amazon",
+          "amazon amazon",
+          "10",
+          "amazon prime",
+          "the",
+          "prime",
+          "pc",
+          "amp",
+          "30",
+          "11"
+        ],
+        "representative_examples_original": [
+          "amazon",
+          "amazon",
+          "t t t t amazon",
+          "amazon"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 779,
+        "share_of_first_customer_msgs_sampled": 0.0398,
+        "top_terms": [
+          "de",
+          "le",
+          "je",
+          "est",
+          "pas",
+          "un",
+          "et",
+          "pour",
+          "vous",
+          "colis"
+        ],
+        "representative_examples_original": [
+          "bjr comment puis je annuler une pr commande de livre num rique j'ai command par inadvertance un livre qui ne sort qu'en janvier",
+          "c'est possible de se contacter en dm par rapport un probl me de livraison avec colis priv",
+          "mille mercis je suis comme un gosse le matin de no l cc",
+          "bien jou qui me renouvelle pour un mois amazon prime gratuitement quand j'ai demand de l'arr ter et qui me pr vient pas ensuite"
+        ]
+      }
+    ]
+  },
+  "AppleSupport": {
+    "n_first_customer_messages": 80717,
+    "sampled": 19921,
+    "clusters": [
+      {
+        "cluster": 1,
+        "size": 11879,
+        "share_of_first_customer_msgs_sampled": 0.5963,
+        "top_terms": [
+          "the",
+          "to",
+          "my",
+          "iphone",
+          "it",
+          "and",
+          "is",
+          "on",
+          "can",
+          "in"
+        ],
+        "representative_examples_original": [
+          "why are you doing this to me",
+          "thank you for a new ios that corrupting my totally functional iphone i know you want people to buy new phones but fucking hell",
+          "bkn justo ahora que necesito el iphone no me deja compartir internet al ipad gracias y la nueva actualizaci n",
+          "getting 260 days old notifications when i restart my iphone"
+        ]
+      },
+      {
+        "cluster": 0,
+        "size": 2817,
+        "share_of_first_customer_msgs_sampled": 0.1414,
+        "top_terms": [
+          "phone",
+          "my phone",
+          "my",
+          "update",
+          "and",
+          "the",
+          "it",
+          "is",
+          "to",
+          "new"
+        ],
+        "representative_examples_original": [
+          "the lastest ios11 update is rubbish apps don t open phone keeps freezing and can t make calls without turning it off first",
+          "my phone is not restarting only apple logo is blinking in home screen",
+          "i ll most likely stop using iphone because you people can never get anything right my phone doesn t even know what the letter i is",
+          "my iphone has been garbage since this new update"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 2144,
+        "share_of_first_customer_msgs_sampled": 0.1076,
+        "top_terms": [
+          "11",
+          "ios 11",
+          "ios",
+          "to",
+          "my",
+          "to ios",
+          "iphone",
+          "battery",
+          "is",
+          "the"
+        ],
+        "representative_examples_original": [
+          "after upgrading to ios 11 1 has made my battery worse i have an iphone 7 please fix this",
+          "can't wait for to release stable usable version of ios 11 definitely worst software update from apple ever slippingcrown",
+          "batteritiden p min iphone har blivit l jligt l jligt svag sen senaste ios uppdateringen",
+          "fix your stupid ios 11 the battery drain issue is insane i m having to plug my iphone 7 plus to the wall 4 5 times a day damn"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 1486,
+        "share_of_first_customer_msgs_sampled": 0.0746,
+        "top_terms": [
+          "fix",
+          "fix this",
+          "this",
+          "fix the",
+          "to fix",
+          "please",
+          "please fix",
+          "glitch",
+          "shit",
+          "the"
+        ],
+        "representative_examples_original": [
+          "who knows how to fix this",
+          "i m tired of seeing this fix this damn glitch ios11 iphone",
+          "does anyone s iphone type weird character when you type the letter i how do i fix this",
+          "anyone know how to fix this cc applewatch"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 1061,
+        "share_of_first_customer_msgs_sampled": 0.0533,
+        "top_terms": [
+          "what",
+          "is",
+          "is this",
+          "this",
+          "what is",
+          "going on",
+          "wtf",
+          "with",
+          "going",
+          "the"
+        ],
+        "representative_examples_original": [
+          "wtf",
+          "what the fuck is going on with iphone its really pissing me off i just want to type i without these stupid fucking question marks what the fuck is going in with this shit and how do i fucking fix it",
+          "my account recovery has taken two weeks what s going on over priced phones and zero urgency for support for your consumers",
+          "is this i issue glitch ever getting fixed"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 534,
+        "share_of_first_customer_msgs_sampled": 0.0268,
+        "top_terms": [
+          "question",
+          "mark",
+          "question mark",
+          "question marks",
+          "marks",
+          "box",
+          "the",
+          "fix",
+          "boxes",
+          "why"
+        ],
+        "representative_examples_original": [
+          "how the fuck do i get ride of this stupid box with the question mark i m so done with this bs",
+          "that stupid question mark glitch everywhere seen it on ig too look i can't afford the upgrade i'm still on a payment plan",
+          "you are slacking can you fix my letter i already so it s not turning into a damn question mark",
+          "fix your iphones why the hell do i have an i question mark box"
+        ]
+      }
+    ]
+  },
+  "Uber_Support": {
+    "n_first_customer_messages": 41923,
+    "sampled": 19908,
+    "clusters": [
+      {
+        "cluster": 5,
+        "size": 8601,
+        "share_of_first_customer_msgs_sampled": 0.432,
+        "top_terms": [
+          "to",
+          "the",
+          "is",
+          "my",
+          "and",
+          "in",
+          "it",
+          "for",
+          "uber",
+          "this"
+        ],
+        "representative_examples_original": [
+          "pls stop promotional sms on my number 9099031088 thanks",
+          "im starving i only have one credit card and for some reason i am unable to edit and update the payment method i have a new card so the expiry has changed and the ccv please help ugh it says sorry something went wrong blah blah blah so difficult",
+          "ahhh we re trying desperately but its not working sendhelpsanddoughnuts",
+          "where's my car 1 min away for 10 no answer"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 4786,
+        "share_of_first_customer_msgs_sampled": 0.2404,
+        "top_terms": [
+          "driver",
+          "the",
+          "me",
+          "and",
+          "was",
+          "to",
+          "for",
+          "my",
+          "charged",
+          "he"
+        ],
+        "representative_examples_original": [
+          "honestly there s nothing sadder than tracking your and watching the driver go the wrong way",
+          "your driver cancelled and then out charged me refund me immediately",
+          "i have been charged for an that cancelled on me after 10 minute wait what is the way to resolve this",
+          "you seriously need to take a look at how many times your drivers cancel and start charging them and not us when we have to cancel it s beginning to become a joke now a driver just drove past me and then cancelled i ve been waiting for 11 mins"
+        ]
+      },
+      {
+        "cluster": 0,
+        "size": 3087,
+        "share_of_first_customer_msgs_sampled": 0.1551,
+        "top_terms": [
+          "you",
+          "your",
+          "to",
+          "the",
+          "drivers",
+          "and",
+          "are",
+          "me",
+          "can",
+          "of"
+        ],
+        "representative_examples_original": [
+          "me reports error in charges to uber fuck off we're keeping your money and we'll address none of your concerns",
+          "lol one of your drivers ran me off the road with a baby in the car never riding with y all again",
+          "i seriously have had the worst experience with tonight in dallas you try to be nice and then everything becomes a mess",
+          "you got me messed up these inflation prices are ridiculous it s been 24 hours and the price went up 10 hooowwwww"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 1731,
+        "share_of_first_customer_msgs_sampled": 0.0869,
+        "top_terms": [
+          "help",
+          "please",
+          "phone",
+          "my",
+          "need",
+          "please help",
+          "in",
+          "can",
+          "to",
+          "my phone"
+        ],
+        "representative_examples_original": [
+          "my wife has left her phone in a taxi in the uk doesn't know her password and can't get past 2 factor security to log in this seems to be the only way of contacting you please help",
+          "lost my phone in the uber car yesterday help",
+          "hi please could you dm me or provide a contact number to discuss a problem with my order thanks",
+          "i have raised in app help 15 hours ago to update my phone number but no one has responded yet please can you help"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 1319,
+        "share_of_first_customer_msgs_sampled": 0.0663,
+        "top_terms": [
+          "account",
+          "my account",
+          "my",
+          "to",
+          "help",
+          "can",
+          "is",
+          "and",
+          "uber",
+          "disabled"
+        ],
+        "representative_examples_original": [
+          "hello i accidentally entered my account number wrong for direct deposit please contact me 206 981 1056",
+          "hey guys my account is saying it's disabled can i get in contact with you to resolve this really want to use ubereats",
+          "unable to log in uber has disabled my account or told to use an email that is not mine",
+          "hey do i ever get my account back it's pushing halloween now"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 384,
+        "share_of_first_customer_msgs_sampled": 0.0193,
+        "top_terms": [
+          "uber eats",
+          "eats",
+          "uber",
+          "my",
+          "order",
+          "my uber",
+          "the",
+          "and",
+          "can",
+          "to"
+        ],
+        "representative_examples_original": [
+          "wait so you can t cancel an order on uber eats seconds after sending it",
+          "what is uber eats",
+          "uber eats is the worst",
+          "hey my uber eats order was completely wrong what should i do i can't find a phone number to call"
+        ]
+      }
+    ]
+  },
+  "SpotifyCares": {
+    "n_first_customer_messages": 28277,
+    "sampled": 19876,
+    "clusters": [
+      {
+        "cluster": 4,
+        "size": 8216,
+        "share_of_first_customer_msgs_sampled": 0.4134,
+        "top_terms": [
+          "the",
+          "to",
+          "my",
+          "on",
+          "it",
+          "and",
+          "spotify",
+          "app",
+          "in",
+          "of"
+        ],
+        "representative_examples_original": [
+          "cant play music only lets me start a radio station based on songs",
+          "can t play anything that isn t downloaded iphone 7 with the latest app update",
+          "please make an apple watch app",
+          "i just want to listen to redpillblues but my spotify is freaking out i m not skipping the songs amp can t play any"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 3171,
+        "share_of_first_customer_msgs_sampled": 0.1595,
+        "top_terms": [
+          "premium",
+          "for",
+          "my",
+          "to",
+          "family",
+          "student",
+          "but",
+          "the",
+          "and",
+          "charged"
+        ],
+        "representative_examples_original": [
+          "i am being charged for premium but it still says i have a free account tried all the tricks recommended want money back",
+          "trying to add my wife who has a free spotify account to the family premium i just subscribed to please help",
+          "paid for the premium but unable to verify student account charged for the subscription though australia user",
+          "i upgraded from premium to family account this morning but cannot invite members as the activation screens is white"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 2941,
+        "share_of_first_customer_msgs_sampled": 0.148,
+        "top_terms": [
+          "you",
+          "can you",
+          "can",
+          "to",
+          "the",
+          "guys",
+          "you guys",
+          "are",
+          "for",
+          "me"
+        ],
+        "representative_examples_original": [
+          "when did you guys remove the ability to choose which song to play when connected to ps4 with 'spotify connect' lame",
+          "when the login says username or email you'd think we could just use the email right nope you have to use your username thanks",
+          "i sent you a dm regarding my subscription can you please reply",
+          "can you credit my last 2 months that went through on my mastercard and charge the 2 months back on my new visa card"
+        ]
+      },
+      {
+        "cluster": 0,
+        "size": 2453,
+        "share_of_first_customer_msgs_sampled": 0.1234,
+        "top_terms": [
+          "account",
+          "my",
+          "my account",
+          "help",
+          "to",
+          "email",
+          "can",
+          "and",
+          "with",
+          "spotify"
+        ],
+        "representative_examples_original": [
+          "hello i have a premium account that i currently cant access i have tried to reset my password but have forgotten the email address linked to my spotify account can you please help",
+          "i can t access my account as not recognising my user name help",
+          "will spotify ever get two factor authentication i had my account hacked today and i'd rather have something stronger than just changing the password",
+          "hi i'm trying to change the country on my account but when i try to put in my new payment info it says spotify is not launched in this country even though its a us debit card"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 2377,
+        "share_of_first_customer_msgs_sampled": 0.1196,
+        "top_terms": [
+          "is",
+          "the",
+          "there",
+          "is there",
+          "this",
+          "why is",
+          "to",
+          "why",
+          "on",
+          "not"
+        ],
+        "representative_examples_original": [
+          "this is what does these days it provides a spinning green icon and randomly plays music you wanted to hear last week",
+          "is there any way to retrieve the track listing from your previous discover weekly lost some real gems '",
+          "what is this",
+          "why your app is not available in india"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 718,
+        "share_of_first_customer_msgs_sampled": 0.0361,
+        "top_terms": [
+          "on spotify",
+          "on",
+          "spotify",
+          "why",
+          "isn",
+          "why isn",
+          "album",
+          "reputation",
+          "put",
+          "be"
+        ],
+        "representative_examples_original": [
+          "why is take care missing on spotify",
+          "hey do youse know when the perfect velvet album will be on spotify thank youuu",
+          "why is volatile times by no longer on spotify cc",
+          "spotify so when are y'all like gonna put perfect velvet by red velvet on spotify i'm tired of waiting"
+        ]
+      }
+    ]
+  },
+  "AmericanAir": {
+    "n_first_customer_messages": 26386,
+    "sampled": 19939,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 8865,
+        "share_of_first_customer_msgs_sampled": 0.4446,
+        "top_terms": [
+          "to",
+          "you",
+          "and",
+          "my",
+          "on",
+          "for",
+          "is",
+          "in",
+          "it",
+          "with"
+        ],
+        "representative_examples_original": [
+          "waiting for our friend charlsie idol to get from iah dfw mad opo she is stuck in dfw help her please we re waiting",
+          "been flying since i was one year old got nothing but support and fond memories",
+          "sunrise in with connection to las vegas",
+          "hey look what i got today"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 4564,
+        "share_of_first_customer_msgs_sampled": 0.2289,
+        "top_terms": [
+          "the",
+          "to",
+          "in",
+          "on",
+          "of",
+          "at",
+          "is",
+          "and",
+          "for",
+          "on the"
+        ],
+        "representative_examples_original": [
+          "dear non rev crew passenger please suspend your inane rambling on your cell phone since we ve pushed back from the gate tis a poor example",
+          "in the mists of a 6 hour travel night from toronto to la and i m thankful for the little things like a first class upgrade from for you boy i work hard but stay blessed up",
+          "i like flying w amp understand random searches but to have my carry on bags searched 2x in the same airport is absurd trinidad",
+          "meet the do crew they have been pre packing hundreds of meals to go out to local high rises on thanksgiving for 14 years in a row we love them pittsburgh pgh lightoflife"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 4068,
+        "share_of_first_customer_msgs_sampled": 0.204,
+        "top_terms": [
+          "flight",
+          "to",
+          "my",
+          "on",
+          "my flight",
+          "and",
+          "for",
+          "is",
+          "the",
+          "delayed"
+        ],
+        "representative_examples_original": [
+          "hungry so i'm on a 6 hr flight and all i can get is a can of apple juice no food new weight loss program",
+          "takes my money for a flight i had to cancel and wants to charge me 400 to use the 600 i gave them originally crooks",
+          "delayed my flight 7 hours but my vibe is immortal i still love y'all",
+          "please confirm departure of flight 2328 from dfw we are being told 1 hrs to bring it from the hanger"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 891,
+        "share_of_first_customer_msgs_sampled": 0.0447,
+        "top_terms": [
+          "thanks",
+          "thanks for",
+          "for",
+          "for the",
+          "the",
+          "to",
+          "thanks to",
+          "my",
+          "flight",
+          "and"
+        ],
+        "representative_examples_original": [
+          "you guys rock thanks for letting a mom traveling solo w a toddler preboard and for letting us meet the pilot youhaveafan",
+          "first class glass of red saturday evening is shaping up nicely thanks aa2032",
+          "first and last time i fly thanks for ruining thanksgiving",
+          "not too pleased that i paid to upgrade to mce on aa78 to london and the entertainment would not work flight crew was useless thanks for a very boring 9 hour flight waste of money"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 839,
+        "share_of_first_customer_msgs_sampled": 0.0421,
+        "top_terms": [
+          "customer service",
+          "customer",
+          "service",
+          "to",
+          "and",
+          "the",
+          "your",
+          "worst customer",
+          "worst",
+          "your customer"
+        ],
+        "representative_examples_original": [
+          "seriously just lost a valuable customer",
+          "i kinda wish the customer service on was like or",
+          "like the customer service from the twitter desk great job thanks",
+          "worst customer service treated me awful when they canceled a christmas day flight whyihateflying tonedeafairlines phx"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 712,
+        "share_of_first_customer_msgs_sampled": 0.0357,
+        "top_terms": [
+          "thank you",
+          "thank",
+          "you",
+          "you for",
+          "for",
+          "to",
+          "the",
+          "and",
+          "my",
+          "flight"
+        ],
+        "representative_examples_original": [
+          "thank you for treating a lvroute91survivor with such disrespect in miami on 10 15 d38 needs to go through retraining",
+          "when you were told your confirmed on the 4 20 flight and get to gate and for some reason you are now 5th on standby thank you aa",
+          "first class complementary upgrade with an empty seat next to me thank you",
+          "sent you a dm and would love your help thank you so much"
+        ]
+      }
+    ]
+  },
+  "Delta": {
+    "n_first_customer_messages": 26166,
+    "sampled": 19914,
+    "clusters": [
+      {
+        "cluster": 4,
+        "size": 8116,
+        "share_of_first_customer_msgs_sampled": 0.4076,
+        "top_terms": [
+          "to",
+          "you",
+          "is",
+          "and",
+          "for",
+          "your",
+          "with",
+          "this",
+          "it",
+          "on"
+        ],
+        "representative_examples_original": [
+          "is it really a partnership if you can t select seats the run around at schipol is maddening",
+          "geez flying into this 30 mins ago was scary hope everyone is out and safe back in la",
+          "reading all the tweets about horrible experiences with many airlines i can only recommend flying with never had a problem in 10years",
+          "your latest app version is an update too far for my poor phone going to release a version which works with a 3 yr old galaxy"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 5571,
+        "share_of_first_customer_msgs_sampled": 0.2798,
+        "top_terms": [
+          "the",
+          "on",
+          "to",
+          "flight",
+          "at",
+          "in",
+          "and",
+          "of",
+          "is",
+          "for"
+        ],
+        "representative_examples_original": [
+          "twitter family on november 17th my mom who needs oxygen tank to help her was told by airlines that she couldn't bring her oxygen tank now this wouldn't be a problem if it was for the fact so traveled to us less then 7 weeks ago and was not hassled during that timeframe",
+          "it would be a great start to vacation for the theee of us",
+          "dl65 tonight was the worst flight experience ever i have flown almost 20k miles in last 5 weeks with delta really disappointed",
+          "pretty decent curry i have to say on the flight from lhr to dtw today made a nice change"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 4022,
+        "share_of_first_customer_msgs_sampled": 0.202,
+        "top_terms": [
+          "my",
+          "flight",
+          "to",
+          "help",
+          "can",
+          "my flight",
+          "on",
+          "me",
+          "and",
+          "for"
+        ],
+        "representative_examples_original": [
+          "update been waiting for my bag from for 2 hrs missing my cruise and clothes been on hold to speak to a representative for 45 min",
+          "hey why won't your website let me change my flight after weather advisory waiver keep getting errors shouldn't your site handle it",
+          "hi i'm vegan and my meal options are asian vegetarian and vegetarian non dairy how can i make sure i get a vegan meal",
+          "can i change the date of a non refundable flight and if so where can i find out how it would cost"
+        ]
+      },
+      {
+        "cluster": 0,
+        "size": 1025,
+        "share_of_first_customer_msgs_sampled": 0.0515,
+        "top_terms": [
+          "thanks",
+          "thanks for",
+          "for",
+          "for the",
+          "the",
+          "to",
+          "thanks to",
+          "great",
+          "and",
+          "my"
+        ],
+        "representative_examples_original": [
+          "got lil balla to the gate and seated thanks for the great service the gentleman gate agent at b34 atl",
+          "thanks richmond va ms danise w for the rebooking when my husband and i missed our flight we flight delta and love the customer service",
+          "thanks for being the jam as my airline of choice",
+          "thanks for the upgrade today"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 912,
+        "share_of_first_customer_msgs_sampled": 0.0458,
+        "top_terms": [
+          "thank you",
+          "thank",
+          "you",
+          "you for",
+          "for",
+          "the",
+          "to",
+          "and",
+          "my",
+          "flight"
+        ],
+        "representative_examples_original": [
+          "free lunch on my flight sfo to bos nice thank you",
+          "thank you for picking me up at the footbridge in a porsche and driving me to my",
+          "the kindness of strangers thank you to the woman in 2c on dl1770 to msp your generosity thoughts amp prayers will be paid forward",
+          "i love thank you for getting me to my daddy and back to atlanta keepclimbing"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 268,
+        "share_of_first_customer_msgs_sampled": 0.0135,
+        "top_terms": [
+          "sky club",
+          "club",
+          "sky",
+          "club in",
+          "at sky",
+          "at",
+          "in",
+          "the sky",
+          "the",
+          "mi"
+        ],
+        "representative_examples_original": [
+          "i'm at sky club in nashville tn",
+          "hey rough day with delays but you knocked it out of the park with new sky club in atl terminalb swanky",
+          "your terms don't say physical card pmt for sky club discount and you said the temporary card could be used just like a normal one",
+          "getting ready to head home at sky club in newark nj"
+        ]
+      }
+    ]
+  },
+  "Tesco": {
+    "n_first_customer_messages": 16722,
+    "sampled": 16680,
+    "clusters": [
+      {
+        "cluster": 3,
+        "size": 6064,
+        "share_of_first_customer_msgs_sampled": 0.3635,
+        "top_terms": [
+          "to",
+          "for",
+          "my",
+          "and",
+          "it",
+          "the",
+          "on",
+          "delivery",
+          "no",
+          "be"
+        ],
+        "representative_examples_original": [
+          "been at click and collect for 30 mins waiting for someone to get my parcel from the warehouse ridiculous you need to improve your processes",
+          "wholefood black turtle beans carbs on packt 11 6g per 100g but most online nutrition info 64g ideas keto lowcarb",
+          "think been over charged for this mediocre topps product charged 10 each for item they advertised at 6 in their guide please advise",
+          "you should make your coshh data sheets more available to your customers it's now late to even contend contacting directly on phone"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 4498,
+        "share_of_first_customer_msgs_sampled": 0.2697,
+        "top_terms": [
+          "the",
+          "in",
+          "of",
+          "and",
+          "your",
+          "it",
+          "my",
+          "just",
+          "to",
+          "bought"
+        ],
+        "representative_examples_original": [
+          "sorry tesco you re finest red potatoes are rubbish had to peel more away than i kept full of rot in the middle and bruised",
+          "word of advice don't put potentially raw chicken in sushi i've spent the past 12 hours chucking my guts up from it",
+          "i can't get over the cuteness of these christmas pudding napkins from",
+          "just nearly choked on my tesco meal deal what the hell is that white and blue plastic doing in my egg and bacon sandwich"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 2330,
+        "share_of_first_customer_msgs_sampled": 0.1397,
+        "top_terms": [
+          "is",
+          "this",
+          "the",
+          "it",
+          "your",
+          "to",
+          "this is",
+          "is this",
+          "there",
+          "in"
+        ],
+        "representative_examples_original": [
+          "keynsham that is 4 of your staff stood around having a chat about the telly tonight whilst tills go unmanned and queues form poor",
+          "when will u not assume that all your customers have cars sick of being offered petrol vouchers where is my banana voucher",
+          "is this normal",
+          "your website is showing no delivery slots for the next three weeks is it just me"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 2271,
+        "share_of_first_customer_msgs_sampled": 0.1362,
+        "top_terms": [
+          "you",
+          "can",
+          "can you",
+          "please",
+          "the",
+          "have",
+          "to",
+          "your",
+          "me",
+          "for"
+        ],
+        "representative_examples_original": [
+          "wrapping my sons presents love the personalised paper his name is rudi his sister will be upset can you do some reighgan",
+          "hi i want to preorder the xbox one lego marvel superheroes 2 minifigure game 394 0085 from your site it states order today on preorder for delivery on launch day tomorrow but when going to pay only have option for 5 day delivery can you help clarify please",
+          "will you be bringing the tesco roast turkey dinner in time for christmas",
+          "why can't you buy a bag for life at a self service checkout at your express stores customers flocking to sainsburys in their droves"
+        ]
+      },
+      {
+        "cluster": 0,
+        "size": 1043,
+        "share_of_first_customer_msgs_sampled": 0.0625,
+        "top_terms": [
+          "do",
+          "do you",
+          "you",
+          "to",
+          "the",
+          "your",
+          "why do",
+          "have",
+          "in",
+          "how"
+        ],
+        "representative_examples_original": [
+          "if aldi can do this on xmas eve there's no reason why all supermarkets can't give their surplus to the homeless at any time come on supermarkets start doing it who's gonna go first toomuchwaste",
+          "why does discriminate against customers living in rural areas or who do not drive a car with over inflated prices unethical",
+          "do you guys stock the new rokus in store or just online",
+          "why do you take 1 from my account when i pay at the pump is it an extra charge because it's certainly not advertised anywhere"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 474,
+        "share_of_first_customer_msgs_sampled": 0.0284,
+        "top_terms": [
+          "out of",
+          "out",
+          "of date",
+          "of",
+          "date",
+          "the",
+          "to",
+          "and",
+          "bought",
+          "it"
+        ],
+        "representative_examples_original": [
+          "it seems like you've honoured my request suggestion amp taken some of the moisture out of the bag tastier",
+          "hey the blurb on your ps4 games section is a tad out of date no mans sky and the psvr were out ages ago",
+          "pure raging cancelling a delivery a mere 45 mins before it's due on a saturday in glasgow and we are out of nappies for babyg",
+          "being called mate by management maggie and near enough calling me a liar store number 5839 humberstone was completely out of order today for not accepting my mobile banking app as proof of being charged twice badservice poormanners"
+        ]
+      }
+    ]
+  },
+  "British_Airways": {
+    "n_first_customer_messages": 16452,
+    "sampled": 16418,
+    "clusters": [
+      {
+        "cluster": 3,
+        "size": 7952,
+        "share_of_first_customer_msgs_sampled": 0.4843,
+        "top_terms": [
+          "to",
+          "flight",
+          "my",
+          "on",
+          "for",
+          "and",
+          "you",
+          "from",
+          "with",
+          "in"
+        ],
+        "representative_examples_original": [
+          "hello i wanted to clarify i bought a plane ticket and my first connecting flight is with ba my ticket amp receipt says 30kg baggage but when i checked in boarding pass says 23kg which one is it thank you in advance",
+          "dont listen they canceled my flight with no refund refuse to re instate it then message me to tell me that boycott",
+          "hi i received an email saying that my flight is delayed can i arrive later at the airport so i don't keep waiting too long flight info ba0010 departing on nov 23rd thanks",
+          "christmas scam giving false prices for tickets online shame of you ba"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 3850,
+        "share_of_first_customer_msgs_sampled": 0.2345,
+        "top_terms": [
+          "the",
+          "to",
+          "on",
+          "of",
+          "for",
+          "in",
+          "and",
+          "on the",
+          "flight",
+          "is"
+        ],
+        "representative_examples_original": [
+          "hugely grateful to the staff at gatwick who were able to change our seats so a and me are sitting together nervousflyers",
+          "umm you guys might want to know that when clicking on the black friday link on the email ba just sent i get to a 'offer ended' page just to let you know",
+          "thanks for the welcome champagne with a deathly glass shard in it i feel very welcome",
+          "wow now flies daily to faor with the a380"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 1591,
+        "share_of_first_customer_msgs_sampled": 0.0969,
+        "top_terms": [
+          "to",
+          "trying",
+          "trying to",
+          "website",
+          "is",
+          "your",
+          "booking",
+          "book",
+          "the",
+          "it"
+        ],
+        "representative_examples_original": [
+          "when will your website be working it's been down for 2 days now",
+          "your website seems to have gone down again",
+          "hi having probs checking in online using 6 character booking ref and surname but getting an error message help please",
+          "booked flight from inc ba flight told to book extra baggage in your website bc the option isn't 1"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 1350,
+        "share_of_first_customer_msgs_sampled": 0.0822,
+        "top_terms": [
+          "can",
+          "you",
+          "can you",
+          "please",
+          "help",
+          "me",
+          "my",
+          "you help",
+          "to",
+          "hi"
+        ],
+        "representative_examples_original": [
+          "can you please give an honest reason for the delay on ba8704 lcy to edi no crew now an tech issue oh and departure board still says now leaving at 9am",
+          "how can i contact you regarding cancelling a return flight i can not phone as i live abroad and you do not have an email address",
+          "a friend just sent me this via whatsapp a very clever phishing attempt presumably you can do something about this",
+          "twitter says i can not dm since this user doesn't follows you"
+        ]
+      },
+      {
+        "cluster": 0,
+        "size": 887,
+        "share_of_first_customer_msgs_sampled": 0.054,
+        "top_terms": [
+          "check",
+          "check in",
+          "in",
+          "to check",
+          "online",
+          "to",
+          "can",
+          "can check",
+          "in online",
+          "for"
+        ],
+        "representative_examples_original": [
+          "what s the charge to check in a car seat please my infant is not traveling with me",
+          "i'm claustrophobic and must book a seat near front of plane trying buy economy plus tckt and there's no option to reserve a seat until 48 hrs b4 check in opens is this correct i require a specific seat",
+          "err showing me an ad for their app with cta to check in whilst i'm in their app already checking in marketing",
+          "i'm unable to check in online for flight to gothenburg your phones are shut how can i resolve this bad service"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 788,
+        "share_of_first_customer_msgs_sampled": 0.048,
+        "top_terms": [
+          "service",
+          "customer service",
+          "customer",
+          "service from",
+          "and",
+          "from",
+          "to",
+          "your",
+          "the",
+          "on"
+        ],
+        "representative_examples_original": [
+          "great contingency planning ba0769 cancelled with zero communication now single customer service rep left to sort poor",
+          "heartfelt thanks to crew who took great care of me 26 nov when i fell ill on ba0243 professional service enhanced by human contact amp concern deeply appreciated thank you",
+          "just experienced the worst customer service on flight ba2709 rudecrew cabbinbagge",
+          "rude customer service staff huffing down the phone and no answers as to why i ve been overcharged assistance please"
+        ]
+      }
+    ]
+  },
+  "VirginTrains": {
+    "n_first_customer_messages": 14851,
+    "sampled": 14818,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 5947,
+        "share_of_first_customer_msgs_sampled": 0.4013,
+        "top_terms": [
+          "to",
+          "for",
+          "my",
+          "and",
+          "on",
+          "train",
+          "is",
+          "at",
+          "it",
+          "the"
+        ],
+        "representative_examples_original": [
+          "why are we sat at runcorn going no where",
+          "your customer services are a joke my d i l and 8yr grandson returning from seeing my son for the w e is scotland stuck",
+          "i ve also enquired twice online but no response since sunday why am i only being refunded half ticket price when advised on 5 nov to find alternative route travel arrangements between euston runcorn as train delayed indefinitely",
+          "is there a delay towards birmingham"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 2626,
+        "share_of_first_customer_msgs_sampled": 0.1772,
+        "top_terms": [
+          "the",
+          "on",
+          "on the",
+          "train",
+          "to",
+          "of",
+          "in",
+          "the train",
+          "is",
+          "and"
+        ],
+        "representative_examples_original": [
+          "just totally overtook a london midland train ludicrous speed go yay for being on a super fast pendolino non stop all the way from stafford",
+          "i m only going on a 2 hour train journey yet i have enough food to feed the carriage sorry iamafeeder",
+          "just got off this train i think someone may have been smoking in the loo",
+          "in creases on to manchester pulling into stoke and the conductor comes on the pa saying stooookkke on trent littlethings"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 1978,
+        "share_of_first_customer_msgs_sampled": 0.1335,
+        "top_terms": [
+          "you",
+          "can",
+          "to",
+          "can you",
+          "for",
+          "the",
+          "me",
+          "thank you",
+          "thank",
+          "have"
+        ],
+        "representative_examples_original": [
+          "do you have a time of when 390 010 or 006 will be passing pnr penrith station thanks",
+          "hey please can you tell me when trains will be available for 2 january 2018 thanks",
+          "if you had brunch with what would you order",
+          "you had one job"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 1905,
+        "share_of_first_customer_msgs_sampled": 0.1286,
+        "top_terms": [
+          "euston",
+          "to",
+          "from",
+          "euston to",
+          "the",
+          "from euston",
+          "to euston",
+          "on",
+          "is",
+          "manchester"
+        ],
+        "representative_examples_original": [
+          "will the 1830 or the 1930 to glasgow run no information at all at euston",
+          "is the the 17 05 from euston to liverpool cancelled",
+          "top notch service from the 20 00 euston gt manchester pic service from alan karen and richard thankyou for looking after us guys x",
+          "on the 8 30 from bham to euston and it is so hot how do we get the heating off"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 1345,
+        "share_of_first_customer_msgs_sampled": 0.0908,
+        "top_terms": [
+          "london",
+          "to london",
+          "to",
+          "from",
+          "london euston",
+          "the",
+          "on",
+          "from london",
+          "train",
+          "euston"
+        ],
+        "representative_examples_original": [
+          "can i reserve a seat at 11 00 service today from london euston to manchester piccadilly as my it got cancelled yesterday",
+          "was meant to travel last night but couldn't can you tell me if the 10 55 from manchester to london is going ahead as normal",
+          "imagine paying over 100 for a train ticket from london to leeds and having to sit on the floor because of overcrowding",
+          "what s happening with the 21 00 train from london euston to milton keynes central"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 1017,
+        "share_of_first_customer_msgs_sampled": 0.0686,
+        "top_terms": [
+          "class",
+          "first class",
+          "first",
+          "1st class",
+          "1st",
+          "to",
+          "in",
+          "the",
+          "in first",
+          "on"
+        ],
+        "representative_examples_original": [
+          "does a declassified train mean i get my 1st class ticket refunded",
+          "17 47 train from liverpool lime street wifi isn t working even in first class need to watch kane blast one in against madrid",
+          "never cease to be amazed in 1st class no willingness to take rubbish off table unless i put in the bag for member of staff first class prices poor show",
+          "big thank you to the lovely nina who was the train crew for first class on the 18 30 birmingham new street to euston service today such a lovely person who talked about sewing with me and kept dropping off biscuits just in case"
+        ]
+      }
+    ]
+  },
+  "XboxSupport": {
+    "n_first_customer_messages": 13435,
+    "sampled": 13341,
+    "clusters": [
+      {
+        "cluster": 3,
+        "size": 5668,
+        "share_of_first_customer_msgs_sampled": 0.4249,
+        "top_terms": [
+          "the",
+          "is",
+          "for",
+          "this",
+          "to",
+          "on",
+          "of",
+          "and",
+          "can",
+          "my"
+        ],
+        "representative_examples_original": [
+          "i redeemed my pre order code for ww2 and didn t receive my permanent weapon unlock token or 2xp can i get help",
+          "i am so disappointed w xbox their support amp what they stand 4 they steal from u going to try",
+          "i still can't get on cod ww2 multiplayer",
+          "hey bought an elite controller in june it's already falling apart lb busted sound jack intermittent right thumbstick drifts how do i get a replacement"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 3551,
+        "share_of_first_customer_msgs_sampled": 0.2662,
+        "top_terms": [
+          "it",
+          "my",
+          "to",
+          "and",
+          "the",
+          "xbox",
+          "my xbox",
+          "on",
+          "but",
+          "me"
+        ],
+        "representative_examples_original": [
+          "your update has messed up my xbox cant turn it on without it crashing does the same thing after telling me to restart",
+          "hi what is going on had a 3 5gb update on xbox and when done it lost all my profiles that was on the xbox",
+          "1hr on the phone 3 techs hung up on once all cuz my 14 day trial wouldn t work nothing was done to make it right so bad",
+          "it says i have gold until 11 20 17 but is also asking to go gold and not letting me access online content"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 1912,
+        "share_of_first_customer_msgs_sampled": 0.1433,
+        "top_terms": [
+          "xbox one",
+          "one",
+          "xbox",
+          "on",
+          "the",
+          "my",
+          "my xbox",
+          "to",
+          "is",
+          "the xbox"
+        ],
+        "representative_examples_original": [
+          "i got an xbox game pass 1 month trial with my xbox one x but the code keeps appearing with an error code",
+          "so i got an xbox one x without kinect port how do i now control my set top tv box",
+          "bit of an issue with my xbox one x a few games are having graphics issues i'm seeing lots of coloured black squares when playing",
+          "hey my 3 5 mm headphone drive doesn't work on my xbox one s controller i thought it was the headset but none have worked yet"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 1208,
+        "share_of_first_customer_msgs_sampled": 0.0905,
+        "top_terms": [
+          "you",
+          "can you",
+          "can",
+          "me",
+          "guys",
+          "you guys",
+          "help",
+          "to",
+          "help me",
+          "you help"
+        ],
+        "representative_examples_original": [
+          "are you kidding me i have spent thousands with microsoft and they could give a shit",
+          "can you update the app with the x your not able to reply to messages",
+          "if you can is it possiable you can get me a refund for minecraft in anyway or get my money back if my mincraft wont work",
+          "i was in chat yesterday for an hour with ron and he was great help with trying to find out a screen glitch problem on my x i would recommend you guys acknowledging this problem at microsoft so more people don t freak out and think their console is broken like i did"
+        ]
+      },
+      {
+        "cluster": 0,
+        "size": 788,
+        "share_of_first_customer_msgs_sampled": 0.0591,
+        "top_terms": [
+          "live",
+          "xbox live",
+          "xbox",
+          "to",
+          "my",
+          "gold",
+          "to xbox",
+          "live gold",
+          "it",
+          "and"
+        ],
+        "representative_examples_original": [
+          "i am having trouble signing into xbox live and connecting to the internet happened about 15mins ago i restarted and all",
+          "what is the upload limit for xbox live",
+          "xbox live was down and remzeil came in to save the day promote that man remzeil2020",
+          "ny landlord installed a new router xbox says internet is connected but won't connect to live error code 8015190b"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 214,
+        "share_of_first_customer_msgs_sampled": 0.016,
+        "top_terms": [
+          "help",
+          "need help",
+          "need",
+          "help with",
+          "help me",
+          "please",
+          "please help",
+          "me",
+          "some help",
+          "need your"
+        ],
+        "representative_examples_original": [
+          "i need your help",
+          "hello i need help with dragon ball xenoverse i can't use my dlcs and take dragon balls at game",
+          "help",
+          "i need help cancelling a preorder"
+        ]
+      }
+    ]
+  },
+  "VerizonSupport": {
+    "n_first_customer_messages": 8447,
+    "sampled": 8416,
+    "clusters": [
+      {
+        "cluster": 0,
+        "size": 3344,
+        "share_of_first_customer_msgs_sampled": 0.3973,
+        "top_terms": [
+          "is",
+          "the",
+          "my",
+          "in",
+          "on",
+          "internet",
+          "and",
+          "with",
+          "this",
+          "what"
+        ],
+        "representative_examples_original": [
+          "verizon gives contract for two years but in the middle of the contract raises the price saying the discounts have expired why they give contract for two years they should give the contract only till the discounts are good poor practice by verizon",
+          "are there issues going on again with uploading to twitch and stable bitrates i'm dropping frames like crazy was this ever looked into or resolved twitch",
+          "why is everyone getting their phone shipped and mine still says processing welp iphonex",
+          "reception consistently breaks up on my cable why"
+        ]
+      },
+      {
+        "cluster": 2,
+        "size": 3185,
+        "share_of_first_customer_msgs_sampled": 0.3784,
+        "top_terms": [
+          "to",
+          "you",
+          "for",
+          "my",
+          "and",
+          "it",
+          "the",
+          "me",
+          "have",
+          "do"
+        ],
+        "representative_examples_original": [
+          "i'd love for someone in a managerial position to contact me about my parent's interaction with your incompetent employees in ruston la",
+          "i switched from my grandfathered plan to this new unlimited and have never experienced this amount of buffering in 10 years",
+          "thought verizon was better but turns out they're worse than so many alternatives and won't work with you at all",
+          "was out for like 2 hours"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 888,
+        "share_of_first_customer_msgs_sampled": 0.1055,
+        "top_terms": [
+          "can",
+          "help",
+          "my",
+          "can you",
+          "please",
+          "you",
+          "need",
+          "me",
+          "to",
+          "get"
+        ],
+        "representative_examples_original": [
+          "help problem was too long for a tweet",
+          "get this message socket error connection failed because connected host has failed to respond can you help or comment",
+          "hey i need help my phone will not keep service in the last couple days now i can t get anything tried everything ik of",
+          "hey check out my result speedtest i pay for 100 100 help please"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 567,
+        "share_of_first_customer_msgs_sampled": 0.0674,
+        "top_terms": [
+          "customer service",
+          "customer",
+          "service",
+          "worst",
+          "the worst",
+          "the",
+          "is",
+          "service is",
+          "your",
+          "ever"
+        ],
+        "representative_examples_original": [
+          "worst company in the usa rip offs horrific service easy peasy to hack worst customer service ever everyone know if you have verizon you can be hacked whereas they can steal not only money from your bank account but buy things and verizon let's them decade w gfysv",
+          "then abruptly eliminates channels with no forewarning greedy dishonest disgraceful horrible customer service verizonfios",
+          "every month i want to scream u r the very worst service complete incompetence all around",
+          "been on the phone waiting to talk to someone at for 29 mins and counting awful customer service"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 265,
+        "share_of_first_customer_msgs_sampled": 0.0315,
+        "top_terms": [
+          "hold",
+          "on hold",
+          "on",
+          "hold for",
+          "for",
+          "been on",
+          "been",
+          "minutes",
+          "hour",
+          "to"
+        ],
+        "representative_examples_original": [
+          "25 minutes on hold and counting customer service is horrendous",
+          "1 hour on hold and must think this is the way to provide customer service verizonsucks",
+          "been on hold for over 3 hours can't get anyone to answer",
+          "i have been on hold now for almost 2 and 1 2 hours i did the call back and all you did was put me on hold again"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 167,
+        "share_of_first_customer_msgs_sampled": 0.0198,
+        "top_terms": [
+          "outage",
+          "outage in",
+          "is there",
+          "there",
+          "there an",
+          "an outage",
+          "an",
+          "in",
+          "is",
+          "internet"
+        ],
+        "representative_examples_original": [
+          "just lost service on both ipad and iphone is there an outage in southern az",
+          "is there an issue with cable and internet in towson md not able to fix anything or reach anyone",
+          "my internet is out in ny there is an outage ticket nyes091823 on my account do you really expect to fix it tomorrow night",
+          "is there an outage in brooklyn right now zip 11211"
+        ]
+      }
+    ]
+  },
+  "TMobileHelp": {
+    "n_first_customer_messages": 22820,
+    "sampled": 19889,
+    "clusters": [
+      {
+        "cluster": 2,
+        "size": 9666,
+        "share_of_first_customer_msgs_sampled": 0.486,
+        "top_terms": [
+          "to",
+          "the",
+          "my",
+          "and",
+          "for",
+          "it",
+          "on",
+          "in",
+          "with",
+          "phone"
+        ],
+        "representative_examples_original": [
+          "what's the prompt for english on the automated system",
+          "after paying over 200 in insurance that was sold to me as a cover all they want a 175 deductible goodbye going to",
+          "i recently changed phone number on one of my lines and activated a new sim card text msg works but can't make or receive calls ayuda team magenta",
+          "i will say despite the problems with the coupon has excellent customer support thanks"
+        ]
+      },
+      {
+        "cluster": 1,
+        "size": 2963,
+        "share_of_first_customer_msgs_sampled": 0.149,
+        "top_terms": [
+          "is",
+          "the",
+          "this",
+          "my",
+          "to",
+          "it",
+          "in",
+          "on",
+          "there",
+          "and"
+        ],
+        "representative_examples_original": [
+          "idk if it is signal my 7 edge or android oreo but since update signal has run like crap doubt it's",
+          "i was wondering if my account is eligible for the 55 service",
+          "is spitting facts i already know to make it seem like they're helping i see right through your strategy",
+          "who cares no one apparently service is good but when an in store transaction is messed up no one is interested coming soon all communications and transactions"
+        ]
+      },
+      {
+        "cluster": 0,
+        "size": 2673,
+        "share_of_first_customer_msgs_sampled": 0.1344,
+        "top_terms": [
+          "you",
+          "guys",
+          "to",
+          "you guys",
+          "the",
+          "can",
+          "for",
+          "and",
+          "me",
+          "do"
+        ],
+        "representative_examples_original": [
+          "hey can you explain this my note5 has full signal but my note8 on the same plan has nothing and they are 6 inches apart halp",
+          "can you tell me how much the iphonex is going to be on installments",
+          "can you assist me with getting my pixel 2 rebate approved looks like they r not accepting receipts from google's pop up in nyc",
+          "um you have to pay a whole month when you used ten days if you port out termsandconditions your customerservice sucks prorate"
+        ]
+      },
+      {
+        "cluster": 4,
+        "size": 1936,
+        "share_of_first_customer_msgs_sampled": 0.0973,
+        "top_terms": [
+          "service",
+          "customer service",
+          "customer",
+          "the",
+          "in",
+          "is",
+          "no",
+          "your",
+          "no service",
+          "and"
+        ],
+        "representative_examples_original": [
+          "i been experiencing a lot of issues with this service and i'm tired of calling the customer centers i need assstance",
+          "man i thought had the worst service but is equally as horrible why dont u have affordable plans",
+          "ive been totally kicked n the ass btwn my phone carrier service n phone i use maybe i need 2 switch all around",
+          "canceled my account cont to get charged 3 months and 600 dollars later crazy amount of phone calls worst customer service ever don t ever use"
+        ]
+      },
+      {
+        "cluster": 3,
+        "size": 1555,
+        "share_of_first_customer_msgs_sampled": 0.0782,
+        "top_terms": [
+          "iphone",
+          "the iphone",
+          "the",
+          "my iphone",
+          "to",
+          "for",
+          "my",
+          "on",
+          "order",
+          "an iphone"
+        ],
+        "representative_examples_original": [
+          "can i preorder an iphone x through you",
+          "well that iphone x pre order was a waste of my sleep your app is trash",
+          "if we take advantage of the iphone bogo do we still qualify for the new iphone upgrade program",
+          "will have a similar pre registration for iphone x jod to what apple have announced for their upgrade program on 11 23"
+        ]
+      },
+      {
+        "cluster": 5,
+        "size": 1096,
+        "share_of_first_customer_msgs_sampled": 0.0551,
+        "top_terms": [
+          "help",
+          "please",
+          "need",
+          "help me",
+          "me",
+          "can",
+          "need help",
+          "please help",
+          "my",
+          "with"
+        ],
+        "representative_examples_original": [
+          "my phone can t stream any video but has fast speed test results help me out",
+          "i need account help currently at tmobile store been here 4 times i need help with raising eic",
+          "how do i participate in t mobile tuesday's help",
+          "hello i have a question about the samsung bogo offer and my account can you help"
+        ]
+      }
+    ]
+  }
+}

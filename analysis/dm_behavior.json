@@ -1,0 +1,113 @@
+{
+  "method": "regex heuristics on brand outbound messages; DM==private-channel pivot",
+  "results": [
+    {
+      "brand": "AmazonHelp",
+      "n_brand_messages": 169840,
+      "n_conv_with_at_least_one_brand_response": 82556,
+      "brand_msgs_with_dm_phrase": 15837,
+      "brand_msgs_with_private_info_phrase": 7133,
+      "brand_msgs_with_either_dm_or_private_phrase": 22237,
+      "share_brand_msgs_dm_or_private": 0.1309
+    },
+    {
+      "brand": "AppleSupport",
+      "n_brand_messages": 106860,
+      "n_conv_with_at_least_one_brand_response": 80717,
+      "brand_msgs_with_dm_phrase": 59399,
+      "brand_msgs_with_private_info_phrase": 31021,
+      "brand_msgs_with_either_dm_or_private_phrase": 59447,
+      "share_brand_msgs_dm_or_private": 0.5563
+    },
+    {
+      "brand": "Uber_Support",
+      "n_brand_messages": 56270,
+      "n_conv_with_at_least_one_brand_response": 41923,
+      "brand_msgs_with_dm_phrase": 43830,
+      "brand_msgs_with_private_info_phrase": 31363,
+      "brand_msgs_with_either_dm_or_private_phrase": 44402,
+      "share_brand_msgs_dm_or_private": 0.7891
+    },
+    {
+      "brand": "SpotifyCares",
+      "n_brand_messages": 43265,
+      "n_conv_with_at_least_one_brand_response": 28277,
+      "brand_msgs_with_dm_phrase": 13694,
+      "brand_msgs_with_private_info_phrase": 10605,
+      "brand_msgs_with_either_dm_or_private_phrase": 13853,
+      "share_brand_msgs_dm_or_private": 0.3202
+    },
+    {
+      "brand": "AmericanAir",
+      "n_brand_messages": 36764,
+      "n_conv_with_at_least_one_brand_response": 26386,
+      "brand_msgs_with_dm_phrase": 7397,
+      "brand_msgs_with_private_info_phrase": 784,
+      "brand_msgs_with_either_dm_or_private_phrase": 7409,
+      "share_brand_msgs_dm_or_private": 0.2015
+    },
+    {
+      "brand": "Delta",
+      "n_brand_messages": 42253,
+      "n_conv_with_at_least_one_brand_response": 26166,
+      "brand_msgs_with_dm_phrase": 7681,
+      "brand_msgs_with_private_info_phrase": 407,
+      "brand_msgs_with_either_dm_or_private_phrase": 7714,
+      "share_brand_msgs_dm_or_private": 0.1826
+    },
+    {
+      "brand": "Tesco",
+      "n_brand_messages": 38573,
+      "n_conv_with_at_least_one_brand_response": 16722,
+      "brand_msgs_with_dm_phrase": 10479,
+      "brand_msgs_with_private_info_phrase": 3733,
+      "brand_msgs_with_either_dm_or_private_phrase": 10993,
+      "share_brand_msgs_dm_or_private": 0.285
+    },
+    {
+      "brand": "British_Airways",
+      "n_brand_messages": 29361,
+      "n_conv_with_at_least_one_brand_response": 16452,
+      "brand_msgs_with_dm_phrase": 4299,
+      "brand_msgs_with_private_info_phrase": 3701,
+      "brand_msgs_with_either_dm_or_private_phrase": 4818,
+      "share_brand_msgs_dm_or_private": 0.1641
+    },
+    {
+      "brand": "VirginTrains",
+      "n_brand_messages": 27817,
+      "n_conv_with_at_least_one_brand_response": 14851,
+      "brand_msgs_with_dm_phrase": 760,
+      "brand_msgs_with_private_info_phrase": 627,
+      "brand_msgs_with_either_dm_or_private_phrase": 878,
+      "share_brand_msgs_dm_or_private": 0.0316
+    },
+    {
+      "brand": "XboxSupport",
+      "n_brand_messages": 24557,
+      "n_conv_with_at_least_one_brand_response": 13435,
+      "brand_msgs_with_dm_phrase": 6115,
+      "brand_msgs_with_private_info_phrase": 2285,
+      "brand_msgs_with_either_dm_or_private_phrase": 6130,
+      "share_brand_msgs_dm_or_private": 0.2496
+    },
+    {
+      "brand": "VerizonSupport",
+      "n_brand_messages": 17966,
+      "n_conv_with_at_least_one_brand_response": 8447,
+      "brand_msgs_with_dm_phrase": 2215,
+      "brand_msgs_with_private_info_phrase": 1592,
+      "brand_msgs_with_either_dm_or_private_phrase": 2223,
+      "share_brand_msgs_dm_or_private": 0.1237
+    },
+    {
+      "brand": "TMobileHelp",
+      "n_brand_messages": 34317,
+      "n_conv_with_at_least_one_brand_response": 22820,
+      "brand_msgs_with_dm_phrase": 28602,
+      "brand_msgs_with_private_info_phrase": 11382,
+      "brand_msgs_with_either_dm_or_private_phrase": 28621,
+      "share_brand_msgs_dm_or_private": 0.834
+    }
+  ]
+}

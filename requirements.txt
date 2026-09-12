@@ -1,0 +1,14 @@
+# Core runtime (Python >= 3.11; tested on 3.14)
+numpy>=2.0
+pandas>=3.0
+scikit-learn>=1.6
+duckdb>=1.5
+pyarrow>=17
+tabulate>=0.9
+joblib>=1.4            # model persistence (ships with scikit-learn)
+
+# Optional — live LLM-as-judge (EVAL_JUDGE=openai + OPENAI_API_KEY)
+openai>=1.0
+
+# Optional — semantic retrieval encoder (--semantic)
+sentence-transformers>=3.0

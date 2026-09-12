@@ -1,0 +1,915 @@
+{
+  "generated": "2026-09-11 20:42:06",
+  "method": "brand = author_id with >= 100 outbound tweets whose rt_tweet matches an inbound tweet; customers = authors on other side of reply links",
+  "brands": [
+    {
+      "brand": "AmazonHelp",
+      "total_tweets": 169840,
+      "inbound_tweets": 0,
+      "outbound_tweets": 169840,
+      "tweets_responding_to_customer_tweets": 74127,
+      "unique_customers_interacted_with": 38041,
+      "share_of_tweet_volume": 0.0604
+    },
+    {
+      "brand": "AppleSupport",
+      "total_tweets": 106860,
+      "inbound_tweets": 0,
+      "outbound_tweets": 106860,
+      "tweets_responding_to_customer_tweets": 28373,
+      "unique_customers_interacted_with": 20941,
+      "share_of_tweet_volume": 0.038
+    },
+    {
+      "brand": "Uber_Support",
+      "total_tweets": 56270,
+      "inbound_tweets": 0,
+      "outbound_tweets": 56270,
+      "tweets_responding_to_customer_tweets": 15339,
+      "unique_customers_interacted_with": 11113,
+      "share_of_tweet_volume": 0.02
+    },
+    {
+      "brand": "VirginTrains",
+      "total_tweets": 27817,
+      "inbound_tweets": 0,
+      "outbound_tweets": 27817,
+      "tweets_responding_to_customer_tweets": 13246,
+      "unique_customers_interacted_with": 6913,
+      "share_of_tweet_volume": 0.0099
+    },
+    {
+      "brand": "SpotifyCares",
+      "total_tweets": 43265,
+      "inbound_tweets": 0,
+      "outbound_tweets": 43265,
+      "tweets_responding_to_customer_tweets": 12709,
+      "unique_customers_interacted_with": 8158,
+      "share_of_tweet_volume": 0.0154
+    },
+    {
+      "brand": "AmericanAir",
+      "total_tweets": 36764,
+      "inbound_tweets": 0,
+      "outbound_tweets": 36764,
+      "tweets_responding_to_customer_tweets": 12317,
+      "unique_customers_interacted_with": 8354,
+      "share_of_tweet_volume": 0.0131
+    },
+    {
+      "brand": "Delta",
+      "total_tweets": 42253,
+      "inbound_tweets": 0,
+      "outbound_tweets": 42253,
+      "tweets_responding_to_customer_tweets": 10535,
+      "unique_customers_interacted_with": 7013,
+      "share_of_tweet_volume": 0.015
+    },
+    {
+      "brand": "Tesco",
+      "total_tweets": 38573,
+      "inbound_tweets": 0,
+      "outbound_tweets": 38573,
+      "tweets_responding_to_customer_tweets": 10107,
+      "unique_customers_interacted_with": 6643,
+      "share_of_tweet_volume": 0.0137
+    },
+    {
+      "brand": "GWRHelp",
+      "total_tweets": 19364,
+      "inbound_tweets": 0,
+      "outbound_tweets": 19364,
+      "tweets_responding_to_customer_tweets": 9468,
+      "unique_customers_interacted_with": 4632,
+      "share_of_tweet_volume": 0.0069
+    },
+    {
+      "brand": "VerizonSupport",
+      "total_tweets": 17966,
+      "inbound_tweets": 0,
+      "outbound_tweets": 17966,
+      "tweets_responding_to_customer_tweets": 8972,
+      "unique_customers_interacted_with": 4218,
+      "share_of_tweet_volume": 0.0064
+    },
+    {
+      "brand": "British_Airways",
+      "total_tweets": 29361,
+      "inbound_tweets": 0,
+      "outbound_tweets": 29361,
+      "tweets_responding_to_customer_tweets": 8671,
+      "unique_customers_interacted_with": 5655,
+      "share_of_tweet_volume": 0.0104
+    },
+    {
+      "brand": "TMobileHelp",
+      "total_tweets": 34317,
+      "inbound_tweets": 0,
+      "outbound_tweets": 34317,
+      "tweets_responding_to_customer_tweets": 8486,
+      "unique_customers_interacted_with": 5677,
+      "share_of_tweet_volume": 0.0122
+    },
+    {
+      "brand": "XboxSupport",
+      "total_tweets": 24557,
+      "inbound_tweets": 0,
+      "outbound_tweets": 24557,
+      "tweets_responding_to_customer_tweets": 7810,
+      "unique_customers_interacted_with": 5153,
+      "share_of_tweet_volume": 0.0087
+    },
+    {
+      "brand": "SouthwestAir",
+      "total_tweets": 28977,
+      "inbound_tweets": 0,
+      "outbound_tweets": 28977,
+      "tweets_responding_to_customer_tweets": 7723,
+      "unique_customers_interacted_with": 5787,
+      "share_of_tweet_volume": 0.0103
+    },
+    {
+      "brand": "sainsburys",
+      "total_tweets": 19466,
+      "inbound_tweets": 0,
+      "outbound_tweets": 19466,
+      "tweets_responding_to_customer_tweets": 7428,
+      "unique_customers_interacted_with": 4914,
+      "share_of_tweet_volume": 0.0069
+    },
+    {
+      "brand": "AskPlayStation",
+      "total_tweets": 19098,
+      "inbound_tweets": 0,
+      "outbound_tweets": 19098,
+      "tweets_responding_to_customer_tweets": 6811,
+      "unique_customers_interacted_with": 4731,
+      "share_of_tweet_volume": 0.0068
+    },
+    {
+      "brand": "comcastcares",
+      "total_tweets": 33031,
+      "inbound_tweets": 0,
+      "outbound_tweets": 33031,
+      "tweets_responding_to_customer_tweets": 6786,
+      "unique_customers_interacted_with": 4912,
+      "share_of_tweet_volume": 0.0117
+    },
+    {
+      "brand": "hulu_support",
+      "total_tweets": 21872,
+      "inbound_tweets": 0,
+      "outbound_tweets": 21872,
+      "tweets_responding_to_customer_tweets": 6755,
+      "unique_customers_interacted_with": 4582,
+      "share_of_tweet_volume": 0.0078
+    },
+    {
+      "brand": "Ask_Spectrum",
+      "total_tweets": 25860,
+      "inbound_tweets": 0,
+      "outbound_tweets": 25860,
+      "tweets_responding_to_customer_tweets": 6625,
+      "unique_customers_interacted_with": 4481,
+      "share_of_tweet_volume": 0.0092
+    },
+    {
+      "brand": "O2",
+      "total_tweets": 16212,
+      "inbound_tweets": 0,
+      "outbound_tweets": 16212,
+      "tweets_responding_to_customer_tweets": 6350,
+      "unique_customers_interacted_with": 3723,
+      "share_of_tweet_volume": 0.0058
+    },
+    {
+      "brand": "sprintcare",
+      "total_tweets": 22381,
+      "inbound_tweets": 0,
+      "outbound_tweets": 22381,
+      "tweets_responding_to_customer_tweets": 6192,
+      "unique_customers_interacted_with": 4091,
+      "share_of_tweet_volume": 0.008
+    },
+    {
+      "brand": "Safaricom_Care",
+      "total_tweets": 16077,
+      "inbound_tweets": 0,
+      "outbound_tweets": 16077,
+      "tweets_responding_to_customer_tweets": 5605,
+      "unique_customers_interacted_with": 3307,
+      "share_of_tweet_volume": 0.0057
+    },
+    {
+      "brand": "ATVIAssist",
+      "total_tweets": 17650,
+      "inbound_tweets": 0,
+      "outbound_tweets": 17650,
+      "tweets_responding_to_customer_tweets": 5603,
+      "unique_customers_interacted_with": 3805,
+      "share_of_tweet_volume": 0.0063
+    },
+    {
+      "brand": "idea_cares",
+      "total_tweets": 15724,
+      "inbound_tweets": 0,
+      "outbound_tweets": 15724,
+      "tweets_responding_to_customer_tweets": 5591,
+      "unique_customers_interacted_with": 2904,
+      "share_of_tweet_volume": 0.0056
+    },
+    {
+      "brand": "ChipotleTweets",
+      "total_tweets": 18749,
+      "inbound_tweets": 0,
+      "outbound_tweets": 18749,
+      "tweets_responding_to_customer_tweets": 5562,
+      "unique_customers_interacted_with": 4390,
+      "share_of_tweet_volume": 0.0067
+    },
+    {
+      "brand": "SW_Help",
+      "total_tweets": 12231,
+      "inbound_tweets": 0,
+      "outbound_tweets": 12231,
+      "tweets_responding_to_customer_tweets": 5263,
+      "unique_customers_interacted_with": 2711,
+      "share_of_tweet_volume": 0.0043
+    },
+    {
+      "brand": "ArgosHelpers",
+      "total_tweets": 12174,
+      "inbound_tweets": 0,
+      "outbound_tweets": 12174,
+      "tweets_responding_to_customer_tweets": 5173,
+      "unique_customers_interacted_with": 3221,
+      "share_of_tweet_volume": 0.0043
+    },
+    {
+      "brand": "MicrosoftHelps",
+      "total_tweets": 11304,
+      "inbound_tweets": 0,
+      "outbound_tweets": 11304,
+      "tweets_responding_to_customer_tweets": 4520,
+      "unique_customers_interacted_with": 2401,
+      "share_of_tweet_volume": 0.004
+    },
+    {
+      "brand": "UPSHelp",
+      "total_tweets": 17817,
+      "inbound_tweets": 0,
+      "outbound_tweets": 17817,
+      "tweets_responding_to_customer_tweets": 4255,
+      "unique_customers_interacted_with": 3467,
+      "share_of_tweet_volume": 0.0063
+    },
+    {
+      "brand": "AirAsiaSupport",
+      "total_tweets": 12829,
+      "inbound_tweets": 0,
+      "outbound_tweets": 12829,
+      "tweets_responding_to_customer_tweets": 3884,
+      "unique_customers_interacted_with": 2183,
+      "share_of_tweet_volume": 0.0046
+    },
+    {
+      "brand": "AskAmex",
+      "total_tweets": 11358,
+      "inbound_tweets": 0,
+      "outbound_tweets": 11358,
+      "tweets_responding_to_customer_tweets": 3665,
+      "unique_customers_interacted_with": 1997,
+      "share_of_tweet_volume": 0.004
+    },
+    {
+      "brand": "AskTarget",
+      "total_tweets": 13218,
+      "inbound_tweets": 0,
+      "outbound_tweets": 13218,
+      "tweets_responding_to_customer_tweets": 3585,
+      "unique_customers_interacted_with": 3072,
+      "share_of_tweet_volume": 0.0047
+    },
+    {
+      "brand": "AdobeCare",
+      "total_tweets": 9917,
+      "inbound_tweets": 0,
+      "outbound_tweets": 9917,
+      "tweets_responding_to_customer_tweets": 3572,
+      "unique_customers_interacted_with": 1950,
+      "share_of_tweet_volume": 0.0035
+    },
+    {
+      "brand": "marksandspencer",
+      "total_tweets": 11504,
+      "inbound_tweets": 0,
+      "outbound_tweets": 11504,
+      "tweets_responding_to_customer_tweets": 3428,
+      "unique_customers_interacted_with": 2544,
+      "share_of_tweet_volume": 0.0041
+    },
+    {
+      "brand": "AskeBay",
+      "total_tweets": 9686,
+      "inbound_tweets": 0,
+      "outbound_tweets": 9686,
+      "tweets_responding_to_customer_tweets": 3140,
+      "unique_customers_interacted_with": 1869,
+      "share_of_tweet_volume": 0.0034
+    },
+    {
+      "brand": "Morrisons",
+      "total_tweets": 10126,
+      "inbound_tweets": 0,
+      "outbound_tweets": 10126,
+      "tweets_responding_to_customer_tweets": 3138,
+      "unique_customers_interacted_with": 2208,
+      "share_of_tweet_volume": 0.0036
+    },
+    {
+      "brand": "LondonMidland",
+      "total_tweets": 6822,
+      "inbound_tweets": 0,
+      "outbound_tweets": 6822,
+      "tweets_responding_to_customer_tweets": 3080,
+      "unique_customers_interacted_with": 1694,
+      "share_of_tweet_volume": 0.0024
+    },
+    {
+      "brand": "JetBlue",
+      "total_tweets": 8020,
+      "inbound_tweets": 0,
+      "outbound_tweets": 8020,
+      "tweets_responding_to_customer_tweets": 2774,
+      "unique_customers_interacted_with": 1959,
+      "share_of_tweet_volume": 0.0029
+    },
+    {
+      "brand": "BofA_Help",
+      "total_tweets": 12683,
+      "inbound_tweets": 0,
+      "outbound_tweets": 12683,
+      "tweets_responding_to_customer_tweets": 2697,
+      "unique_customers_interacted_with": 1956,
+      "share_of_tweet_volume": 0.0045
+    },
+    {
+      "brand": "GloCare",
+      "total_tweets": 6308,
+      "inbound_tweets": 0,
+      "outbound_tweets": 6308,
+      "tweets_responding_to_customer_tweets": 2608,
+      "unique_customers_interacted_with": 1284,
+      "share_of_tweet_volume": 0.0022
+    },
+    {
+      "brand": "AzureSupport",
+      "total_tweets": 7565,
+      "inbound_tweets": 0,
+      "outbound_tweets": 7565,
+      "tweets_responding_to_customer_tweets": 2603,
+      "unique_customers_interacted_with": 1282,
+      "share_of_tweet_volume": 0.0027
+    },
+    {
+      "brand": "CoxHelp",
+      "total_tweets": 7861,
+      "inbound_tweets": 0,
+      "outbound_tweets": 7861,
+      "tweets_responding_to_customer_tweets": 2536,
+      "unique_customers_interacted_with": 1609,
+      "share_of_tweet_volume": 0.0028
+    },
+    {
+      "brand": "AirbnbHelp",
+      "total_tweets": 8875,
+      "inbound_tweets": 0,
+      "outbound_tweets": 8875,
+      "tweets_responding_to_customer_tweets": 2532,
+      "unique_customers_interacted_with": 1720,
+      "share_of_tweet_volume": 0.0032
+    },
+    {
+      "brand": "AskLyft",
+      "total_tweets": 11809,
+      "inbound_tweets": 0,
+      "outbound_tweets": 11809,
+      "tweets_responding_to_customer_tweets": 2281,
+      "unique_customers_interacted_with": 1885,
+      "share_of_tweet_volume": 0.0042
+    },
+    {
+      "brand": "AskPayPal",
+      "total_tweets": 11298,
+      "inbound_tweets": 0,
+      "outbound_tweets": 11298,
+      "tweets_responding_to_customer_tweets": 2234,
+      "unique_customers_interacted_with": 1769,
+      "share_of_tweet_volume": 0.004
+    },
+    {
+      "brand": "AlaskaAir",
+      "total_tweets": 7478,
+      "inbound_tweets": 0,
+      "outbound_tweets": 7478,
+      "tweets_responding_to_customer_tweets": 2164,
+      "unique_customers_interacted_with": 1514,
+      "share_of_tweet_volume": 0.0027
+    },
+    {
+      "brand": "nationalrailenq",
+      "total_tweets": 4444,
+      "inbound_tweets": 0,
+      "outbound_tweets": 4444,
+      "tweets_responding_to_customer_tweets": 2097,
+      "unique_customers_interacted_with": 1298,
+      "share_of_tweet_volume": 0.0016
+    },
+    {
+      "brand": "VirginAtlantic",
+      "total_tweets": 4318,
+      "inbound_tweets": 0,
+      "outbound_tweets": 4318,
+      "tweets_responding_to_customer_tweets": 1963,
+      "unique_customers_interacted_with": 1283,
+      "share_of_tweet_volume": 0.0015
+    },
+    {
+      "brand": "airtel_care",
+      "total_tweets": 9881,
+      "inbound_tweets": 0,
+      "outbound_tweets": 9881,
+      "tweets_responding_to_customer_tweets": 1907,
+      "unique_customers_interacted_with": 1017,
+      "share_of_tweet_volume": 0.0035
+    },
+    {
+      "brand": "AldiUK",
+      "total_tweets": 8114,
+      "inbound_tweets": 0,
+      "outbound_tweets": 8114,
+      "tweets_responding_to_customer_tweets": 1822,
+      "unique_customers_interacted_with": 1644,
+      "share_of_tweet_volume": 0.0029
+    },
+    {
+      "brand": "NikeSupport",
+      "total_tweets": 3468,
+      "inbound_tweets": 0,
+      "outbound_tweets": 3468,
+      "tweets_responding_to_customer_tweets": 1773,
+      "unique_customers_interacted_with": 850,
+      "share_of_tweet_volume": 0.0012
+    },
+    {
+      "brand": "GreggsOfficial",
+      "total_tweets": 4522,
+      "inbound_tweets": 0,
+      "outbound_tweets": 4522,
+      "tweets_responding_to_customer_tweets": 1708,
+      "unique_customers_interacted_with": 1376,
+      "share_of_tweet_volume": 0.0016
+    },
+    {
+      "brand": "ChaseSupport",
+      "total_tweets": 8811,
+      "inbound_tweets": 0,
+      "outbound_tweets": 8811,
+      "tweets_responding_to_customer_tweets": 1502,
+      "unique_customers_interacted_with": 1196,
+      "share_of_tweet_volume": 0.0031
+    },
+    {
+      "brand": "Ask_WellsFargo",
+      "total_tweets": 7578,
+      "inbound_tweets": 0,
+      "outbound_tweets": 7578,
+      "tweets_responding_to_customer_tweets": 1405,
+      "unique_customers_interacted_with": 1204,
+      "share_of_tweet_volume": 0.0027
+    },
+    {
+      "brand": "TacoBellTeam",
+      "total_tweets": 4082,
+      "inbound_tweets": 0,
+      "outbound_tweets": 4082,
+      "tweets_responding_to_customer_tweets": 1317,
+      "unique_customers_interacted_with": 1020,
+      "share_of_tweet_volume": 0.0015
+    },
+    {
+      "brand": "DropboxSupport",
+      "total_tweets": 5954,
+      "inbound_tweets": 0,
+      "outbound_tweets": 5954,
+      "tweets_responding_to_customer_tweets": 1300,
+      "unique_customers_interacted_with": 914,
+      "share_of_tweet_volume": 0.0021
+    },
+    {
+      "brand": "McDonalds",
+      "total_tweets": 8478,
+      "inbound_tweets": 0,
+      "outbound_tweets": 8478,
+      "tweets_responding_to_customer_tweets": 1182,
+      "unique_customers_interacted_with": 1153,
+      "share_of_tweet_volume": 0.003
+    },
+    {
+      "brand": "DellCares",
+      "total_tweets": 5336,
+      "inbound_tweets": 0,
+      "outbound_tweets": 5336,
+      "tweets_responding_to_customer_tweets": 1070,
+      "unique_customers_interacted_with": 645,
+      "share_of_tweet_volume": 0.0019
+    },
+    {
+      "brand": "AskPapaJohns",
+      "total_tweets": 3908,
+      "inbound_tweets": 0,
+      "outbound_tweets": 3908,
+      "tweets_responding_to_customer_tweets": 1046,
+      "unique_customers_interacted_with": 840,
+      "share_of_tweet_volume": 0.0014
+    },
+    {
+      "brand": "CenturyLinkHelp",
+      "total_tweets": 3801,
+      "inbound_tweets": 0,
+      "outbound_tweets": 3801,
+      "tweets_responding_to_customer_tweets": 933,
+      "unique_customers_interacted_with": 749,
+      "share_of_tweet_volume": 0.0014
+    },
+    {
+      "brand": "VirginAmerica",
+      "total_tweets": 2815,
+      "inbound_tweets": 0,
+      "outbound_tweets": 2815,
+      "tweets_responding_to_customer_tweets": 882,
+      "unique_customers_interacted_with": 635,
+      "share_of_tweet_volume": 0.001
+    },
+    {
+      "brand": "AskCiti",
+      "total_tweets": 4081,
+      "inbound_tweets": 0,
+      "outbound_tweets": 4081,
+      "tweets_responding_to_customer_tweets": 872,
+      "unique_customers_interacted_with": 651,
+      "share_of_tweet_volume": 0.0015
+    },
+    {
+      "brand": "NortonSupport",
+      "total_tweets": 2011,
+      "inbound_tweets": 0,
+      "outbound_tweets": 2011,
+      "tweets_responding_to_customer_tweets": 805,
+      "unique_customers_interacted_with": 352,
+      "share_of_tweet_volume": 0.0007
+    },
+    {
+      "brand": "Postmates_Help",
+      "total_tweets": 3346,
+      "inbound_tweets": 0,
+      "outbound_tweets": 3346,
+      "tweets_responding_to_customer_tweets": 753,
+      "unique_customers_interacted_with": 626,
+      "share_of_tweet_volume": 0.0012
+    },
+    {
+      "brand": "HPSupport",
+      "total_tweets": 7200,
+      "inbound_tweets": 0,
+      "outbound_tweets": 7200,
+      "tweets_responding_to_customer_tweets": 705,
+      "unique_customers_interacted_with": 519,
+      "share_of_tweet_volume": 0.0026
+    },
+    {
+      "brand": "AsurionCares",
+      "total_tweets": 1898,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1898,
+      "tweets_responding_to_customer_tweets": 669,
+      "unique_customers_interacted_with": 376,
+      "share_of_tweet_volume": 0.0007
+    },
+    {
+      "brand": "ATT",
+      "total_tweets": 2790,
+      "inbound_tweets": 0,
+      "outbound_tweets": 2790,
+      "tweets_responding_to_customer_tweets": 632,
+      "unique_customers_interacted_with": 543,
+      "share_of_tweet_volume": 0.001
+    },
+    {
+      "brand": "IHGService",
+      "total_tweets": 2643,
+      "inbound_tweets": 0,
+      "outbound_tweets": 2643,
+      "tweets_responding_to_customer_tweets": 631,
+      "unique_customers_interacted_with": 488,
+      "share_of_tweet_volume": 0.0009
+    },
+    {
+      "brand": "USCellularCares",
+      "total_tweets": 1177,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1177,
+      "tweets_responding_to_customer_tweets": 626,
+      "unique_customers_interacted_with": 275,
+      "share_of_tweet_volume": 0.0004
+    },
+    {
+      "brand": "TfL",
+      "total_tweets": 2243,
+      "inbound_tweets": 0,
+      "outbound_tweets": 2243,
+      "tweets_responding_to_customer_tweets": 598,
+      "unique_customers_interacted_with": 499,
+      "share_of_tweet_volume": 0.0008
+    },
+    {
+      "brand": "GoDaddyHelp",
+      "total_tweets": 1965,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1965,
+      "tweets_responding_to_customer_tweets": 569,
+      "unique_customers_interacted_with": 438,
+      "share_of_tweet_volume": 0.0007
+    },
+    {
+      "brand": "VMUcare",
+      "total_tweets": 1381,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1381,
+      "tweets_responding_to_customer_tweets": 482,
+      "unique_customers_interacted_with": 295,
+      "share_of_tweet_volume": 0.0005
+    },
+    {
+      "brand": "AskVirginMoney",
+      "total_tweets": 914,
+      "inbound_tweets": 0,
+      "outbound_tweets": 914,
+      "tweets_responding_to_customer_tweets": 482,
+      "unique_customers_interacted_with": 227,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "askpanera",
+      "total_tweets": 2153,
+      "inbound_tweets": 0,
+      "outbound_tweets": 2153,
+      "tweets_responding_to_customer_tweets": 471,
+      "unique_customers_interacted_with": 434,
+      "share_of_tweet_volume": 0.0008
+    },
+    {
+      "brand": "KFC_UKI_Help",
+      "total_tweets": 2103,
+      "inbound_tweets": 0,
+      "outbound_tweets": 2103,
+      "tweets_responding_to_customer_tweets": 471,
+      "unique_customers_interacted_with": 449,
+      "share_of_tweet_volume": 0.0007
+    },
+    {
+      "brand": "ArbysCares",
+      "total_tweets": 1904,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1904,
+      "tweets_responding_to_customer_tweets": 470,
+      "unique_customers_interacted_with": 421,
+      "share_of_tweet_volume": 0.0007
+    },
+    {
+      "brand": "sizehelpteam",
+      "total_tweets": 1482,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1482,
+      "tweets_responding_to_customer_tweets": 452,
+      "unique_customers_interacted_with": 380,
+      "share_of_tweet_volume": 0.0005
+    },
+    {
+      "brand": "SCsupport",
+      "total_tweets": 1329,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1329,
+      "tweets_responding_to_customer_tweets": 438,
+      "unique_customers_interacted_with": 318,
+      "share_of_tweet_volume": 0.0005
+    },
+    {
+      "brand": "GooglePlayMusic",
+      "total_tweets": 804,
+      "inbound_tweets": 0,
+      "outbound_tweets": 804,
+      "tweets_responding_to_customer_tweets": 369,
+      "unique_customers_interacted_with": 257,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "Walmart",
+      "total_tweets": 2643,
+      "inbound_tweets": 0,
+      "outbound_tweets": 2643,
+      "tweets_responding_to_customer_tweets": 351,
+      "unique_customers_interacted_with": 309,
+      "share_of_tweet_volume": 0.0009
+    },
+    {
+      "brand": "AskRBC",
+      "total_tweets": 1011,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1011,
+      "tweets_responding_to_customer_tweets": 345,
+      "unique_customers_interacted_with": 286,
+      "share_of_tweet_volume": 0.0004
+    },
+    {
+      "brand": "Kimpton",
+      "total_tweets": 1339,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1339,
+      "tweets_responding_to_customer_tweets": 336,
+      "unique_customers_interacted_with": 218,
+      "share_of_tweet_volume": 0.0005
+    },
+    {
+      "brand": "YahooCare",
+      "total_tweets": 906,
+      "inbound_tweets": 0,
+      "outbound_tweets": 906,
+      "tweets_responding_to_customer_tweets": 335,
+      "unique_customers_interacted_with": 244,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "OPPOCareIN",
+      "total_tweets": 879,
+      "inbound_tweets": 0,
+      "outbound_tweets": 879,
+      "tweets_responding_to_customer_tweets": 314,
+      "unique_customers_interacted_with": 190,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "AWSSupport",
+      "total_tweets": 1035,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1035,
+      "tweets_responding_to_customer_tweets": 310,
+      "unique_customers_interacted_with": 272,
+      "share_of_tweet_volume": 0.0004
+    },
+    {
+      "brand": "AskTigogh",
+      "total_tweets": 715,
+      "inbound_tweets": 0,
+      "outbound_tweets": 715,
+      "tweets_responding_to_customer_tweets": 307,
+      "unique_customers_interacted_with": 140,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "NeweggService",
+      "total_tweets": 1079,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1079,
+      "tweets_responding_to_customer_tweets": 301,
+      "unique_customers_interacted_with": 236,
+      "share_of_tweet_volume": 0.0004
+    },
+    {
+      "brand": "PandoraSupport",
+      "total_tweets": 1043,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1043,
+      "tweets_responding_to_customer_tweets": 294,
+      "unique_customers_interacted_with": 243,
+      "share_of_tweet_volume": 0.0004
+    },
+    {
+      "brand": "DoorDash_Help",
+      "total_tweets": 1581,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1581,
+      "tweets_responding_to_customer_tweets": 291,
+      "unique_customers_interacted_with": 244,
+      "share_of_tweet_volume": 0.0006
+    },
+    {
+      "brand": "MTNC_Care",
+      "total_tweets": 784,
+      "inbound_tweets": 0,
+      "outbound_tweets": 784,
+      "tweets_responding_to_customer_tweets": 268,
+      "unique_customers_interacted_with": 167,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "PearsonSupport",
+      "total_tweets": 841,
+      "inbound_tweets": 0,
+      "outbound_tweets": 841,
+      "tweets_responding_to_customer_tweets": 256,
+      "unique_customers_interacted_with": 174,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "BoostCare",
+      "total_tweets": 907,
+      "inbound_tweets": 0,
+      "outbound_tweets": 907,
+      "tweets_responding_to_customer_tweets": 249,
+      "unique_customers_interacted_with": 176,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "asksalesforce",
+      "total_tweets": 710,
+      "inbound_tweets": 0,
+      "outbound_tweets": 710,
+      "tweets_responding_to_customer_tweets": 249,
+      "unique_customers_interacted_with": 162,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "AskSeagate",
+      "total_tweets": 639,
+      "inbound_tweets": 0,
+      "outbound_tweets": 639,
+      "tweets_responding_to_customer_tweets": 222,
+      "unique_customers_interacted_with": 142,
+      "share_of_tweet_volume": 0.0002
+    },
+    {
+      "brand": "KeyBank_Help",
+      "total_tweets": 555,
+      "inbound_tweets": 0,
+      "outbound_tweets": 555,
+      "tweets_responding_to_customer_tweets": 193,
+      "unique_customers_interacted_with": 131,
+      "share_of_tweet_volume": 0.0002
+    },
+    {
+      "brand": "DunkinDonuts",
+      "total_tweets": 1290,
+      "inbound_tweets": 0,
+      "outbound_tweets": 1290,
+      "tweets_responding_to_customer_tweets": 165,
+      "unique_customers_interacted_with": 148,
+      "share_of_tweet_volume": 0.0005
+    },
+    {
+      "brand": "MOO",
+      "total_tweets": 630,
+      "inbound_tweets": 0,
+      "outbound_tweets": 630,
+      "tweets_responding_to_customer_tweets": 154,
+      "unique_customers_interacted_with": 126,
+      "share_of_tweet_volume": 0.0002
+    },
+    {
+      "brand": "HiltonHelp",
+      "total_tweets": 833,
+      "inbound_tweets": 0,
+      "outbound_tweets": 833,
+      "tweets_responding_to_customer_tweets": 153,
+      "unique_customers_interacted_with": 125,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "askvisa",
+      "total_tweets": 709,
+      "inbound_tweets": 0,
+      "outbound_tweets": 709,
+      "tweets_responding_to_customer_tweets": 119,
+      "unique_customers_interacted_with": 106,
+      "share_of_tweet_volume": 0.0003
+    },
+    {
+      "brand": "ask_progressive",
+      "total_tweets": 612,
+      "inbound_tweets": 0,
+      "outbound_tweets": 612,
+      "tweets_responding_to_customer_tweets": 114,
+      "unique_customers_interacted_with": 104,
+      "share_of_tweet_volume": 0.0002
+    },
+    {
+      "brand": "AskRobinhood",
+      "total_tweets": 432,
+      "inbound_tweets": 0,
+      "outbound_tweets": 432,
+      "tweets_responding_to_customer_tweets": 112,
+      "unique_customers_interacted_with": 98,
+      "share_of_tweet_volume": 0.0002
+    }
+  ]
+}

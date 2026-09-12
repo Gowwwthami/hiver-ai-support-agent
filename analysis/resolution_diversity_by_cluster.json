@@ -1,0 +1,1204 @@
+[
+  {
+    "brand": "AmazonHelp",
+    "n_problem_response_pairs": 82556,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.1964,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 7135,
+        "type_dist": {
+          "OTHER": 0.9858444288717589,
+          "DM_INFO": 0.013314646110721794,
+          "ACK": 0.0002803083391730904,
+          "STATUS_UPDATE": 0.0001401541695865452,
+          "APOLOGY_ONLY": 0.0001401541695865452,
+          "SELF_SERVICE": 0.0001401541695865452,
+          "ESCALATION": 0.0001401541695865452
+        },
+        "top2_last_response_templates": [
+          " (31)",
+          "votre service (27)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 3873,
+        "type_dist": {
+          "OTHER": 0.9987090111025045,
+          "DM_INFO": 0.000774593338497289,
+          "STATUS_UPDATE": 0.0002581977794990963,
+          "SELF_SERVICE": 0.0002581977794990963
+        },
+        "top2_last_response_templates": [
+          "et (362)",
+          "tn (328)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 52699,
+        "type_dist": {
+          "OTHER": 0.40797738097497105,
+          "APOLOGY_ONLY": 0.21632289037742652,
+          "DM_INFO": 0.16514544868024061,
+          "ACK": 0.09110229795631795,
+          "SELF_SERVICE": 0.03686976982485436,
+          "STATUS_UPDATE": 0.036717964287747394,
+          "ESCALATION": 0.01882388660126378,
+          "COMPENSATION": 0.01525645647925008,
+          "FIXED": 0.011783904817928233
+        },
+        "top2_last_response_templates": [
+          "sorry for the hassle please report this to our support team here and we'll check this hn (88)",
+          "sorry to hear that get in touch here and we'll be happy to help rs (46)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 13250,
+        "type_dist": {
+          "OTHER": 0.8171320754716981,
+          "APOLOGY_ONLY": 0.06324528301886792,
+          "DM_INFO": 0.044075471698113204,
+          "ACK": 0.03977358490566038,
+          "SELF_SERVICE": 0.011547169811320755,
+          "ESCALATION": 0.010566037735849057,
+          "STATUS_UPDATE": 0.006415094339622641,
+          "COMPENSATION": 0.0039245283018867925,
+          "FIXED": 0.003320754716981132
+        },
+        "top2_last_response_templates": [
+          "et (238)",
+          "tn (225)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 5599,
+        "type_dist": {
+          "OTHER": 0.40525093766744064,
+          "APOLOGY_ONLY": 0.2821932487944276,
+          "DM_INFO": 0.11627076263618503,
+          "ACK": 0.1014466869083765,
+          "STATUS_UPDATE": 0.023932845150919806,
+          "SELF_SERVICE": 0.02268262189676728,
+          "FIXED": 0.01786033220217896,
+          "ESCALATION": 0.017503125558135383,
+          "COMPENSATION": 0.012859439185568852
+        },
+        "top2_last_response_templates": [
+          "sorry for the hassle please report this to our support team here and we'll check this hn (16)",
+          "we would like to help you please share your details with us here we'll get in touch shortly cb (16)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "AppleSupport",
+    "n_problem_response_pairs": 80717,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0515,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 12416,
+        "type_dist": {
+          "DM_INFO": 0.7648195876288659,
+          "OTHER": 0.14698775773195877,
+          "ACK": 0.0352770618556701,
+          "FIXED": 0.03278028350515464,
+          "SELF_SERVICE": 0.018605025773195876,
+          "ESCALATION": 0.0009664948453608248,
+          "STATUS_UPDATE": 0.00032216494845360824,
+          "APOLOGY_ONLY": 0.0002416237113402062
+        },
+        "top2_last_response_templates": [
+          "here s what you can do to work around the issue until it s fixed in a future software update (310)",
+          "thanks for reaching out we're here to help dm us so we can look into this further with you (84)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 6342,
+        "type_dist": {
+          "DM_INFO": 0.5632292652160202,
+          "FIXED": 0.217281614632608,
+          "OTHER": 0.12787764112267425,
+          "SELF_SERVICE": 0.04651529485966572,
+          "ACK": 0.042100283822138124,
+          "ESCALATION": 0.0017344686218858404,
+          "STATUS_UPDATE": 0.0011037527593818985,
+          "COMPENSATION": 0.0001576789656259855
+        },
+        "top2_last_response_templates": [
+          "here s what you can do to work around the issue until it s fixed in a future software update (1237)",
+          "thanks for reaching out we have a workaround for this here dm us if you still need help (174)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 6966,
+        "type_dist": {
+          "DM_INFO": 0.4602354292276773,
+          "FIXED": 0.32227964398507036,
+          "OTHER": 0.12891185759402812,
+          "SELF_SERVICE": 0.04909560723514212,
+          "ACK": 0.03832902670111973,
+          "ESCALATION": 0.0010048808498420902,
+          "APOLOGY_ONLY": 0.0001435544071202986
+        },
+        "top2_last_response_templates": [
+          "here s what you can do to work around the issue until it s fixed in a future software update (2044)",
+          "thanks for reaching out we have a workaround for this here dm us if you still need help (254)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 17006,
+        "type_dist": {
+          "DM_INFO": 0.7671998118311184,
+          "OTHER": 0.16699988239444902,
+          "ACK": 0.034576031988709864,
+          "SELF_SERVICE": 0.018228860402210983,
+          "FIXED": 0.011525343996236623,
+          "ESCALATION": 0.000646830530401035,
+          "APOLOGY_ONLY": 0.0004704222039280254,
+          "STATUS_UPDATE": 0.0003528166529460191
+        },
+        "top2_last_response_templates": [
+          "we offer support via twitter in english get help in spanish here or join (535)",
+          "we offer support via twitter in english contact us for help in your preferred language here (497)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 37987,
+        "type_dist": {
+          "DM_INFO": 0.6509595387895859,
+          "OTHER": 0.18440519124963803,
+          "ACK": 0.06320583357464396,
+          "FIXED": 0.0621528417616553,
+          "SELF_SERVICE": 0.033406165267065045,
+          "STATUS_UPDATE": 0.0028167530997446496,
+          "ESCALATION": 0.0018427356727301445,
+          "APOLOGY_ONLY": 0.0006317950877931924,
+          "COMPENSATION": 0.0005791454971437597
+        },
+        "top2_last_response_templates": [
+          "here s what you can do to work around the issue until it s fixed in a future software update (2012)",
+          "we offer support via twitter in english contact us for help in your preferred language here (370)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "Uber_Support",
+    "n_problem_response_pairs": 41923,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0062,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 10878,
+        "type_dist": {
+          "DM_INFO": 0.8198198198198198,
+          "OTHER": 0.07115278543849972,
+          "ACK": 0.03861003861003861,
+          "SELF_SERVICE": 0.03337010479867623,
+          "APOLOGY_ONLY": 0.02592388306674021,
+          "ESCALATION": 0.0061592204449347305,
+          "FIXED": 0.0026659312373598087,
+          "STATUS_UPDATE": 0.0011950726236440521,
+          "COMPENSATION": 0.0011031439602868175
+        },
+        "top2_last_response_templates": [
+          "here to help send us a note at so our team can connect (623)",
+          "we're sorry to hear this was your experience contact us via and we'll be in touch (253)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 4533,
+        "type_dist": {
+          "DM_INFO": 0.7546878446944628,
+          "OTHER": 0.10544893006838738,
+          "SELF_SERVICE": 0.05735715861460401,
+          "ACK": 0.05228325612177366,
+          "APOLOGY_ONLY": 0.019413192146481358,
+          "ESCALATION": 0.009044782704610633,
+          "STATUS_UPDATE": 0.0008824178248400617,
+          "FIXED": 0.0006618133686300463,
+          "COMPENSATION": 0.00022060445621001543
+        },
+        "top2_last_response_templates": [
+          "here to help send us a note at so our team can connect (142)",
+          "due to our privacy policy we will have to speak directly to the account holder please have them contact us via (90)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 2834,
+        "type_dist": {
+          "DM_INFO": 0.7808750882145378,
+          "OTHER": 0.08892025405786874,
+          "ACK": 0.05045871559633028,
+          "SELF_SERVICE": 0.04551870148200424,
+          "APOLOGY_ONLY": 0.020465772759350742,
+          "ESCALATION": 0.011291460832745237,
+          "FIXED": 0.0017642907551164433,
+          "COMPENSATION": 0.00035285815102328866,
+          "STATUS_UPDATE": 0.00035285815102328866
+        },
+        "top2_last_response_templates": [
+          "here to help send us a note at so our team can connect (125)",
+          "here to help send us a note here and our team will follow up (56)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 3405,
+        "type_dist": {
+          "DM_INFO": 0.7914831130690162,
+          "OTHER": 0.06784140969162995,
+          "APOLOGY_ONLY": 0.06020558002936858,
+          "SELF_SERVICE": 0.035829662261380325,
+          "ACK": 0.03524229074889868,
+          "ESCALATION": 0.003524229074889868,
+          "STATUS_UPDATE": 0.003524229074889868,
+          "COMPENSATION": 0.0014684287812041115,
+          "FIXED": 0.000881057268722467
+        },
+        "top2_last_response_templates": [
+          "here to help send us a note at so our team can connect (147)",
+          "we're sorry to hear this was your experience contact us via and we'll be in touch (58)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 20273,
+        "type_dist": {
+          "DM_INFO": 0.7099097321560697,
+          "OTHER": 0.11774281063483451,
+          "SELF_SERVICE": 0.06856410003452869,
+          "ACK": 0.053371479307453264,
+          "APOLOGY_ONLY": 0.03911606570315197,
+          "ESCALATION": 0.006264489715384995,
+          "STATUS_UPDATE": 0.0025649879149607854,
+          "FIXED": 0.001973067626892912,
+          "COMPENSATION": 0.000493266906723228
+        },
+        "top2_last_response_templates": [
+          "here to help send us a note at so our team can connect (749)",
+          "hi there please reach out to and fill out the boxes at the bottom so we can get in touch (268)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "SpotifyCares",
+    "n_problem_response_pairs": 28277,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.1467,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 3741,
+        "type_dist": {
+          "DM_INFO": 0.826516974071104,
+          "OTHER": 0.10425020048115477,
+          "SELF_SERVICE": 0.035017375033413525,
+          "ACK": 0.019513499064421277,
+          "APOLOGY_ONLY": 0.006950013365410318,
+          "FIXED": 0.005078855920876771,
+          "COMPENSATION": 0.0016038492381716118,
+          "ESCALATION": 0.0005346164127238706,
+          "STATUS_UPDATE": 0.0005346164127238706
+        },
+        "top2_last_response_templates": [
+          "hi there can you dm us your account's email address or username we'll take a look backstage nq (35)",
+          "hey there can you dm us your account's email address we'll take a look rb (25)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 1353,
+        "type_dist": {
+          "OTHER": 0.6541019955654102,
+          "SELF_SERVICE": 0.1345158906134516,
+          "DM_INFO": 0.1271249076127125,
+          "ACK": 0.06282335550628233,
+          "APOLOGY_ONLY": 0.011825572801182557,
+          "FIXED": 0.005173688100517369,
+          "ESCALATION": 0.004434589800443459
+        },
+        "top2_last_response_templates": [
+          "hey fingers crossed we'll be able to have it soon but there's info about spotify content here df (12)",
+          "hey fingers crossed we'll be able to have it soon but there's info about spotify content here nq (6)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 14380,
+        "type_dist": {
+          "OTHER": 0.5187065368567455,
+          "DM_INFO": 0.2737134909596662,
+          "ACK": 0.1133518776077886,
+          "SELF_SERVICE": 0.03998609179415855,
+          "APOLOGY_ONLY": 0.03247566063977747,
+          "ESCALATION": 0.012934631432545201,
+          "FIXED": 0.006884561891515995,
+          "COMPENSATION": 0.001599443671766342,
+          "STATUS_UPDATE": 0.0003477051460361613
+        },
+        "top2_last_response_templates": [
+          "hey don't worry we're on it our developers are looking into this and we'll keep everyone updated df (29)",
+          "we hear you rest assured your feedback will be passed on to the right folks df (27)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 4351,
+        "type_dist": {
+          "OTHER": 0.5102275339002528,
+          "DM_INFO": 0.28614111698460126,
+          "ACK": 0.11652493679613882,
+          "SELF_SERVICE": 0.03585382670650425,
+          "APOLOGY_ONLY": 0.027809698919788555,
+          "ESCALATION": 0.012181107791312342,
+          "FIXED": 0.007124798896805332,
+          "COMPENSATION": 0.003217651114686279,
+          "STATUS_UPDATE": 0.0009193288899103654
+        },
+        "top2_last_response_templates": [
+          "we hear you rest assured your feedback will be passed on to the right folks df (15)",
+          "we can see how that d be handy thanks for taking the time to reach out your feedback's been noted df (13)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 4452,
+        "type_dist": {
+          "DM_INFO": 0.7812219227313567,
+          "OTHER": 0.15588499550763701,
+          "ACK": 0.01954177897574124,
+          "SELF_SERVICE": 0.014375561545372867,
+          "COMPENSATION": 0.01302785265049416,
+          "APOLOGY_ONLY": 0.007861635220125786,
+          "FIXED": 0.004267744833782569,
+          "ESCALATION": 0.0022461814914645105,
+          "STATUS_UPDATE": 0.0015723270440251573
+        },
+        "top2_last_response_templates": [
+          "hi there can you dm us your account's email address or username we'll take a look backstage nq (82)",
+          "hey there can you dm us your account's email address we'll take a look rb (49)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "AmericanAir",
+    "n_problem_response_pairs": 26386,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0255,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 1297,
+        "type_dist": {
+          "OTHER": 0.40478026214340784,
+          "ACK": 0.2158828064764842,
+          "DM_INFO": 0.14109483423284502,
+          "STATUS_UPDATE": 0.09175019275250579,
+          "APOLOGY_ONLY": 0.08712413261372398,
+          "ESCALATION": 0.04857363145720894,
+          "SELF_SERVICE": 0.004626060138781804,
+          "COMPENSATION": 0.0038550501156515036,
+          "FIXED": 0.002313030069390902
+        },
+        "top2_last_response_templates": [
+          "you bet thanks for flying the friendly skies with us today (2)",
+          "our pleasure (2)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 14000,
+        "type_dist": {
+          "OTHER": 0.3658571428571429,
+          "ACK": 0.16614285714285715,
+          "DM_INFO": 0.16157142857142856,
+          "APOLOGY_ONLY": 0.1402142857142857,
+          "STATUS_UPDATE": 0.11307142857142857,
+          "ESCALATION": 0.03328571428571429,
+          "SELF_SERVICE": 0.011571428571428571,
+          "COMPENSATION": 0.005357142857142857,
+          "FIXED": 0.0029285714285714284
+        },
+        "top2_last_response_templates": [
+          "since american has banned the transport of animal trophies we have no plans to change our policy (26)",
+          "you bet (24)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 5159,
+        "type_dist": {
+          "OTHER": 0.3572397751502229,
+          "DM_INFO": 0.2591587516960651,
+          "APOLOGY_ONLY": 0.122698197325063,
+          "STATUS_UPDATE": 0.0986625314983524,
+          "ACK": 0.09614266330684242,
+          "ESCALATION": 0.03837953091684435,
+          "SELF_SERVICE": 0.012599340957549913,
+          "COMPENSATION": 0.011048652839697616,
+          "FIXED": 0.004070556309362279
+        },
+        "top2_last_response_templates": [
+          "you bet (8)",
+          "you're welcome (7)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 933,
+        "type_dist": {
+          "OTHER": 0.4640943193997856,
+          "ACK": 0.27116827438370844,
+          "DM_INFO": 0.12433011789924973,
+          "STATUS_UPDATE": 0.05466237942122187,
+          "ESCALATION": 0.04608788853161844,
+          "APOLOGY_ONLY": 0.03215434083601286,
+          "SELF_SERVICE": 0.003215434083601286,
+          "COMPENSATION": 0.0021436227224008574,
+          "FIXED": 0.0021436227224008574
+        },
+        "top2_last_response_templates": [
+          "you're very welcome (4)",
+          "we're glad to help where we can (2)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 4997,
+        "type_dist": {
+          "OTHER": 0.3508104862917751,
+          "DM_INFO": 0.2545527316389834,
+          "APOLOGY_ONLY": 0.1482889733840304,
+          "ACK": 0.11346808084850911,
+          "STATUS_UPDATE": 0.07164298579147488,
+          "ESCALATION": 0.03301981188713228,
+          "SELF_SERVICE": 0.013207924754852912,
+          "COMPENSATION": 0.01180708425055033,
+          "FIXED": 0.003201921152691615
+        },
+        "top2_last_response_templates": [
+          "since american has banned the transport of animal trophies we have no plans to change our policy (11)",
+          "you bet (7)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "Delta",
+    "n_problem_response_pairs": 26166,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0499,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 1195,
+        "type_dist": {
+          "ACK": 0.500418410041841,
+          "OTHER": 0.3205020920502092,
+          "STATUS_UPDATE": 0.06861924686192468,
+          "DM_INFO": 0.04602510460251046,
+          "APOLOGY_ONLY": 0.03598326359832636,
+          "ESCALATION": 0.02510460251046025,
+          "FIXED": 0.0016736401673640166,
+          "SELF_SERVICE": 0.0008368200836820083,
+          "COMPENSATION": 0.0008368200836820083
+        },
+        "top2_last_response_templates": [
+          "thanks it is our pleasure to take care of you when you fly with us tdl (11)",
+          "you are very welcome thanks for choosing to fly with us amc (10)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 6291,
+        "type_dist": {
+          "DM_INFO": 0.37291368621840726,
+          "OTHER": 0.3024956286758862,
+          "ACK": 0.12509934827531394,
+          "APOLOGY_ONLY": 0.07566364647909712,
+          "STATUS_UPDATE": 0.065172468605945,
+          "ESCALATION": 0.03735495151804165,
+          "COMPENSATION": 0.011285964075663646,
+          "SELF_SERVICE": 0.009060562708631379,
+          "FIXED": 0.0009537434430138292
+        },
+        "top2_last_response_templates": [
+          " (38)",
+          "oh no so sorry for that could you provide your confirmation number via dm so i can assist tdl (33)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 2703,
+        "type_dist": {
+          "ACK": 0.28967813540510545,
+          "OTHER": 0.27524972253052166,
+          "DM_INFO": 0.15723270440251572,
+          "APOLOGY_ONLY": 0.12134665186829449,
+          "STATUS_UPDATE": 0.0924898261191269,
+          "ESCALATION": 0.05438401775804662,
+          "SELF_SERVICE": 0.0059193488716241215,
+          "COMPENSATION": 0.0029596744358120607,
+          "FIXED": 0.0007399186089530152
+        },
+        "top2_last_response_templates": [
+          " (14)",
+          "oh no so sorry for that could you provide your confirmation number via dm so i can assist tdl (13)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 1361,
+        "type_dist": {
+          "ACK": 0.4041146216017634,
+          "OTHER": 0.30492285084496695,
+          "DM_INFO": 0.10360029390154299,
+          "STATUS_UPDATE": 0.08449669360764143,
+          "APOLOGY_ONLY": 0.060249816311535635,
+          "ESCALATION": 0.03526818515797208,
+          "COMPENSATION": 0.0029390154298310064,
+          "FIXED": 0.0029390154298310064,
+          "SELF_SERVICE": 0.0014695077149155032
+        },
+        "top2_last_response_templates": [
+          "thanks it is our pleasure to take care of you when you fly with us tdl (15)",
+          "our pleasure aly (7)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 14616,
+        "type_dist": {
+          "OTHER": 0.29584017515051997,
+          "ACK": 0.24568965517241378,
+          "DM_INFO": 0.19813902572523262,
+          "APOLOGY_ONLY": 0.11008483853311439,
+          "STATUS_UPDATE": 0.08654898741105638,
+          "ESCALATION": 0.04727695675971538,
+          "SELF_SERVICE": 0.00752599890530925,
+          "COMPENSATION": 0.00663656267104543,
+          "FIXED": 0.002257799671592775
+        },
+        "top2_last_response_templates": [
+          "oh no so sorry for that could you provide your confirmation number via dm so i can assist tdl (69)",
+          " (51)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "Tesco",
+    "n_problem_response_pairs": 16722,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0068,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 2601,
+        "type_dist": {
+          "DM_INFO": 0.3302575932333718,
+          "OTHER": 0.2991157247212611,
+          "ACK": 0.17377931564782775,
+          "COMPENSATION": 0.08765859284890427,
+          "APOLOGY_ONLY": 0.06958861976163014,
+          "ESCALATION": 0.02575932333717801,
+          "FIXED": 0.01114955786236063,
+          "STATUS_UPDATE": 0.0019223375624759708,
+          "SELF_SERVICE": 0.0007689350249903883
+        },
+        "top2_last_response_templates": [
+          "also the supplier code sc would it be ok to pass your details to our supplier ty jayne (11)",
+          "lastly would it be okay to pass your details on to our supplier in case they wish to contact you thanks peter (10)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 8230,
+        "type_dist": {
+          "DM_INFO": 0.3737545565006075,
+          "OTHER": 0.2894289185905225,
+          "ACK": 0.17837181044957473,
+          "APOLOGY_ONLY": 0.08699878493317133,
+          "COMPENSATION": 0.030012150668286757,
+          "ESCALATION": 0.021020656136087484,
+          "FIXED": 0.014823815309842042,
+          "STATUS_UPDATE": 0.003888213851761847,
+          "SELF_SERVICE": 0.001701093560145808
+        },
+        "top2_last_response_templates": [
+          "in order for me to do so can you please dm your full name full address and email address thank you aneurin (56)",
+          "do you give permission to pass your details to the supplier aisha (18)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 962,
+        "type_dist": {
+          "DM_INFO": 0.3887733887733888,
+          "OTHER": 0.29313929313929316,
+          "ACK": 0.18087318087318088,
+          "APOLOGY_ONLY": 0.08316008316008316,
+          "ESCALATION": 0.015592515592515593,
+          "COMPENSATION": 0.014553014553014554,
+          "FIXED": 0.011434511434511435,
+          "STATUS_UPDATE": 0.007276507276507277,
+          "SELF_SERVICE": 0.005197505197505198
+        },
+        "top2_last_response_templates": [
+          "in order for me to do so can you please dm your full name full address and email address thank you aneurin (2)",
+          "currently of the colleagues we employ in the uk fewer than are paid by tuxedo cards each month many thanks sarah (2)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 2460,
+        "type_dist": {
+          "DM_INFO": 0.34308943089430893,
+          "OTHER": 0.3130081300813008,
+          "ACK": 0.18943089430894308,
+          "APOLOGY_ONLY": 0.1008130081300813,
+          "COMPENSATION": 0.02195121951219512,
+          "ESCALATION": 0.013414634146341463,
+          "FIXED": 0.011788617886178862,
+          "STATUS_UPDATE": 0.003658536585365854,
+          "SELF_SERVICE": 0.002845528455284553
+        },
+        "top2_last_response_templates": [
+          "in order for me to do so can you please dm your full name full address and email address thank you aneurin (14)",
+          "do you give permission to pass your details to the supplier aisha (4)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 2469,
+        "type_dist": {
+          "DM_INFO": 0.32280275415147835,
+          "OTHER": 0.3175374645605508,
+          "ACK": 0.17699473471040908,
+          "APOLOGY_ONLY": 0.10044552450384771,
+          "COMPENSATION": 0.03645200486026731,
+          "ESCALATION": 0.019441069258809233,
+          "FIXED": 0.017820980153908466,
+          "STATUS_UPDATE": 0.006075334143377886,
+          "SELF_SERVICE": 0.002430133657351154
+        },
+        "top2_last_response_templates": [
+          "in order for me to do so can you please dm your full name full address and email address thank you aneurin (15)",
+          "if there is anything else i can help you with please let me know kindest regards hannah (11)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "British_Airways",
+    "n_problem_response_pairs": 16452,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0309,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 3931,
+        "type_dist": {
+          "OTHER": 0.283388450775884,
+          "STATUS_UPDATE": 0.2154668023403714,
+          "ACK": 0.1602645637242432,
+          "APOLOGY_ONLY": 0.145764436530145,
+          "DM_INFO": 0.11574662935639786,
+          "ESCALATION": 0.05189519206308827,
+          "SELF_SERVICE": 0.013991350801322818,
+          "COMPENSATION": 0.007631645891630628,
+          "FIXED": 0.005850928516916815
+        },
+        "top2_last_response_templates": [
+          "if you'd like to pass on your 'thanks' to any of the crew you can do so here liz (4)",
+          "you can dm if you need any assistance rebooking your flight l (3)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 3439,
+        "type_dist": {
+          "OTHER": 0.3640593195696423,
+          "DM_INFO": 0.29223611514975284,
+          "APOLOGY_ONLY": 0.1264902587961617,
+          "ACK": 0.08170979936027915,
+          "STATUS_UPDATE": 0.054085489968013954,
+          "ESCALATION": 0.03809246874091306,
+          "FIXED": 0.01802849665600465,
+          "SELF_SERVICE": 0.01395754579819715,
+          "COMPENSATION": 0.011340505961035184
+        },
+        "top2_last_response_templates": [
+          "can you dm us your booking reference full name full address and phone number danih (6)",
+          "details of the changes you wish to make one of the team will be in touch as soon as possible l (4)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 7602,
+        "type_dist": {
+          "OTHER": 0.3443830570902394,
+          "ACK": 0.166798210997106,
+          "APOLOGY_ONLY": 0.15693238621415417,
+          "STATUS_UPDATE": 0.13759536963956853,
+          "DM_INFO": 0.11589055511707445,
+          "ESCALATION": 0.05209155485398579,
+          "COMPENSATION": 0.009208103130755065,
+          "FIXED": 0.009208103130755065,
+          "SELF_SERVICE": 0.007892659826361484
+        },
+        "top2_last_response_templates": [
+          "this method has been used by airlines around the world for a number of years including by our partners american airlines iberia and qatar kieran (15)",
+          "can you dm us your booking reference full address and phone number danih (8)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 920,
+        "type_dist": {
+          "OTHER": 0.3467391304347826,
+          "APOLOGY_ONLY": 0.2358695652173913,
+          "STATUS_UPDATE": 0.1565217391304348,
+          "DM_INFO": 0.10869565217391304,
+          "ACK": 0.07934782608695652,
+          "ESCALATION": 0.04021739130434782,
+          "FIXED": 0.01847826086956522,
+          "COMPENSATION": 0.007608695652173913,
+          "SELF_SERVICE": 0.006521739130434782
+        },
+        "top2_last_response_templates": [
+          "you'll be able to check in when you get to the airport we're sorry for any inconvenience have a great flight liz (5)",
+          "inconvenience caused linda (3)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 560,
+        "type_dist": {
+          "DM_INFO": 0.26964285714285713,
+          "OTHER": 0.25892857142857145,
+          "APOLOGY_ONLY": 0.17142857142857143,
+          "ACK": 0.14642857142857144,
+          "STATUS_UPDATE": 0.06785714285714285,
+          "ESCALATION": 0.05357142857142857,
+          "COMPENSATION": 0.01607142857142857,
+          "SELF_SERVICE": 0.008928571428571428,
+          "FIXED": 0.007142857142857143
+        },
+        "top2_last_response_templates": [
+          "number many thanks lisa (2)",
+          "you can do so here liz (2)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "VirginTrains",
+    "n_problem_response_pairs": 14851,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0103,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 1024,
+        "type_dist": {
+          "OTHER": 0.6015625,
+          "APOLOGY_ONLY": 0.1728515625,
+          "ACK": 0.1044921875,
+          "ESCALATION": 0.0478515625,
+          "COMPENSATION": 0.0380859375,
+          "DM_INFO": 0.017578125,
+          "SELF_SERVICE": 0.0126953125,
+          "STATUS_UPDATE": 0.00390625,
+          "FIXED": 0.0009765625
+        },
+        "top2_last_response_templates": [
+          "this can be escalated further with customer relations via the online complaints link mm (6)",
+          "sorry to hear about your experience while travelling with us this can be escalated further with customer relations via the online complaints link mm (5)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 1413,
+        "type_dist": {
+          "OTHER": 0.6249115357395613,
+          "ACK": 0.13305024769992924,
+          "APOLOGY_ONLY": 0.12101910828025478,
+          "ESCALATION": 0.05307855626326964,
+          "DM_INFO": 0.021939136588818117,
+          "COMPENSATION": 0.01627742392073602,
+          "STATUS_UPDATE": 0.012738853503184714,
+          "SELF_SERVICE": 0.010615711252653927,
+          "FIXED": 0.006369426751592357
+        },
+        "top2_last_response_templates": [
+          "we are awaiting an update as to when the line will reopen live updates can be found via mm (8)",
+          "have a great journey pa (5)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 8119,
+        "type_dist": {
+          "OTHER": 0.5888656238453012,
+          "APOLOGY_ONLY": 0.14065771646754527,
+          "ACK": 0.11553146939278236,
+          "ESCALATION": 0.05111466929424806,
+          "DM_INFO": 0.04705012932627171,
+          "COMPENSATION": 0.024387239807858112,
+          "STATUS_UPDATE": 0.01638132774972287,
+          "SELF_SERVICE": 0.011700948392659194,
+          "FIXED": 0.0043108757236112825
+        },
+        "top2_last_response_templates": [
+          " (30)",
+          "this is one for mm (21)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 2162,
+        "type_dist": {
+          "OTHER": 0.6234967622571693,
+          "APOLOGY_ONLY": 0.12025901942645699,
+          "ACK": 0.11008325624421832,
+          "DM_INFO": 0.05550416281221091,
+          "ESCALATION": 0.04070305272895467,
+          "COMPENSATION": 0.01757631822386679,
+          "STATUS_UPDATE": 0.014801110083256245,
+          "SELF_SERVICE": 0.01156336725254394,
+          "FIXED": 0.006012950971322849
+        },
+        "top2_last_response_templates": [
+          "mm (6)",
+          "you can write in via pa (5)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 2133,
+        "type_dist": {
+          "OTHER": 0.6230661040787623,
+          "APOLOGY_ONLY": 0.1350210970464135,
+          "ACK": 0.07172995780590717,
+          "ESCALATION": 0.07032348804500703,
+          "STATUS_UPDATE": 0.048288795124238164,
+          "COMPENSATION": 0.02437880918893577,
+          "SELF_SERVICE": 0.012658227848101266,
+          "DM_INFO": 0.011251758087201125,
+          "FIXED": 0.0032817627754336614
+        },
+        "top2_last_response_templates": [
+          "we don't have an update on this service at the moment live updates can be found via mm (10)",
+          "some lines have now reopened to from london euston delays are expected until the end of service mm (10)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "XboxSupport",
+    "n_problem_response_pairs": 13435,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.018,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 2211,
+        "type_dist": {
+          "OTHER": 0.5187697874265038,
+          "DM_INFO": 0.27589326096788785,
+          "ACK": 0.08367254635911352,
+          "SELF_SERVICE": 0.0773405698778833,
+          "APOLOGY_ONLY": 0.017186793306196293,
+          "FIXED": 0.012663952962460425,
+          "ESCALATION": 0.0067842605156037995,
+          "STATUS_UPDATE": 0.006331976481230212,
+          "COMPENSATION": 0.0013568521031207597
+        },
+        "top2_last_response_templates": [
+          "are having along with your gamertag please include verbatims of any error you are seeing xs (48)",
+          "we'd be happy to help but we could use more info could you follow amp dm with your gamertag amp some details ez (48)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 8813,
+        "type_dist": {
+          "OTHER": 0.47747645523658233,
+          "DM_INFO": 0.32599568818790425,
+          "ACK": 0.08044933620787473,
+          "SELF_SERVICE": 0.06547146261205038,
+          "FIXED": 0.017474185861795076,
+          "APOLOGY_ONLY": 0.01316237376602746,
+          "ESCALATION": 0.0076024055372744806,
+          "STATUS_UPDATE": 0.006354249404289118,
+          "COMPENSATION": 0.006013843186202202
+        },
+        "top2_last_response_templates": [
+          "we'd be happy to help but we could use more info could you follow amp dm with your gamertag amp some details ez (275)",
+          "are having along with your gamertag please include verbatims of any error you are seeing xs (140)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 1365,
+        "type_dist": {
+          "OTHER": 0.5003663003663004,
+          "DM_INFO": 0.3047619047619048,
+          "ACK": 0.08131868131868132,
+          "SELF_SERVICE": 0.0652014652014652,
+          "APOLOGY_ONLY": 0.018315018315018316,
+          "FIXED": 0.011721611721611722,
+          "COMPENSATION": 0.00805860805860806,
+          "ESCALATION": 0.005128205128205128,
+          "STATUS_UPDATE": 0.005128205128205128
+        },
+        "top2_last_response_templates": [
+          "we'd be happy to help but we could use more info could you follow amp dm with your gamertag amp some details ez (35)",
+          "are having along with your gamertag please include verbatims of any error you are seeing xs (30)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 818,
+        "type_dist": {
+          "DM_INFO": 0.4511002444987775,
+          "OTHER": 0.3691931540342298,
+          "ACK": 0.08801955990220049,
+          "SELF_SERVICE": 0.04767726161369193,
+          "FIXED": 0.012224938875305624,
+          "APOLOGY_ONLY": 0.008557457212713936,
+          "STATUS_UPDATE": 0.008557457212713936,
+          "COMPENSATION": 0.007334963325183374,
+          "ESCALATION": 0.007334963325183374
+        },
+        "top2_last_response_templates": [
+          "we'd be happy to help but we could use more info could you follow amp dm with your gamertag amp some details ez (33)",
+          "hi let's have you follow us dm us your gamertag and some more info about what you're seeing bl (24)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 228,
+        "type_dist": {
+          "DM_INFO": 0.5350877192982456,
+          "OTHER": 0.32894736842105265,
+          "ACK": 0.06140350877192982,
+          "SELF_SERVICE": 0.05263157894736842,
+          "FIXED": 0.013157894736842105,
+          "ESCALATION": 0.0043859649122807015,
+          "STATUS_UPDATE": 0.0043859649122807015
+        },
+        "top2_last_response_templates": [
+          "we'd be happy to help but we could use more info could you follow amp dm with your gamertag amp some details ez (14)",
+          "we would be happy to help could you dm us your gamertag and a summary of your issue js (9)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "VerizonSupport",
+    "n_problem_response_pairs": 8447,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0095,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 189,
+        "type_dist": {
+          "OTHER": 0.6507936507936508,
+          "DM_INFO": 0.17989417989417988,
+          "ACK": 0.07407407407407407,
+          "SELF_SERVICE": 0.06349206349206349,
+          "ESCALATION": 0.021164021164021163,
+          "APOLOGY_ONLY": 0.005291005291005291,
+          "FIXED": 0.005291005291005291
+        },
+        "top2_last_response_templates": [
+          "you can always check for any outages in your area at this link adp (5)",
+          "you can check for any outages based on your account here jay (4)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 1286,
+        "type_dist": {
+          "OTHER": 0.6205287713841369,
+          "DM_INFO": 0.21073094867807154,
+          "ACK": 0.08242612752721618,
+          "APOLOGY_ONLY": 0.03576982892690513,
+          "SELF_SERVICE": 0.02177293934681182,
+          "ESCALATION": 0.012441679626749611,
+          "FIXED": 0.006998444790046656,
+          "STATUS_UPDATE": 0.006220839813374806,
+          "COMPENSATION": 0.003110419906687403
+        },
+        "top2_last_response_templates": [
+          "let me partner you with our verizon wireless team car (33)",
+          "please follow and dm us rmd (14)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 1413,
+        "type_dist": {
+          "OTHER": 0.6192498230714791,
+          "DM_INFO": 0.20523708421797593,
+          "ACK": 0.06723283793347487,
+          "SELF_SERVICE": 0.05803255484784147,
+          "APOLOGY_ONLY": 0.027600849256900213,
+          "STATUS_UPDATE": 0.009907997169143666,
+          "ESCALATION": 0.008492569002123142,
+          "FIXED": 0.0021231422505307855,
+          "COMPENSATION": 0.0021231422505307855
+        },
+        "top2_last_response_templates": [
+          "let me partner you with our verizon wireless team car (43)",
+          "thanks for the tweet we'll refer this to our wireless colleagues since we handle fios and dsl accounts ddd (26)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 5041,
+        "type_dist": {
+          "OTHER": 0.6453084705415593,
+          "DM_INFO": 0.1900416584011109,
+          "ACK": 0.08708589565562389,
+          "SELF_SERVICE": 0.03550882761356874,
+          "APOLOGY_ONLY": 0.022019440587185083,
+          "ESCALATION": 0.009125173576671296,
+          "FIXED": 0.004562586788335648,
+          "STATUS_UPDATE": 0.00416584011108907,
+          "COMPENSATION": 0.0021821067248561795
+        },
+        "top2_last_response_templates": [
+          "let me partner you with our verizon wireless team car (162)",
+          "thanks for the tweet we'll refer this to our wireless colleagues since we handle fios and dsl accounts ddd (97)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 518,
+        "type_dist": {
+          "OTHER": 0.6544401544401545,
+          "DM_INFO": 0.2335907335907336,
+          "ACK": 0.055984555984555984,
+          "APOLOGY_ONLY": 0.02895752895752896,
+          "SELF_SERVICE": 0.015444015444015444,
+          "STATUS_UPDATE": 0.003861003861003861,
+          "ESCALATION": 0.003861003861003861,
+          "FIXED": 0.0019305019305019305,
+          "COMPENSATION": 0.0019305019305019305
+        },
+        "top2_last_response_templates": [
+          "let me partner you with our verizon wireless team car (20)",
+          "what's going on car (8)"
+        ]
+      }
+    ]
+  },
+  {
+    "brand": "TMobileHelp",
+    "n_problem_response_pairs": 22820,
+    "mean_pairwise_bhattacharyya_between_problem_clusters": 0.0039,
+    "clusters": [
+      {
+        "pcluster": 0,
+        "n": 1360,
+        "type_dist": {
+          "DM_INFO": 0.8669117647058824,
+          "OTHER": 0.08235294117647059,
+          "ACK": 0.027205882352941177,
+          "SELF_SERVICE": 0.014705882352941176,
+          "ESCALATION": 0.005147058823529412,
+          "APOLOGY_ONLY": 0.0022058823529411764,
+          "COMPENSATION": 0.0007352941176470588,
+          "FIXED": 0.0007352941176470588
+        },
+        "top2_last_response_templates": [
+          "you can rely on me to take a look for you click on my profile to dm me tjellwood (5)",
+          "send me a dm and i'll check it out bridget wren (5)"
+        ]
+      },
+      {
+        "pcluster": 1,
+        "n": 3329,
+        "type_dist": {
+          "DM_INFO": 0.8410934214478822,
+          "OTHER": 0.09762691498948634,
+          "ACK": 0.037548813457494744,
+          "SELF_SERVICE": 0.017122258936617604,
+          "ESCALATION": 0.0024031240612796636,
+          "APOLOGY_ONLY": 0.0015019525382997897,
+          "FIXED": 0.0009011715229798738,
+          "COMPENSATION": 0.0009011715229798738,
+          "STATUS_UPDATE": 0.0009011715229798738
+        },
+        "top2_last_response_templates": [
+          "hey there i can surely look into that for you click my pic and send me a dm jessicacanada (7)",
+          "we're aware of the issue but let's make sure we're doing everything possible to get you taken care of send us a dm rickk (7)"
+        ]
+      },
+      {
+        "pcluster": 2,
+        "n": 2603,
+        "type_dist": {
+          "DM_INFO": 0.9004994237418363,
+          "OTHER": 0.050326546292739145,
+          "ACK": 0.03534383403764887,
+          "SELF_SERVICE": 0.006915097963887821,
+          "APOLOGY_ONLY": 0.004610065309258548,
+          "ESCALATION": 0.001152516327314637,
+          "FIXED": 0.001152516327314637
+        },
+        "top2_last_response_templates": [
+          "we want to make sure that all of your experiences with us are top notch dm me so i can lend a hand taylorbest (7)",
+          "having strong connection is important to me let's take a closer look to see what's happening send us a dm rickk (5)"
+        ]
+      },
+      {
+        "pcluster": 3,
+        "n": 1906,
+        "type_dist": {
+          "DM_INFO": 0.8179433368310598,
+          "OTHER": 0.12172088142707241,
+          "ACK": 0.03672612801678909,
+          "SELF_SERVICE": 0.013641133263378805,
+          "ESCALATION": 0.00472193074501574,
+          "FIXED": 0.0026232948583420775,
+          "APOLOGY_ONLY": 0.002098635886673662,
+          "COMPENSATION": 0.0005246589716684155
+        },
+        "top2_last_response_templates": [
+          "hey there i can surely look into that for you click my pic and send me a dm jessicacanada (6)",
+          "you can rely on me to take a look for you click on my profile to dm me tjellwood (5)"
+        ]
+      },
+      {
+        "pcluster": 4,
+        "n": 13622,
+        "type_dist": {
+          "DM_INFO": 0.8448098663926003,
+          "OTHER": 0.09939803259433269,
+          "ACK": 0.03531052708853326,
+          "SELF_SERVICE": 0.012553222727940096,
+          "FIXED": 0.0024225517545147556,
+          "APOLOGY_ONLY": 0.0020554984583761563,
+          "ESCALATION": 0.001688445162237557,
+          "COMPENSATION": 0.0008809279107326384,
+          "STATUS_UPDATE": 0.0008809279107326384
+        },
+        "top2_last_response_templates": [
+          "we're aware of the issue but let's make sure we're doing everything possible to get you taken care of send us a dm rickk (71)",
+          "you can rely on me to take a look for you click on my profile to dm me tjellwood (29)"
+        ]
+      }
+    ]
+  }
+]

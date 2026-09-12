@@ -1,0 +1,170 @@
+{
+  "method": "templates normalized: URLs->{{URL}}, mentions->@USER, numbers->{{NUM}}, lowercased, whitespace collapsed; metrics over brand outbound tweets",
+  "results": [
+    {
+      "brand": "AmazonHelp",
+      "n_brand_outbound_tweets": 169840,
+      "unique_raw_texts": 169805,
+      "unique_normalized_templates": 154114,
+      "unique_ratio_normalized": 0.9074,
+      "top10_template_share": 0.006,
+      "top20_template_share": 0.0095,
+      "top50_template_share": 0.0165,
+      "most_frequent_raw_msg_share": 0.0
+    },
+    {
+      "brand": "AppleSupport",
+      "n_brand_outbound_tweets": 106860,
+      "unique_raw_texts": 106770,
+      "unique_normalized_templates": 82877,
+      "unique_ratio_normalized": 0.7756,
+      "top10_template_share": 0.098,
+      "top20_template_share": 0.114,
+      "top50_template_share": 0.1307,
+      "most_frequent_raw_msg_share": 0.0
+    },
+    {
+      "brand": "Uber_Support",
+      "n_brand_outbound_tweets": 56270,
+      "unique_raw_texts": 56198,
+      "unique_normalized_templates": 20852,
+      "unique_ratio_normalized": 0.3706,
+      "top10_template_share": 0.1238,
+      "top20_template_share": 0.1889,
+      "top50_template_share": 0.3007,
+      "most_frequent_raw_msg_share": 0.0001
+    },
+    {
+      "brand": "SpotifyCares",
+      "n_brand_outbound_tweets": 43265,
+      "unique_raw_texts": 43261,
+      "unique_normalized_templates": 35571,
+      "unique_ratio_normalized": 0.8222,
+      "top10_template_share": 0.0174,
+      "top20_template_share": 0.0253,
+      "top50_template_share": 0.0411,
+      "most_frequent_raw_msg_share": 0.0
+    },
+    {
+      "brand": "Delta",
+      "n_brand_outbound_tweets": 42253,
+      "unique_raw_texts": 42243,
+      "unique_normalized_templates": 38909,
+      "unique_ratio_normalized": 0.9209,
+      "top10_template_share": 0.0156,
+      "top20_template_share": 0.0215,
+      "top50_template_share": 0.0325,
+      "most_frequent_raw_msg_share": 0.0
+    },
+    {
+      "brand": "Tesco",
+      "n_brand_outbound_tweets": 38573,
+      "unique_raw_texts": 38562,
+      "unique_normalized_templates": 36289,
+      "unique_ratio_normalized": 0.9408,
+      "top10_template_share": 0.0122,
+      "top20_template_share": 0.0191,
+      "top50_template_share": 0.0303,
+      "most_frequent_raw_msg_share": 0.0001
+    },
+    {
+      "brand": "AmericanAir",
+      "n_brand_outbound_tweets": 36764,
+      "unique_raw_texts": 36763,
+      "unique_normalized_templates": 35578,
+      "unique_ratio_normalized": 0.9677,
+      "top10_template_share": 0.0068,
+      "top20_template_share": 0.01,
+      "top50_template_share": 0.0161,
+      "most_frequent_raw_msg_share": 0.0001
+    },
+    {
+      "brand": "TMobileHelp",
+      "n_brand_outbound_tweets": 34317,
+      "unique_raw_texts": 34303,
+      "unique_normalized_templates": 33288,
+      "unique_ratio_normalized": 0.97,
+      "top10_template_share": 0.0099,
+      "top20_template_share": 0.0132,
+      "top50_template_share": 0.0188,
+      "most_frequent_raw_msg_share": 0.0001
+    },
+    {
+      "brand": "comcastcares",
+      "n_brand_outbound_tweets": 33031,
+      "unique_raw_texts": 33018,
+      "unique_normalized_templates": 23956,
+      "unique_ratio_normalized": 0.7253,
+      "top10_template_share": 0.0523,
+      "top20_template_share": 0.0761,
+      "top50_template_share": 0.1147,
+      "most_frequent_raw_msg_share": 0.0001
+    },
+    {
+      "brand": "British_Airways",
+      "n_brand_outbound_tweets": 29361,
+      "unique_raw_texts": 29360,
+      "unique_normalized_templates": 29057,
+      "unique_ratio_normalized": 0.9896,
+      "top10_template_share": 0.0033,
+      "top20_template_share": 0.0048,
+      "top50_template_share": 0.0081,
+      "most_frequent_raw_msg_share": 0.0001
+    },
+    {
+      "brand": "VirginTrains",
+      "n_brand_outbound_tweets": 27817,
+      "unique_raw_texts": 27770,
+      "unique_normalized_templates": 26015,
+      "unique_ratio_normalized": 0.9352,
+      "top10_template_share": 0.0115,
+      "top20_template_share": 0.0171,
+      "top50_template_share": 0.0285,
+      "most_frequent_raw_msg_share": 0.0002
+    },
+    {
+      "brand": "Ask_Spectrum",
+      "n_brand_outbound_tweets": 25860,
+      "unique_raw_texts": 25816,
+      "unique_normalized_templates": 14246,
+      "unique_ratio_normalized": 0.5509,
+      "top10_template_share": 0.1345,
+      "top20_template_share": 0.1874,
+      "top50_template_share": 0.2734,
+      "most_frequent_raw_msg_share": 0.0002
+    },
+    {
+      "brand": "XboxSupport",
+      "n_brand_outbound_tweets": 24557,
+      "unique_raw_texts": 24546,
+      "unique_normalized_templates": 17627,
+      "unique_ratio_normalized": 0.7178,
+      "top10_template_share": 0.0843,
+      "top20_template_share": 0.106,
+      "top50_template_share": 0.1405,
+      "most_frequent_raw_msg_share": 0.0001
+    },
+    {
+      "brand": "sprintcare",
+      "n_brand_outbound_tweets": 22381,
+      "unique_raw_texts": 22351,
+      "unique_normalized_templates": 19333,
+      "unique_ratio_normalized": 0.8638,
+      "top10_template_share": 0.0139,
+      "top20_template_share": 0.0231,
+      "top50_template_share": 0.0428,
+      "most_frequent_raw_msg_share": 0.0001
+    },
+    {
+      "brand": "VerizonSupport",
+      "n_brand_outbound_tweets": 17966,
+      "unique_raw_texts": 17958,
+      "unique_normalized_templates": 14072,
+      "unique_ratio_normalized": 0.7833,
+      "top10_template_share": 0.0635,
+      "top20_template_share": 0.0846,
+      "top50_template_share": 0.1211,
+      "most_frequent_raw_msg_share": 0.0001
+    }
+  ]
+}

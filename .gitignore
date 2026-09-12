@@ -1,0 +1,33 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Raw Twitter dataset (downloaded separately — see README "Reproduce")
+data_extracted/
+
+# Regenerable caches (rebuilt from the raw dataset; see analysis/scripts + run_eval --force)
+analysis/cache/*.parquet
+analysis/cache/models/
+
+# Local datasets / archives
+data/
+*.zip
+
+# Generated caches
+.cache/

@@ -1,0 +1,108 @@
+{
+  "data_path": "C:\\Users\\M.Gowthami\\OneDrive\\\u6587\u6863\\Default Project\\data_extracted\\twcs\\twcs.csv",
+  "file_size_bytes": 516508641,
+  "total_rows": 2811774,
+  "columns": [
+    {
+      "column_name": "tweet_id",
+      "column_type": "BIGINT"
+    },
+    {
+      "column_name": "author_id",
+      "column_type": "VARCHAR"
+    },
+    {
+      "column_name": "inbound",
+      "column_type": "BOOLEAN"
+    },
+    {
+      "column_name": "created_at",
+      "column_type": "VARCHAR"
+    },
+    {
+      "column_name": "text",
+      "column_type": "VARCHAR"
+    },
+    {
+      "column_name": "response_tweet_id",
+      "column_type": "VARCHAR"
+    },
+    {
+      "column_name": "in_response_to_tweet_id",
+      "column_type": "BIGINT"
+    }
+  ],
+  "null_counts": [
+    {
+      "col": "tweet_id",
+      "n_null": 0,
+      "n_unique": 0
+    },
+    {
+      "col": "author_id",
+      "n_null": 0,
+      "n_unique": 0
+    },
+    {
+      "col": "inbound",
+      "n_null": 0,
+      "n_unique": 0
+    },
+    {
+      "col": "created_at",
+      "n_null": 0,
+      "n_unique": 0
+    },
+    {
+      "col": "text",
+      "n_null": 0,
+      "n_unique": 0
+    },
+    {
+      "col": "response_tweet_id",
+      "n_null": 1040629,
+      "n_unique": 0
+    },
+    {
+      "col": "in_response_to_tweet_id",
+      "n_null": 794335,
+      "n_unique": 0
+    }
+  ],
+  "unique_counts": [
+    {
+      "col": "tweet_id",
+      "n_unique": 2811774
+    },
+    {
+      "col": "author_id",
+      "n_unique": 702777
+    },
+    {
+      "col": "inbound",
+      "n_unique": 2
+    },
+    {
+      "col": "created_at",
+      "n_unique": 2061666
+    },
+    {
+      "col": "text",
+      "n_unique": 2782618
+    },
+    {
+      "col": "response_tweet_id",
+      "n_unique": 1771145
+    },
+    {
+      "col": "in_response_to_tweet_id",
+      "n_unique": 1774822
+    }
+  ],
+  "exact_dup_rows": 0,
+  "dup_tweet_id_rows": 0,
+  "created_at_min": "2008-05-08 20:13:59+00:00 (parsed)",
+  "created_at_max": "2017-12-03 23:14:01+00:00 (parsed)",
+  "runtime_seconds": 6.3,
+  "note": "WARNING: earlier min/max were computed with string (lexical) ordering on created_at and were WRONG. Corrected values parsed via pd.to_datetime. 99.94% of rows are 2017-10 -> 2017-12."
+}
