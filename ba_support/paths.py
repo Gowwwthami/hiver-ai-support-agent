@@ -34,6 +34,7 @@ RESULTS_MD = EVAL_DIR / "EVALUATION_REPORT.md"
 PREDICTIONS_CSV = EVAL_DIR / "predictions.csv"
 FAILURES_MD = ROOT / "analysis" / "TOP_5_FAILURES.md"
 REVIEW_SUMMARY_MD = EVAL_DIR / "review_summary.md"
+HUMAN_VALIDATION_DIR = EVAL_DIR / "human_validation"
 
 BRAND = "British_Airways"
 

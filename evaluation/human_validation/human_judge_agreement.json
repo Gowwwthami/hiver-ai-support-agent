@@ -1,0 +1,85 @@
+{
+  "design": {
+    "sample_n": 50,
+    "sample_seed": 2026,
+    "thresholds": {
+      "spearman_weak": 0.5,
+      "spearman_good": 0.7,
+      "kappa_weak": 0.4,
+      "kappa_good": 0.6,
+      "mad_max": 1.0,
+      "within_one_min": 0.8
+    },
+    "reviewer": "project author (single reviewer; rater/author bias present; no inter-annotator reliability computed)"
+  },
+  "n_missing_judge_rows": 0,
+  "headline": {
+    "backend": "offline",
+    "n": 50,
+    "human_vs_judge_overall_spearman": 0.378,
+    "human_vs_judge_escalation_appropriate_kappa": -0.1157,
+    "human_vs_judge_correctness_spearman": 0.4618,
+    "human_vs_judge_groundedness_spearman": 0.1056
+  },
+  "ordinal": {
+    "overall": {
+      "n": 50,
+      "spearman": 0.378,
+      "spearman_ci95": [
+        0.1164,
+        0.5926
+      ],
+      "mean_abs_diff": 1.06,
+      "exact_agreement": 0.28,
+      "within_one": 0.76
+    },
+    "correctness": {
+      "n": 50,
+      "spearman": 0.4618,
+      "spearman_ci95": [
+        0.1532,
+        0.7165
+      ],
+      "mean_abs_diff": 1.54,
+      "exact_agreement": 0.14,
+      "within_one": 0.56
+    },
+    "groundedness": {
+      "n": 50,
+      "spearman": 0.1056,
+      "spearman_ci95": [
+        -0.1851,
+        0.4124
+      ],
+      "mean_abs_diff": 1.5,
+      "exact_agreement": 0.14,
+      "within_one": 0.58
+    },
+    "completeness": {
+      "n": 50,
+      "spearman": 0.133,
+      "spearman_ci95": [
+        -0.1262,
+        0.3655
+      ],
+      "mean_abs_diff": 2.3,
+      "exact_agreement": 0.08,
+      "within_one": 0.32
+    }
+  },
+  "binary": {
+    "hallucination": {
+      "n": 50,
+      "kappa": 0.0,
+      "pabak": 0.16,
+      "raw_agreement": 0.58,
+      "note": "judge constant (all False)"
+    },
+    "escalation_appropriate": {
+      "n": 50,
+      "kappa": -0.1157,
+      "pabak": -0.08,
+      "raw_agreement": 0.46
+    }
+  }
+}

@@ -1,0 +1,51 @@
+example_id,judge_backend,judge_overall,judge_correctness,judge_groundedness,judge_completeness,judge_hallucination,judge_escalation_appropriate,judge_why
+BA_120790,offline,3,5,5,5,False,True,no issues detected
+BA_122456,offline,3,5,3,5,False,True,factual auto reply grounded on top evidence sim=0.19
+BA_147482,offline,1,5,3,5,False,False,factual auto reply grounded on top evidence sim=0.25; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_152445,offline,1,5,3,5,False,False,factual auto reply grounded on top evidence sim=0.18; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_154364,offline,2,2,4,5,False,True,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.42
+BA_163041,offline,1,5,3,5,False,False,factual auto reply grounded on top evidence sim=0.26; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_163928,offline,3,5,4,5,False,True,factual auto reply grounded on top evidence sim=0.35
+BA_177915,offline,1,2,3,5,False,False,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.21; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_179834,offline,2,2,5,2,False,True,intent mismatch between prediction and gold; information intent answered without factual evidence
+BA_197365,offline,3,5,5,5,False,True,no issues detected
+BA_235380,offline,1,5,3,5,False,False,factual auto reply grounded on top evidence sim=0.15; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_24151,offline,1,5,3,5,False,False,factual auto reply grounded on top evidence sim=0.19; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_252288,offline,3,5,4,5,False,True,factual auto reply grounded on top evidence sim=0.36
+BA_301699,offline,3,5,4,5,False,True,factual auto reply grounded on top evidence sim=0.33
+BA_334633,offline,1,2,5,5,False,False,intent mismatch between prediction and gold; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_33704,offline,3,5,5,4,False,True,no issues detected
+BA_337964,offline,1,2,3,5,False,False,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.21; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_349968,offline,3,5,4,5,False,True,factual auto reply grounded on top evidence sim=0.37
+BA_365162,offline,3,5,3,5,False,True,factual auto reply grounded on top evidence sim=0.27
+BA_375254,offline,1,2,3,5,False,False,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.24; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_409640,offline,2,5,4,5,False,False,factual auto reply grounded on top evidence sim=0.34; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_410381,offline,3,5,5,4,False,True,no issues detected
+BA_440828,offline,2,2,5,4,False,True,intent mismatch between prediction and gold
+BA_477490,offline,3,5,4,5,False,True,factual auto reply grounded on top evidence sim=0.34
+BA_487360,offline,2,5,4,5,False,False,factual auto reply grounded on top evidence sim=0.30; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_495495,offline,2,5,4,5,False,False,factual auto reply grounded on top evidence sim=0.36; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_509781,offline,2,2,5,4,False,True,intent mismatch between prediction and gold
+BA_510140,offline,2,2,5,4,False,True,intent mismatch between prediction and gold
+BA_51492,offline,2,2,3,5,False,True,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.22
+BA_521268,offline,3,5,4,5,False,True,factual auto reply grounded on top evidence sim=0.68
+BA_542508,offline,3,5,5,5,False,True,no issues detected
+BA_542898,offline,1,2,3,5,False,False,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.22; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_567068,offline,3,5,5,4,False,True,no issues detected
+BA_57162,offline,2,2,4,5,False,True,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.92
+BA_577348,offline,2,5,4,5,False,False,factual auto reply grounded on top evidence sim=0.37; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_578442,offline,1,5,3,5,False,False,factual auto reply grounded on top evidence sim=0.28; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_587371,offline,2,2,3,5,False,True,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.27
+BA_661009,offline,1,2,5,5,False,False,intent mismatch between prediction and gold; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_688279,offline,3,5,5,5,False,True,no issues detected
+BA_689051,offline,1,2,3,5,False,False,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.22; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_693943,offline,3,5,5,4,False,True,no issues detected
+BA_705984,offline,3,5,3,5,False,True,factual auto reply grounded on top evidence sim=0.24
+BA_71387,offline,1,2,4,5,False,False,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.36; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_716299,offline,2,2,5,4,False,True,intent mismatch between prediction and gold
+BA_729813,offline,3,5,5,4,False,True,no issues detected
+BA_73767,offline,1,2,4,5,False,False,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.33; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_755281,offline,1,5,3,5,False,False,factual auto reply grounded on top evidence sim=0.18; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+BA_772744,offline,3,5,5,4,False,True,no issues detected
+BA_783910,offline,2,2,3,5,False,True,intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.13
+BA_794863,offline,3,5,5,5,False,True,no issues detected
