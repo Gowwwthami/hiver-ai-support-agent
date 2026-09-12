@@ -5,10 +5,12 @@ Primary interface: `Judge.judge(sample) -> dict` with the mandated fields:
     correctness, groundedness, completeness, hallucination (bool),
     escalation_appropriate (bool), overall (1-5), reason.
 
-Two implementations:
+Three implementations:
   - `OpenAIJudge`  : live LLM judge (OPENAI_API_KEY + `openai` package). Raw
                      model output is returned verbatim into results.json when
                      used. Requires explicit opt-in via env EVAL_JUDGE=openai.
+  - `GeminiJudge`  : live LLM judge (GEMINI_API_KEY + `google-genai` package).
+                     Same rubric and prompt, schema-constrained JSON output.
   - `OfflineJudge` : deterministic, fully-reproducible fallback that implements
                      the same rubric from observable properties (evidence usage,
                      intent match, reply structure, PII/hallucination markers,
@@ -21,6 +23,8 @@ available, the offline judge runs and the results file states so explicitly.
 
 import os
 import re
+import threading
+import time
 
 from . import taxonomy
 from .normalize import HALLUCINATION_MARKERS, PII_PATTERNS, redact
@@ -149,6 +153,162 @@ class OfflineJudge(BaseJudge):
 IS_PATTERN = re.compile(r"(intent|agency)", re.IGNORECASE)
 
 
+def _build_judge_prompt(sample: dict) -> str:
+    """Shared judge prompt (identical text for every live backend)."""
+    return (
+        "You are a careful evaluation judge for a customer-support assistant "
+        "that drafts British Airways replies from retrieved historical "
+        "evidence.\n\nRUBRIC (score each 1-5 unless Boolean):\n"
+        + "\n".join(f"- {k}: {v}" for k, v in RUBRIC.items())
+        + "\n\nJudging rules:\n"
+        "- The draft must be grounded in the retrieved evidence; grade "
+        "groundedness LOW when a factual claim has no supporting evidence.\n"
+        "- Untrue or unsupported policy / amounts / bookings = hallucination "
+        "= true.\n"
+        "- Escalation is appropriate when the request needs account data, "
+        "money adjudication, identity/security, legal exposure, or human "
+        "judgment, unless the safe public answer is complete.\n\n"
+        "CUSTOMER MESSAGE:\n"
+        f"{sample['customer_message']}\n\nRETRIEVED EVIDENCE:\n"
+        + ("\n".join(f"[sim={e.get('similarity', 0.0):.2f}] {e.get('brand_reply', '')}"
+                     for e in sample.get("evidence_used", [])) or "(none)")
+        + "\n\nDRAFT REPLY:\n" + sample.get("draft_reply", "")
+        + "\n\nPREDICTED intent=" + str(sample.get("intent_predicted"))
+        + " escalation=" + str(sample.get("escalation_predicted"))
+        + "\nGOLD intent=" + str(sample.get("intent_gold"))
+        + " escalation=" + str(sample.get("escalation_gold"))
+        + "\n\nReturn ONLY valid JSON: {\"correctness\": int, "
+          "\"groundedness\": int, \"completeness\": int, \"hallucination\": bool, "
+          "\"escalation_appropriate\": bool, \"overall\": int, \"reason\": str}"
+    )
+
+
+RESPONSE_SCHEMA = {
+    "type": "OBJECT",
+    "properties": {
+        "correctness": {"type": "INTEGER"},
+        "groundedness": {"type": "INTEGER"},
+        "completeness": {"type": "INTEGER"},
+        "hallucination": {"type": "BOOLEAN"},
+        "escalation_appropriate": {"type": "BOOLEAN"},
+        "overall": {"type": "INTEGER"},
+        "reason": {"type": "STRING"},
+    },
+    "required": ["correctness", "groundedness", "completeness",
+                 "hallucination", "escalation_appropriate", "overall", "reason"],
+}
+
+# Gemini free-tier reliability (rate limiting + 429 retry).
+GEMINI_MIN_INTERVAL_S = 15.0      # >=15s between call starts -> max 4 requests/min
+GEMINI_MAX_RETRIES = 5
+GEMINI_MAX_BACKOFF_S = 60.0
+_GEMINI_STATE = {"last_call_start": None}
+_GEMINI_STATE_LOCK = threading.Lock()
+
+
+def _rate_limit_before_call() -> None:
+    """Space Gemini call starts >=15s apart (free tier allows 5 requests/min)."""
+    now = time.monotonic()
+    with _GEMINI_STATE_LOCK:
+        last = _GEMINI_STATE["last_call_start"]
+        if last is None:
+            _GEMINI_STATE["last_call_start"] = now
+            return
+        wait = last + GEMINI_MIN_INTERVAL_S - now
+        _GEMINI_STATE["last_call_start"] = now + max(wait, 0.0)
+    if wait > 0:
+        time.sleep(wait)
+
+
+def _parse_gemini_duration(value) -> float | None:
+    """Parse a proto-JSON Duration (e.g. \"7s\", \"1.5s\") or numeric seconds."""
+    if isinstance(value, bool) or value is None:
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        m = re.fullmatch(r"(\d+(?:\.\d+)?)s", value.strip())
+        if m:
+            return float(m.group(1))
+    return None
+
+
+def _gemini_retry_delay(exc: BaseException) -> float | None:
+    """Server RetryInfo delay inside APIError.details, when present."""
+    details = getattr(exc, "details", None)
+    if not isinstance(details, (dict, list)):
+        return None
+    stack = list(details.values()) if isinstance(details, dict) else list(details)
+    while stack:
+        node = stack.pop()
+        if isinstance(node, dict):
+            if str(node.get("@type", "")).endswith("google.rpc.RetryInfo"):
+                delay = _parse_gemini_duration(node.get("retryDelay"))
+                if delay is not None:
+                    return delay
+            stack.extend(v for v in node.values()
+                         if isinstance(v, (dict, list)))
+        elif isinstance(node, list):
+            stack.extend(v for v in node if isinstance(v, (dict, list)))
+    return None
+
+
+def _gemini_backoff_delay(exc: BaseException) -> float:
+    """Retry delay: Retry-After header, else server RetryInfo, else 15s floor.
+
+    The 15-second request-start spacing is still enforced separately by
+    _rate_limit_before_call on every attempt, so a shorter backoff here never
+    lets the next request start sooner than 15s after the previous one.
+    """
+    resp = getattr(exc, "response", None)
+    if resp is not None:
+        try:
+            headers = getattr(resp, "headers", None) or {}
+            retry_after = headers.get("Retry-After")
+            if retry_after is not None:
+                try:
+                    return min(float(retry_after), GEMINI_MAX_BACKOFF_S)
+                except ValueError:
+                    pass  # HTTP-date Retry-After is not a plain seconds value
+        except Exception:  # noqa: BLE001 - defensive against proxy response types
+            pass
+    delay = _gemini_retry_delay(exc)
+    if delay is not None:
+        return min(delay, GEMINI_MAX_BACKOFF_S)
+    return GEMINI_MIN_INTERVAL_S
+
+
+def _gemini_is_429(exc: BaseException) -> bool:
+    """True when the exception is a Gemini 429 / RESOURCE_EXHAUSTED."""
+    code = getattr(exc, "code", None)
+    if code in (429, "429"):
+        return True
+    status = getattr(exc, "status", None)
+    if status == "RESOURCE_EXHAUSTED":
+        return True
+    text = str(exc)
+    return "429" in text or "RESOURCE_EXHAUSTED" in text
+
+
+def _gemini_generate(client, model: str, prompt: str, config) -> object:
+    """One Gemini generation with pacing (>=15s) and bounded 429 retries.
+
+    A retried call is the SAME logical example; it is never skipped and never
+    duplicated in the output. Non-429 errors propagate immediately.
+    """
+    for _ in range(GEMINI_MAX_RETRIES):
+        _rate_limit_before_call()
+        try:
+            return client.models.generate_content(
+                model=model, contents=prompt, config=config)
+        except Exception as exc:  # noqa: BLE001 - normalize backend failures
+            if not _gemini_is_429(exc):
+                raise
+            time.sleep(_gemini_backoff_delay(exc))
+    raise RuntimeError(
+        f"Gemini judge still rate-limited after {GEMINI_MAX_RETRIES} attempts")
+
+
 class OpenAIJudge(BaseJudge):  # pragma: no cover - requires live key & package
     backend = "openai"
 
@@ -165,32 +325,7 @@ class OpenAIJudge(BaseJudge):  # pragma: no cover - requires live key & package
         self.model = model
 
     def judge(self, sample: dict) -> dict:
-        prompt = (
-            "You are a careful evaluation judge for a customer-support assistant "
-            "that drafts British Airways replies from retrieved historical "
-            "evidence.\n\nRUBRIC (score each 1-5 unless Boolean):\n"
-            + "\n".join(f"- {k}: {v}" for k, v in RUBRIC.items())
-            + "\n\nJudging rules:\n"
-            "- The draft must be grounded in the retrieved evidence; grade "
-            "groundedness LOW when a factual claim has no supporting evidence.\n"
-            "- Untrue or unsupported policy / amounts / bookings = hallucination "
-            "= true.\n"
-            "- Escalation is appropriate when the request needs account data, "
-            "money adjudication, identity/security, legal exposure, or human "
-            "judgment, unless the safe public answer is complete.\n\n"
-            "CUSTOMER MESSAGE:\n"
-            f"{sample['customer_message']}\n\nRETRIEVED EVIDENCE:\n"
-            + ("\n".join(f"[sim={e.get('similarity', 0.0):.2f}] {e.get('brand_reply', '')}"
-                         for e in sample.get("evidence_used", [])) or "(none)")
-            + "\n\nDRAFT REPLY:\n" + sample.get("draft_reply", "")
-            + "\n\nPREDICTED intent=" + str(sample.get("intent_predicted"))
-            + " escalation=" + str(sample.get("escalation_predicted"))
-            + "\nGOLD intent=" + str(sample.get("intent_gold"))
-            + " escalation=" + str(sample.get("escalation_gold"))
-            + "\n\nReturn ONLY valid JSON: {\"correctness\": int, "
-              "\"groundedness\": int, \"completeness\": int, \"hallucination\": bool, "
-              "\"escalation_appropriate\": bool, \"overall\": int, \"reason\": str}"
-        )
+        prompt = _build_judge_prompt(sample)
         resp = self._openai.chat.completions.create(
             model=self.model,
             messages=[{"role": "user", "content": prompt}],
@@ -206,11 +341,73 @@ class OpenAIJudge(BaseJudge):  # pragma: no cover - requires live key & package
         return data
 
 
+def _create_gemini_client(api_key: str):
+    """genai.Client with the SDK's automatic HTTP retry explicitly disabled.
+
+    HttpRetryOptions.attempts counts total requests INCLUDING the original, so
+    attempts=1 means exactly one HTTP request and zero automatic retries; our
+    own _gemini_generate loop is then the sole retry owner. http_status_codes
+    is set empty as an explicit second guard so no status ever auto-retries.
+    """
+    try:
+        from google import genai
+        from google.genai import types
+    except ImportError:
+        raise RuntimeError(
+            "google-genai package is not installed; install it with "
+            "`pip install \"google-genai>=1.0\"` or use --backend offline "
+            "for the reproducible run.") from None
+    return genai.Client(
+        api_key=api_key,
+        http_options=types.HttpOptions(
+            retry_options=types.HttpRetryOptions(
+                attempts=1,
+                http_status_codes=[],
+            ),
+        ),
+    )
+
+
+class GeminiJudge(BaseJudge):  # pragma: no cover - requires live key & package
+    backend = "gemini"
+
+    def __init__(self, model: str = "gemini-3.6-flash",
+                 api_key_env: str = "GEMINI_API_KEY"):
+        key = os.environ.get(api_key_env, "")
+        if not key:
+            raise RuntimeError(
+                f"{api_key_env} is not set; refusing to run a live judge without "
+                f"credentials. Use EVAL_JUDGE=offline for the reproducible run.")
+        self._client = _create_gemini_client(key)
+        self.model = model
+
+    def judge(self, sample: dict) -> dict:
+        prompt = _build_judge_prompt(sample)
+        resp = _gemini_generate(
+            self._client, self.model, prompt, {
+                "response_mime_type": "application/json",
+                "response_schema": RESPONSE_SCHEMA,
+                "temperature": 0.0,
+                "top_p": 1.0,
+                "seed": 1,
+            },
+        )
+        text = resp.text
+        import json
+
+        data = json.loads(text)
+        data["judge_backend"] = self.backend
+        data["why"] = data.pop("reason", "")
+        return data
+
+
 def make_judge(backend: str = "offline") -> BaseJudge:
     if backend == "offline":
         return OfflineJudge()
     if backend == "openai":
         return OpenAIJudge()
+    if backend == "gemini":
+        return GeminiJudge()
     raise ValueError(f"unknown judge backend: {backend}")
 
 

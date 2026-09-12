@@ -306,7 +306,7 @@ def targeted_judge(sample_ids, backend: str = "offline") -> pd.DataFrame:
         judge = judgemod.make_judge(backend)
     except (ImportError, RuntimeError) as e:
         raise RuntimeError(
-            f"live OpenAI judge is not usable here: {e}; "
+            f"live judge backend '{backend}' is not usable here: {e}; "
             "use `--backend offline` for the reproducible target run") from e
     pred = pd.read_csv(paths.PREDICTIONS_CSV)
     p = pred[pred["example_id"].isin(set(sample_ids))].copy()
@@ -536,7 +536,7 @@ def agree(human_csv: str, backend: str | None = None) -> dict:
 
 
 # ---- CLI ------------------------------------------------------------------------
-def main():
+def build_parser():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
 
@@ -551,14 +551,21 @@ def main():
                        default=str(OUT_DIR / "review_sample_manifest.csv"))
 
     p_j = sub.add_parser("judge", help="targeted judge on the selected ids")
-    p_j.add_argument("--backend", choices=["offline", "openai"], default="offline")
+    p_j.add_argument("--backend",
+                     choices=["offline", "openai", "gemini"], default="offline")
     p_j.add_argument("--manifest", type=str,
                      default=str(OUT_DIR / "review_sample_manifest.csv"))
 
     p_a = sub.add_parser("agree", help="human-vs-judge agreement statistics")
     p_a.add_argument("--human", required=True, help="returned human scores CSV")
-    p_a.add_argument("--backend", choices=["offline", "openai"], default=None)
+    p_a.add_argument("--backend",
+                     choices=["offline", "openai", "gemini"], default=None)
 
+    return ap
+
+
+def main():
+    ap = build_parser()
     args = ap.parse_args()
     if args.cmd == "select":
         if args.check:

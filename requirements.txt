@@ -7,8 +7,9 @@ pyarrow>=17
 tabulate>=0.9
 joblib>=1.4            # model persistence (ships with scikit-learn)
 
-# Optional — live LLM-as-judge (EVAL_JUDGE=openai + OPENAI_API_KEY)
+# Optional — live LLM-as-judge (EVAL_JUDGE=openai + OPENAI_API_KEY, or --backend gemini + GEMINI_API_KEY)
 openai>=1.0
+google-genai>=1.0
 
 # Optional — semantic retrieval encoder (--semantic)
 sentence-transformers>=3.0

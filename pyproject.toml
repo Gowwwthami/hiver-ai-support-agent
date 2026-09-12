@@ -20,7 +20,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-judge = ["openai>=1.0"]
+judge = ["openai>=1.0", "google-genai>=1.0"]
 semantic = ["sentence-transformers>=3.0"]
 
 [tool.setuptools.packages.find]
