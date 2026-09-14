@@ -1,6 +1,6 @@
 {
   "project": "Hiver SDE Intern Take-Home - British_Airways support agent",
-  "generated_utc": "2026-09-12T05:27:23.144591+00:00",
+  "generated_utc": "2026-09-14T18:41:29.164882+00:00",
   "seed": 42,
   "top_k": 3,
   "judge_backend": "offline",
@@ -42,29 +42,29 @@
   },
   "intent_classification": {
     "majority_baseline": {
-      "accuracy": 0.145,
-      "macro_f1": 0.0253,
-      "weighted_f1": 0.0367,
-      "micro_f1": 0.145,
+      "accuracy": 0.055,
+      "macro_f1": 0.0104,
+      "weighted_f1": 0.0057,
+      "micro_f1": 0.055,
       "n": 200,
       "per_class": [
         {
           "intent": "non_support_or_acknowledgement",
-          "support": 43,
+          "support": 58,
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0
         },
         {
-          "intent": "complaint_or_human_assistance",
-          "support": 29,
-          "precision": 0.145,
-          "recall": 1.0,
-          "f1": 0.2533
-        },
-        {
           "intent": "flight_disruption",
           "support": 27,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0
+        },
+        {
+          "intent": "information_or_policy",
+          "support": 23,
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0
@@ -84,13 +84,6 @@
           "f1": 0.0
         },
         {
-          "intent": "information_or_policy",
-          "support": 20,
-          "precision": 0.0,
-          "recall": 0.0,
-          "f1": 0.0
-        },
-        {
           "intent": "baggage",
           "support": 16,
           "precision": 0.0,
@@ -99,14 +92,21 @@
         },
         {
           "intent": "booking_change_or_cancellation",
-          "support": 12,
+          "support": 13,
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0
         },
         {
+          "intent": "complaint_or_human_assistance",
+          "support": 11,
+          "precision": 0.055,
+          "recall": 1.0,
+          "f1": 0.1043
+        },
+        {
           "intent": "seat_or_upgrade",
-          "support": 7,
+          "support": 6,
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0
@@ -161,7 +161,7 @@
             0,
             0,
             0,
-            12,
+            13,
             0,
             0,
             0,
@@ -173,7 +173,7 @@
             0,
             0,
             0,
-            29,
+            11,
             0,
             0,
             0,
@@ -197,7 +197,7 @@
             0,
             0,
             0,
-            20,
+            23,
             0,
             0,
             0,
@@ -209,7 +209,7 @@
             0,
             0,
             0,
-            43,
+            58,
             0,
             0,
             0,
@@ -233,7 +233,7 @@
             0,
             0,
             0,
-            7,
+            6,
             0,
             0,
             0,
@@ -266,28 +266,21 @@
         "seat_or_upgrade",
         "website_or_app_issue"
       ],
-      "fit_or_pred_seconds": 0.1
+      "fit_or_pred_seconds": 0.24
     },
     "rule_keyword_baseline": {
-      "accuracy": 0.43,
-      "macro_f1": 0.4394,
-      "weighted_f1": 0.4415,
-      "micro_f1": 0.43,
+      "accuracy": 0.355,
+      "macro_f1": 0.4029,
+      "weighted_f1": 0.4064,
+      "micro_f1": 0.355,
       "n": 200,
       "per_class": [
         {
           "intent": "non_support_or_acknowledgement",
-          "support": 43,
+          "support": 58,
           "precision": 0.625,
-          "recall": 0.2326,
-          "f1": 0.339
-        },
-        {
-          "intent": "complaint_or_human_assistance",
-          "support": 29,
-          "precision": 0.2286,
-          "recall": 0.8276,
-          "f1": 0.3582
+          "recall": 0.1724,
+          "f1": 0.2703
         },
         {
           "intent": "flight_disruption",
@@ -295,6 +288,13 @@
           "precision": 0.8,
           "recall": 0.5926,
           "f1": 0.6809
+        },
+        {
+          "intent": "information_or_policy",
+          "support": 23,
+          "precision": 0.5714,
+          "recall": 0.3478,
+          "f1": 0.4324
         },
         {
           "intent": "refund_or_compensation",
@@ -311,13 +311,6 @@
           "f1": 0.5806
         },
         {
-          "intent": "information_or_policy",
-          "support": 20,
-          "precision": 0.5,
-          "recall": 0.35,
-          "f1": 0.4118
-        },
-        {
           "intent": "baggage",
           "support": 16,
           "precision": 1.0,
@@ -326,17 +319,24 @@
         },
         {
           "intent": "booking_change_or_cancellation",
-          "support": 12,
+          "support": 13,
           "precision": 0.5,
-          "recall": 0.0833,
-          "f1": 0.1429
+          "recall": 0.0769,
+          "f1": 0.1333
+        },
+        {
+          "intent": "complaint_or_human_assistance",
+          "support": 11,
+          "precision": 0.0857,
+          "recall": 0.8182,
+          "f1": 0.1552
         },
         {
           "intent": "seat_or_upgrade",
-          "support": 7,
-          "precision": 0.5,
-          "recall": 0.5714,
-          "f1": 0.5333
+          "support": 6,
+          "precision": 0.375,
+          "recall": 0.5,
+          "f1": 0.4286
         },
         {
           "intent": "account_access_or_security",
@@ -388,7 +388,7 @@
             0,
             0,
             1,
-            9,
+            10,
             0,
             1,
             0,
@@ -399,10 +399,10 @@
           [
             0,
             0,
+            0,
+            9,
+            0,
             1,
-            24,
-            1,
-            2,
             0,
             0,
             1,
@@ -424,9 +424,9 @@
             0,
             0,
             0,
-            8,
+            10,
             0,
-            7,
+            8,
             2,
             2,
             1,
@@ -435,13 +435,13 @@
           [
             4,
             0,
-            0,
-            24,
             1,
+            36,
+            2,
             1,
             10,
             1,
-            2,
+            3,
             0
           ],
           [
@@ -465,7 +465,7 @@
             0,
             1,
             0,
-            4,
+            3,
             0
           ],
           [
@@ -483,28 +483,21 @@
         ]
       },
       "missing_classes_in_prediction": [],
-      "fit_or_pred_seconds": 0.18
+      "fit_or_pred_seconds": 0.45
     },
     "tfidf_lr_baseline": {
-      "accuracy": 0.55,
-      "macro_f1": 0.4886,
-      "weighted_f1": 0.5448,
-      "micro_f1": 0.55,
+      "accuracy": 0.505,
+      "macro_f1": 0.449,
+      "weighted_f1": 0.5183,
+      "micro_f1": 0.505,
       "n": 200,
       "per_class": [
         {
           "intent": "non_support_or_acknowledgement",
-          "support": 43,
-          "precision": 0.6842,
-          "recall": 0.6047,
-          "f1": 0.642
-        },
-        {
-          "intent": "complaint_or_human_assistance",
-          "support": 29,
-          "precision": 0.4167,
-          "recall": 0.5172,
-          "f1": 0.4615
+          "support": 58,
+          "precision": 0.7368,
+          "recall": 0.4828,
+          "f1": 0.5833
         },
         {
           "intent": "flight_disruption",
@@ -512,6 +505,13 @@
           "precision": 0.7931,
           "recall": 0.8519,
           "f1": 0.8214
+        },
+        {
+          "intent": "information_or_policy",
+          "support": 23,
+          "precision": 0.2667,
+          "recall": 0.5217,
+          "f1": 0.3529
         },
         {
           "intent": "refund_or_compensation",
@@ -528,13 +528,6 @@
           "f1": 0.5882
         },
         {
-          "intent": "information_or_policy",
-          "support": 20,
-          "precision": 0.2889,
-          "recall": 0.65,
-          "f1": 0.4
-        },
-        {
           "intent": "baggage",
           "support": 16,
           "precision": 1.0,
@@ -543,17 +536,24 @@
         },
         {
           "intent": "booking_change_or_cancellation",
-          "support": 12,
+          "support": 13,
           "precision": 0.0,
           "recall": 0.0,
           "f1": 0.0
         },
         {
+          "intent": "complaint_or_human_assistance",
+          "support": 11,
+          "precision": 0.1667,
+          "recall": 0.5455,
+          "f1": 0.2553
+        },
+        {
           "intent": "seat_or_upgrade",
-          "support": 7,
-          "precision": 0.4545,
-          "recall": 0.7143,
-          "f1": 0.5556
+          "support": 6,
+          "precision": 0.3636,
+          "recall": 0.6667,
+          "f1": 0.4706
         },
         {
           "intent": "account_access_or_security",
@@ -607,7 +607,7 @@
             0,
             5,
             0,
-            5,
+            6,
             0,
             1,
             0,
@@ -617,10 +617,10 @@
             0,
             0,
             0,
-            15,
-            1,
-            10,
-            2,
+            6,
+            0,
+            4,
+            0,
             0,
             1,
             0
@@ -641,9 +641,9 @@
             0,
             0,
             0,
+            4,
             0,
-            0,
-            13,
+            12,
             2,
             3,
             1,
@@ -653,12 +653,12 @@
             3,
             0,
             0,
+            7,
             2,
+            14,
+            28,
             1,
-            8,
-            26,
-            1,
-            2,
+            3,
             0
           ],
           [
@@ -682,7 +682,7 @@
             1,
             1,
             0,
-            5,
+            4,
             0
           ],
           [
@@ -702,28 +702,21 @@
       "missing_classes_in_prediction": [
         "booking_change_or_cancellation"
       ],
-      "fit_or_pred_seconds": 0.13
+      "fit_or_pred_seconds": 0.28
     },
     "hybrid_main": {
-      "accuracy": 0.545,
-      "macro_f1": 0.5114,
-      "weighted_f1": 0.5463,
-      "micro_f1": 0.545,
+      "accuracy": 0.51,
+      "macro_f1": 0.4768,
+      "weighted_f1": 0.5252,
+      "micro_f1": 0.51,
       "n": 200,
       "per_class": [
         {
           "intent": "non_support_or_acknowledgement",
-          "support": 43,
-          "precision": 0.697,
-          "recall": 0.5349,
-          "f1": 0.6053
-        },
-        {
-          "intent": "complaint_or_human_assistance",
-          "support": 29,
-          "precision": 0.4,
-          "recall": 0.4828,
-          "f1": 0.4375
+          "support": 58,
+          "precision": 0.7576,
+          "recall": 0.431,
+          "f1": 0.5495
         },
         {
           "intent": "flight_disruption",
@@ -731,6 +724,13 @@
           "precision": 0.7419,
           "recall": 0.8519,
           "f1": 0.7931
+        },
+        {
+          "intent": "information_or_policy",
+          "support": 23,
+          "precision": 0.3023,
+          "recall": 0.5652,
+          "f1": 0.3939
         },
         {
           "intent": "refund_or_compensation",
@@ -747,13 +747,6 @@
           "f1": 0.5882
         },
         {
-          "intent": "information_or_policy",
-          "support": 20,
-          "precision": 0.3023,
-          "recall": 0.65,
-          "f1": 0.4127
-        },
-        {
           "intent": "baggage",
           "support": 16,
           "precision": 1.0,
@@ -762,17 +755,24 @@
         },
         {
           "intent": "booking_change_or_cancellation",
-          "support": 12,
+          "support": 13,
           "precision": 0.5,
-          "recall": 0.0833,
-          "f1": 0.1429
+          "recall": 0.0769,
+          "f1": 0.1333
+        },
+        {
+          "intent": "complaint_or_human_assistance",
+          "support": 11,
+          "precision": 0.1714,
+          "recall": 0.5455,
+          "f1": 0.2609
         },
         {
           "intent": "seat_or_upgrade",
-          "support": 7,
-          "precision": 0.4545,
-          "recall": 0.7143,
-          "f1": 0.5556
+          "support": 6,
+          "precision": 0.3636,
+          "recall": 0.6667,
+          "f1": 0.4706
         },
         {
           "intent": "account_access_or_security",
@@ -826,7 +826,7 @@
             1,
             5,
             0,
-            4,
+            5,
             0,
             1,
             0,
@@ -835,11 +835,11 @@
           [
             0,
             0,
-            1,
-            14,
-            1,
-            10,
-            2,
+            0,
+            6,
+            0,
+            4,
+            0,
             0,
             1,
             0
@@ -860,7 +860,7 @@
             0,
             0,
             0,
-            0,
+            3,
             0,
             13,
             2,
@@ -871,13 +871,13 @@
           [
             4,
             0,
-            0,
-            3,
-            2,
+            1,
             8,
-            23,
+            3,
+            13,
+            25,
             1,
-            2,
+            3,
             0
           ],
           [
@@ -901,7 +901,7 @@
             1,
             1,
             0,
-            5,
+            4,
             0
           ],
           [
@@ -919,90 +919,87 @@
         ]
       },
       "missing_classes_in_prediction": [],
-      "fit_or_pred_seconds": 0.29
+      "fit_or_pred_seconds": 0.47
     }
   },
   "imbalance": {
     "counts": {
+      "information_or_policy": 23,
+      "booking_change_or_cancellation": 13,
       "account_access_or_security": 3,
-      "information_or_policy": 20,
-      "non_support_or_acknowledgement": 43,
-      "flight_disruption": 27,
-      "complaint_or_human_assistance": 29,
-      "booking_change_or_cancellation": 12,
-      "refund_or_compensation": 22,
+      "seat_or_upgrade": 6,
+      "website_or_app_issue": 21,
       "baggage": 16,
-      "seat_or_upgrade": 7,
-      "website_or_app_issue": 21
+      "non_support_or_acknowledgement": 58,
+      "complaint_or_human_assistance": 11,
+      "refund_or_compensation": 22,
+      "flight_disruption": 27
     },
-    "share_max_over_min": 14.33,
+    "share_max_over_min": 19.33,
     "zero_support_classes": []
   },
   "retrieval_quality": {
     "records": 200,
     "hit_rate_at_k": 1.0,
-    "mean_top1_similarity": 0.2513,
-    "mean_topk_similarity": 0.2107,
-    "mean_topk_similarity_median": 0.1971,
+    "mean_top1_similarity": 0.2478,
+    "mean_topk_similarity": 0.2085,
+    "mean_topk_similarity_median": 0.194,
     "recall_at_k_intent_consistency": 1.0,
-    "evidence_word_overlap_with_reference": 0.1645
+    "evidence_word_overlap_with_reference": 0.1595
   },
   "escalation": {
     "overall": {
-      "accuracy": 0.63,
-      "false_auto_handle_rate": 0.275,
-      "n_false_auto_handle": 55,
-      "false_escalation_rate": 0.09,
-      "n_false_escalation": 18,
-      "auto_handle_precision": 0.6309,
-      "auto_handle_recall": 0.8393,
-      "auto_handle_f1": 0.7203,
+      "accuracy": 0.645,
+      "false_auto_handle_rate": 0.25,
+      "n_false_auto_handle": 50,
+      "false_escalation_rate": 0.1,
+      "n_false_escalation": 20,
+      "auto_handle_precision": 0.6644,
+      "auto_handle_recall": 0.8319,
+      "auto_handle_f1": 0.7388,
       "confusion": {
-        "AUTO_HANDLE": 112,
-        "ESCALATE": 83,
-        "UNCERTAIN": 5
+        "AUTO_HANDLE": 119,
+        "ESCALATE": 75,
+        "UNCERTAIN": 6
       }
     },
     "by_slice": {
       "main": {
-        "accuracy": 0.6433,
-        "false_auto_handle_rate": 0.269,
-        "n_false_auto_handle": 46,
-        "false_escalation_rate": 0.0819,
-        "n_false_escalation": 14,
-        "auto_handle_precision": 0.6567,
-        "auto_handle_recall": 0.8627,
-        "auto_handle_f1": 0.7458,
+        "accuracy": 0.6667,
+        "false_auto_handle_rate": 0.2339,
+        "n_false_auto_handle": 40,
+        "false_escalation_rate": 0.0936,
+        "n_false_escalation": 16,
+        "auto_handle_precision": 0.7015,
+        "auto_handle_recall": 0.8545,
+        "auto_handle_f1": 0.7705,
         "confusion": {
-          "AUTO_HANDLE": 102,
-          "ESCALATE": 64,
-          "UNCERTAIN": 5
+          "AUTO_HANDLE": 110,
+          "ESCALATE": 55,
+          "UNCERTAIN": 6
         }
       },
       "borderline": {
-        "accuracy": 0.5517,
-        "false_auto_handle_rate": 0.3103,
-        "n_false_auto_handle": 9,
+        "accuracy": 0.5172,
+        "false_auto_handle_rate": 0.3448,
+        "n_false_auto_handle": 10,
         "false_escalation_rate": 0.1379,
         "n_false_escalation": 4,
-        "auto_handle_precision": 0.4,
-        "auto_handle_recall": 0.6,
-        "auto_handle_f1": 0.48,
+        "auto_handle_precision": 0.3333,
+        "auto_handle_recall": 0.5556,
+        "auto_handle_f1": 0.4167,
         "confusion": {
-          "AUTO_HANDLE": 10,
-          "ESCALATE": 19,
+          "AUTO_HANDLE": 9,
+          "ESCALATE": 20,
           "UNCERTAIN": 0
         }
       }
     },
     "unsafe_auto_ids": [
-      "BA_105364",
       "BA_135900",
       "BA_147482",
       "BA_150929",
-      "BA_152445",
-      "BA_163041",
-      "BA_167696",
+      "BA_154364",
       "BA_168706",
       "BA_174566",
       "BA_175984",
@@ -1012,15 +1009,10 @@
       "BA_236326",
       "BA_24151",
       "BA_248481",
-      "BA_26002",
-      "BA_278441",
+      "BA_255518",
       "BA_294773",
       "BA_307083",
-      "BA_32854",
       "BA_331684",
-      "BA_334633",
-      "BA_337964",
-      "BA_358073",
       "BA_358078",
       "BA_375254",
       "BA_408652",
@@ -1028,17 +1020,18 @@
       "BA_409640",
       "BA_410230",
       "BA_423824",
-      "BA_466171",
       "BA_472183",
       "BA_487360",
       "BA_495495",
       "BA_50753",
+      "BA_51492",
       "BA_525809",
       "BA_542898",
       "BA_547282",
       "BA_568345",
-      "BA_577348",
       "BA_578442",
+      "BA_630270",
+      "BA_634124",
       "BA_661009",
       "BA_689051",
       "BA_705493",
@@ -1047,23 +1040,25 @@
       "BA_73767",
       "BA_749232",
       "BA_755281",
+      "BA_765259",
       "BA_766761",
+      "BA_783910",
       "BA_787976",
       "BA_83067",
       "BA_98911"
     ]
   },
   "response_quality": {
-    "correctness": 3.635,
+    "correctness": 3.53,
     "correctness_n": 200,
     "groundedness": 4.055,
     "groundedness_n": 200,
     "completeness": 4.695,
     "completeness_n": 200,
-    "overall": 2.185,
+    "overall": 2.2,
     "overall_n": 200,
     "hallucination_rate": 0.0,
-    "escalation_appropriate_rate": 0.725,
+    "escalation_appropriate_rate": 0.75,
     "judge_backends_used": {
       "offline": 200
     }
@@ -1077,33 +1072,33 @@
         "escalation_aware": true
       },
       "judge": {
-        "correctness": 3.055,
+        "correctness": 2.95,
         "correctness_n": 200,
         "groundedness": 3.0,
         "groundedness_n": 200,
-        "completeness": 3.72,
+        "completeness": 3.7,
         "completeness_n": 200,
-        "overall": 1.785,
+        "overall": 1.795,
         "overall_n": 200,
         "hallucination_rate": 0.0,
-        "escalation_appropriate_rate": 0.725,
+        "escalation_appropriate_rate": 0.75,
         "judge_backends_used": {
           "offline": 200
         }
       },
       "escalation": {
-        "accuracy": 0.63,
-        "false_auto_handle_rate": 0.275,
-        "n_false_auto_handle": 55,
-        "false_escalation_rate": 0.09,
-        "n_false_escalation": 18,
-        "auto_handle_precision": 0.6309,
-        "auto_handle_recall": 0.8393,
-        "auto_handle_f1": 0.7203,
+        "accuracy": 0.645,
+        "false_auto_handle_rate": 0.25,
+        "n_false_auto_handle": 50,
+        "false_escalation_rate": 0.1,
+        "n_false_escalation": 20,
+        "auto_handle_precision": 0.6644,
+        "auto_handle_recall": 0.8319,
+        "auto_handle_f1": 0.7388,
         "confusion": {
-          "AUTO_HANDLE": 112,
-          "ESCALATE": 83,
-          "UNCERTAIN": 5
+          "AUTO_HANDLE": 119,
+          "ESCALATE": 75,
+          "UNCERTAIN": 6
         }
       },
       "n": 200
@@ -1116,33 +1111,33 @@
         "escalation_aware": false
       },
       "judge": {
-        "correctness": 2.695,
+        "correctness": 2.635,
         "correctness_n": 200,
         "groundedness": 3.33,
         "groundedness_n": 200,
-        "completeness": 3.58,
+        "completeness": 3.55,
         "completeness_n": 200,
-        "overall": 1.64,
+        "overall": 1.66,
         "overall_n": 200,
         "hallucination_rate": 0.0,
-        "escalation_appropriate_rate": 0.725,
+        "escalation_appropriate_rate": 0.75,
         "judge_backends_used": {
           "offline": 200
         }
       },
       "escalation": {
-        "accuracy": 0.63,
-        "false_auto_handle_rate": 0.275,
-        "n_false_auto_handle": 55,
-        "false_escalation_rate": 0.09,
-        "n_false_escalation": 18,
-        "auto_handle_precision": 0.6309,
-        "auto_handle_recall": 0.8393,
-        "auto_handle_f1": 0.7203,
+        "accuracy": 0.645,
+        "false_auto_handle_rate": 0.25,
+        "n_false_auto_handle": 50,
+        "false_escalation_rate": 0.1,
+        "n_false_escalation": 20,
+        "auto_handle_precision": 0.6644,
+        "auto_handle_recall": 0.8319,
+        "auto_handle_f1": 0.7388,
         "confusion": {
-          "AUTO_HANDLE": 112,
-          "ESCALATE": 83,
-          "UNCERTAIN": 5
+          "AUTO_HANDLE": 119,
+          "ESCALATE": 75,
+          "UNCERTAIN": 6
         }
       },
       "n": 200
@@ -1155,33 +1150,33 @@
         "escalation_aware": false
       },
       "judge": {
-        "correctness": 3.275,
+        "correctness": 3.215,
         "correctness_n": 200,
         "groundedness": 3.61,
         "groundedness_n": 200,
         "completeness": 4.925,
         "completeness_n": 200,
-        "overall": 2.06,
+        "overall": 2.09,
         "overall_n": 200,
         "hallucination_rate": 0.0,
-        "escalation_appropriate_rate": 0.725,
+        "escalation_appropriate_rate": 0.75,
         "judge_backends_used": {
           "offline": 200
         }
       },
       "escalation": {
-        "accuracy": 0.63,
-        "false_auto_handle_rate": 0.275,
-        "n_false_auto_handle": 55,
-        "false_escalation_rate": 0.09,
-        "n_false_escalation": 18,
-        "auto_handle_precision": 0.6309,
-        "auto_handle_recall": 0.8393,
-        "auto_handle_f1": 0.7203,
+        "accuracy": 0.645,
+        "false_auto_handle_rate": 0.25,
+        "n_false_auto_handle": 50,
+        "false_escalation_rate": 0.1,
+        "n_false_escalation": 20,
+        "auto_handle_precision": 0.6644,
+        "auto_handle_recall": 0.8319,
+        "auto_handle_f1": 0.7388,
         "confusion": {
-          "AUTO_HANDLE": 112,
-          "ESCALATE": 83,
-          "UNCERTAIN": 5
+          "AUTO_HANDLE": 119,
+          "ESCALATE": 75,
+          "UNCERTAIN": 6
         }
       },
       "n": 200
@@ -1194,33 +1189,33 @@
         "escalation_aware": true
       },
       "judge": {
-        "correctness": 3.635,
+        "correctness": 3.53,
         "correctness_n": 200,
         "groundedness": 4.055,
         "groundedness_n": 200,
         "completeness": 4.695,
         "completeness_n": 200,
-        "overall": 2.185,
+        "overall": 2.2,
         "overall_n": 200,
         "hallucination_rate": 0.0,
-        "escalation_appropriate_rate": 0.725,
+        "escalation_appropriate_rate": 0.75,
         "judge_backends_used": {
           "offline": 200
         }
       },
       "escalation": {
-        "accuracy": 0.63,
-        "false_auto_handle_rate": 0.275,
-        "n_false_auto_handle": 55,
-        "false_escalation_rate": 0.09,
-        "n_false_escalation": 18,
-        "auto_handle_precision": 0.6309,
-        "auto_handle_recall": 0.8393,
-        "auto_handle_f1": 0.7203,
+        "accuracy": 0.645,
+        "false_auto_handle_rate": 0.25,
+        "n_false_auto_handle": 50,
+        "false_escalation_rate": 0.1,
+        "n_false_escalation": 20,
+        "auto_handle_precision": 0.6644,
+        "auto_handle_recall": 0.8319,
+        "auto_handle_f1": 0.7388,
         "confusion": {
-          "AUTO_HANDLE": 112,
-          "ESCALATE": 83,
-          "UNCERTAIN": 5
+          "AUTO_HANDLE": 119,
+          "ESCALATE": 75,
+          "UNCERTAIN": 6
         }
       },
       "n": 200
@@ -1230,10 +1225,10 @@
     {
       "example_id": "BA_105364",
       "customer_message": "@British_Airways not the best performance at JFK flight BA113 from Heathrow",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.3014,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, ^Kieran",
@@ -1248,9 +1243,9 @@
       "judge_groundedness": 4,
       "judge_completeness": 4,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.32; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.32",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -1310,7 +1305,7 @@
     },
     {
       "example_id": "BA_120790",
-      "customer_message": "Well @British_Airways that was fab. Alistair &amp; Cordelia were very hospitable and welcomed me on to the flight deck for a chat despite having an AMS &amp; back to go. Please pass on my thanks to all crew (BA1343).\nGreat flight. https://t.co/ZiTjjkHv1k",
+      "customer_message": "Well @British_Airways that was fab. Alistair &amp; Cordelia were very hospitable and welcomed me on to the flight deck for a chat despite having an AMS &amp; back to go. Please pass on my thanks to all crew (BA1343).\r\nGreat flight. https://t.co/ZiTjjkHv1k",
       "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "non_support_or_acknowledgement",
       "intent_confidence": 0.8765,
@@ -1486,7 +1481,7 @@
       "top_evidence_conv": 135102,
       "top_evidence_brand": "@256063 We're sorry for the experience you've had. We can certainly appreciate how concerning this must have been for you both. We're following you now. Please feel free to DM us your full name, booking ref, email and contact number at your earliest convenience. 1/2",
       "gold_reference_reply": "@256848 Hi Emlyn, we're following you now. It should let you DM us. Thanks. ^Raj",
-      "gold_prior_context": "[CUSTOMER @ 2017-12-03 16:04:36+05:30] @British_Airways hi, I tried to reserve price for 72 hours for \u00a320, but I never got an email or booking code or anything. So I had to book flight from scratch later that day. I see you\u2019ve still taken the \u00a320 off me though!\n[BRAND @ 2017-12-03 17:36:03+05:30] @256848 This is concerning to hear, Emlyn. If you could DM us your original flight details, new booking ref, email and contact number, we'll look into this for you. ^David",
+      "gold_prior_context": "[CUSTOMER @ 2017-12-03 16:04:36+05:30] @British_Airways hi, I tried to reserve price for 72 hours for \u00a320, but I never got an email or booking code or anything. So I had to book flight from scratch later that day. I see you\u2019ve still taken the \u00a320 off me though!\r\n[BRAND @ 2017-12-03 17:36:03+05:30] @256848 This is concerning to hear, Emlyn. If you could DM us your original flight details, new booking ref, email and contact number, we'll look into this for you. ^David",
       "judge_correctness": 5,
       "judge_groundedness": 4,
       "judge_completeness": 5,
@@ -1554,7 +1549,7 @@
     {
       "example_id": "BA_150929",
       "customer_message": "@British_Airways I have a tkt for a flt 2moro fm BHD-LHR AT 0645 which allows me to change the time of flight on the same day if there is1/3",
-      "gold_intent": "information_or_policy",
+      "gold_intent": "booking_change_or_cancellation",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.3501,
       "gold_escalation": "ESCALATE",
@@ -1568,23 +1563,23 @@
       "top_evidence_brand": "@555856 Hi Aga, you would need to speak to some one to make this change, as we would need to split the booking. 1/2",
       "gold_reference_reply": "@271448 Could we give you a call please, Ryan? We'll need your booking ref, full name, email and contact number. Could you also let us know the 1/2",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
       "judge_escalation_appropriate": false,
       "judge_overall": 1,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.29; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.29; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
     {
       "example_id": "BA_152445",
       "customer_message": "@British_Airways really disappointed with the level of customer support, just no care unless you\u2019re a club member",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.2618,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "We're sorry to hear this, @British_Airways Hi Nick, can you tell us a little more? We'll do all we can to help.",
@@ -1595,13 +1590,13 @@
       "top_evidence_brand": "@121075 Hi Nick, can you tell us a little more? We'll do all we can to help. ^Helen",
       "gold_reference_reply": "@272955 Hi David, is there anything we can help with? If so, please DM the full details with any references and your email, full address and 1/2",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.18; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.18",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -1611,7 +1606,7 @@
       "gold_intent": "booking_change_or_cancellation",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.6895,
-      "gold_escalation": "AUTO_HANDLE",
+      "gold_escalation": "ESCALATE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, @British_Airways We can certainly look into it, Briain. ^Lolly",
@@ -1626,9 +1621,9 @@
       "judge_groundedness": 4,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": true,
-      "judge_overall": 2,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.42",
+      "judge_escalation_appropriate": false,
+      "judge_overall": 1,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.42; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -1662,10 +1657,10 @@
     {
       "example_id": "BA_163041",
       "customer_message": "@British_Airways trying to call, 15 minute wait time for Silver members! Do you have on-line chat?",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "information_or_policy",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.3604,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "We're sorry to hear this, @British_Airways Hi David, we're sorry to hear this has been your experience. Please let us know more about your situation and we'll do all we can to help.",
@@ -1676,13 +1671,13 @@
       "top_evidence_brand": "@268568 Hi David, we're sorry to hear this has been your experience. Please let us know more about your situation and we'll do all we can to help. ^L",
       "gold_reference_reply": "@283186 Hi James, we can certainly help you change your flight. Please DM your full name, booking reference, email address, postal address, and",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.26; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.26",
       "judge_backend": "offline",
       "sample_slice": "borderline"
     },
@@ -1743,10 +1738,10 @@
     {
       "example_id": "BA_167696",
       "customer_message": "@British_Airways perhaps you should change the name of your executive club to \u201celite \u201cclub\u201d #downgrade #notfornormaltravelers #unhappy",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "booking_change_or_cancellation",
       "intent_confidence": 0.6,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for contacting us, @British_Airways Hi Kayleigh, you will need to speak with our BA Holidays team to see if they will be able to assist you with the name change. You",
@@ -1761,9 +1756,9 @@
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.12; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.12",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -2161,7 +2156,7 @@
       "top_evidence_conv": 134081,
       "top_evidence_brand": "@255025 Thanks for letting us know Kerri. Please feel free to contact us if you need any further assistance. ^Kit",
       "gold_reference_reply": "@352613 Hi Umar. If you DM your booking reference, email and contact number we'll take a look for you. ^Anthony",
-      "gold_prior_context": "[CUSTOMER @ 2017-10-13 17:10:47+05:30] @British_Airways do you have halal in flight meals from Singapore to Heathrow?\n[BRAND @ 2017-10-13 23:43:44+05:30] @352613 Hi Umar, we do have a variety of special meals to cater for dietary requirements.  You do need to notify us in advance of any requirements.",
+      "gold_prior_context": "[CUSTOMER @ 2017-10-13 17:10:47+05:30] @British_Airways do you have halal in flight meals from Singapore to Heathrow?\r\n[BRAND @ 2017-10-13 23:43:44+05:30] @352613 Hi Umar, we do have a variety of special meals to cater for dietary requirements.  You do need to notify us in advance of any requirements.",
       "judge_correctness": 5,
       "judge_groundedness": 3,
       "judge_completeness": 5,
@@ -2340,7 +2335,7 @@
       "gold_intent": "booking_change_or_cancellation",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.8683,
-      "gold_escalation": "AUTO_HANDLE",
+      "gold_escalation": "ESCALATE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "We're sorry to hear this, @British_Airways If the passenger would like to reach out to us on twitter, we'd be happy to assist, Rebeca. ^Lisa",
@@ -2355,9 +2350,9 @@
       "judge_groundedness": 4,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": true,
-      "judge_overall": 2,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.62",
+      "judge_escalation_appropriate": false,
+      "judge_overall": 1,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.62; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -2367,7 +2362,7 @@
       "gold_intent": "information_or_policy",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.6,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, @British_Airways We can check that for you. We'll also need your flight details and telephone number.^LW",
@@ -2382,9 +2377,9 @@
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.23; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 3,
+      "judge_why": "factual auto reply grounded on top evidence sim=0.23",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -2499,10 +2494,10 @@
     {
       "example_id": "BA_278441",
       "customer_message": "@British_Airways you are a joke!  From seven flights a day to and from Belfast now down to Three or four depends on the day. Just pathetic!",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.3059,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, @British_Airways Hi Catherine, it's important that you plan in advance, especially when your using your Avios points. ^Tom",
@@ -2517,9 +2512,9 @@
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.22; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.22",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -2796,10 +2791,10 @@
     {
       "example_id": "BA_32854",
       "customer_message": "Well @British_Airways has definitely gone downhill quite sharply recently. This is the current food situation in the Business Class lounge. \ud83d\udcf8 by my Dad. https://t.co/3sXtIgLNUz",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "non_support_or_acknowledgement",
       "intent_confidence": 0.3023,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for getting in touch! We'll share your feedback with the team \u2014 is there anything else we can help with?",
@@ -2810,13 +2805,13 @@
       "top_evidence_brand": "@117980 We're very glad to hear it, Andy! Although we know it's always nice to be away, there's something even nicer about coming home. ^HP",
       "gold_reference_reply": "@151888 Hi Michelle. Sorry for the late reply. I hope the food situation has improved since. Please pass our apologies on to your dad. Which airport are we talking about so we can feed this back? ^Monica",
       "gold_prior_context": "",
-      "judge_correctness": 2,
+      "judge_correctness": 5,
       "judge_groundedness": 5,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "intent mismatch between prediction and gold; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 3,
+      "judge_why": "no issues detected",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -2850,10 +2845,10 @@
     {
       "example_id": "BA_334633",
       "customer_message": "@British_Airways flew on your 777 to St Lucia from Gatwick. Big disappointment. Poor food and enterntainment system from the 80\u2019s \ud83d\udc4e\ud83c\udffd",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "non_support_or_acknowledgement",
       "intent_confidence": 0.2071,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for getting in touch! We'll share your feedback with the team \u2014 is there anything else we can help with?",
@@ -2864,13 +2859,13 @@
       "top_evidence_brand": "@600541 Thanks for getting in touch about your St Lucia flight, and for the round of applause! We hope to see you on board again soon. ^Cec",
       "gold_reference_reply": "@391303 Hi Rahul.  We're sorry you didn't enjoy your experience with us today.  We hope your child is feeling better soon.  ^N",
       "gold_prior_context": "",
-      "judge_correctness": 2,
+      "judge_correctness": 5,
       "judge_groundedness": 5,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "intent mismatch between prediction and gold; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 3,
+      "judge_why": "no issues detected",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -2931,10 +2926,10 @@
     {
       "example_id": "BA_337964",
       "customer_message": "It seems that @British_Airways is now Ryanair but twice as expensive https://t.co/05qsK5KYAJ",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.222,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, @British_Airways Hi Ben. As your charger was confiscated due to the UK Government\u2019s new security requirements for cabin baggage on direct flights from 1/2",
@@ -2949,9 +2944,9 @@
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.21; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.21",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -2985,7 +2980,7 @@
     {
       "example_id": "BA_349968",
       "customer_message": "@British_Airways what is the best number to call in an emergency!",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "information_or_policy",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.312,
       "gold_escalation": "AUTO_HANDLE",
@@ -2999,13 +2994,13 @@
       "top_evidence_brand": "@508245 We're happy to hear you've found your item, Andy. ^Alex",
       "gold_reference_reply": "@453729 We're sorry for the delay in responding to you, Adam. Please follow this link for our contact details: https://t.co/eZHtMInQRK. 1/2",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 4,
       "judge_completeness": 5,
       "judge_hallucination": false,
       "judge_escalation_appropriate": true,
-      "judge_overall": 3,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.37",
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.37",
       "judge_backend": "offline",
       "sample_slice": "borderline"
     },
@@ -3024,7 +3019,7 @@
       "top_evidence_sim": 0.2742,
       "top_evidence_conv": 445003,
       "top_evidence_brand": "@539263 We can only suggest doing as the message indicates, Tom. Have a great flight! ^Lolly",
-      "gold_reference_reply": "@374528 Hi Paul, you can send it to: British Airways,\nCustomer Relations (S506) ,\nPO Box 1126,\nUxbridge,\nUB8 9XS,\nUnited Kingdom.  ^L",
+      "gold_reference_reply": "@374528 Hi Paul, you can send it to: British Airways,\r\nCustomer Relations (S506) ,\r\nPO Box 1126,\r\nUxbridge,\r\nUB8 9XS,\r\nUnited Kingdom.  ^L",
       "gold_prior_context": "",
       "judge_correctness": 2,
       "judge_groundedness": 5,
@@ -3039,10 +3034,10 @@
     {
       "example_id": "BA_358073",
       "customer_message": "@British_Airways Shockingly-bleak connection from Montego Bay to Kingston. A disappointing start to my trip back to London today.",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.2157,
-      "gold_escalation": "UNCERTAIN",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, @British_Airways Hi Rohan. We're sorry to hear this.",
@@ -3057,9 +3052,9 @@
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.16; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.16",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -3390,10 +3385,10 @@
     {
       "example_id": "BA_410381",
       "customer_message": "@British_Airways BA219... 9hr flight, no USB charger slots and a faulty B&amp;W only screen. Disgraceful. Totally disgraceful.\ud83d\ude15 https://t.co/ZN5Z7CCiOc",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.4847,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "ESCALATE",
       "escalation_reason": "complaint_or_human_judgment",
       "draft_reply": "We're sorry to hear this, Please DM us your booking reference and what happened so our team can look into it.",
@@ -3404,13 +3399,13 @@
       "top_evidence_brand": "@287060 Sorry if this has spoiled your journey, Vikki. Thanks for sending those in, we'll pass this on as feedback. ^Paul",
       "gold_reference_reply": "@508371 Our apologies for this, Zoffin! This certainly isn't how it should be. We'll pass this on to our Customer Experience team. ^Alex",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 5,
       "judge_completeness": 4,
       "judge_hallucination": false,
       "judge_escalation_appropriate": true,
-      "judge_overall": 3,
-      "judge_why": "no issues detected",
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -3457,7 +3452,7 @@
       "top_evidence_conv": 204022,
       "top_evidence_brand": "@322361 Hi Ian, most airlines oversell flights in order to keep fares as low as possible, but I'm sorry to hear we misjudged the numbers on this 1/3",
       "gold_reference_reply": "@520479 Hi, Judy. Could you DM us a bit more info please? We'll also need your booking ref, email and contact number. Many thanks. ^Lisa",
-      "gold_prior_context": "[CUSTOMER @ 2017-11-07 04:16:01+05:30] @British_Airways I have  flights with you (in March 2018) and want to know if it's possible to select seats now without extra costs. Thanks.\n[BRAND @ 2017-11-07 12:17:05+05:30] @520479 Hi Judy, do you have a medical condition we need to know about or are you a member of the Executive Club?  ^Marie",
+      "gold_prior_context": "[CUSTOMER @ 2017-11-07 04:16:01+05:30] @British_Airways I have  flights with you (in March 2018) and want to know if it's possible to select seats now without extra costs. Thanks.\r\n[BRAND @ 2017-11-07 12:17:05+05:30] @520479 Hi Judy, do you have a medical condition we need to know about or are you a member of the Executive Club?  ^Marie",
       "judge_correctness": 2,
       "judge_groundedness": 5,
       "judge_completeness": 5,
@@ -3606,10 +3601,10 @@
     {
       "example_id": "BA_466171",
       "customer_message": "Having had no decent response @British_Airways explaining nasty conditions last 2 flights Montpellier Airport, marketing email unappreciated",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.7918,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "We're sorry to hear this, @British_Airways What happened, Jenny? ^Linds",
@@ -3620,13 +3615,13 @@
       "top_evidence_brand": "@351457 What happened, Jenny? Can you DM us the details? ^Linds",
       "gold_reference_reply": "@176547 This is concerning to hear, could you please DM us your full name, email address and case references. We\u2019ll look into this for you. ^Kieran",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 1,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.27; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.27",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -3903,7 +3898,7 @@
     {
       "example_id": "BA_495495",
       "customer_message": "@British_Airways Got no reply ! No surprise  BA is shit",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.3038,
       "gold_escalation": "UNCERTAIN",
@@ -3916,14 +3911,14 @@
       "top_evidence_conv": 221220,
       "top_evidence_brand": "@338592 Hi Karl, sorry to hear you're still waiting to hear from our Customer Relations team. Can you please DM us your CR case reference, 1/2",
       "gold_reference_reply": "",
-      "gold_prior_context": "[BRAND @ 2017-11-26 15:35:31+05:30] @581561 We're concerned to hear that, Chris. Please tell us what's happened? We can arrange to call you back. DM us your booking reference, email address and contact number. ^Linda\n[CUSTOMER @ 2017-11-26 17:59:20+05:30] @British_Airways Thanks Linda I\u2019ve DM\u2019d you with my Email ad thanks",
-      "judge_correctness": 5,
+      "gold_prior_context": "[BRAND @ 2017-11-26 15:35:31+05:30] @581561 We're concerned to hear that, Chris. Please tell us what's happened? We can arrange to call you back. DM us your booking reference, email address and contact number. ^Linda\r\n[CUSTOMER @ 2017-11-26 17:59:20+05:30] @British_Airways Thanks Linda I\u2019ve DM\u2019d you with my Email ad thanks",
+      "judge_correctness": 2,
       "judge_groundedness": 4,
       "judge_completeness": 5,
       "judge_hallucination": false,
       "judge_escalation_appropriate": false,
-      "judge_overall": 2,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.36; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_overall": 1,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.36; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -4010,7 +4005,7 @@
     },
     {
       "example_id": "BA_50753",
-      "customer_message": "@British_Airways Hi 17707027 and __email__\n\nBest regards Danny",
+      "customer_message": "@British_Airways Hi 17707027 and __email__\r\n\r\nBest regards Danny",
       "gold_intent": "refund_or_compensation",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.3854,
@@ -4024,7 +4019,7 @@
       "top_evidence_conv": 39378,
       "top_evidence_brand": "@158828 We're sorry to hear of the issues you've encountered, Carlo. We can arrange to call you back if still been unable to amend your flight. 1/2",
       "gold_reference_reply": "",
-      "gold_prior_context": "[CUSTOMER @ 2017-10-05 09:24:23+05:30] @British_Airways Hi it is a flight credit of mad-fra with LA this was rejected. On 13.9. booking code BBBENZ. Ticket number 0455669465726.\n[BRAND @ 2017-10-05 15:06:26+05:30] @170875 Hi Danny, we can take a look into this for you. DM us your Executive Club number, email address and contact number. ^Linda",
+      "gold_prior_context": "[CUSTOMER @ 2017-10-05 09:24:23+05:30] @British_Airways Hi it is a flight credit of mad-fra with LA this was rejected. On 13.9. booking code BBBENZ. Ticket number 0455669465726.\r\n[BRAND @ 2017-10-05 15:06:26+05:30] @170875 Hi Danny, we can take a look into this for you. DM us your Executive Club number, email address and contact number. ^Linda",
       "judge_correctness": 2,
       "judge_groundedness": 4,
       "judge_completeness": 5,
@@ -4172,11 +4167,11 @@
     },
     {
       "example_id": "BA_51492",
-      "customer_message": "both need our passport checked, one gets a boarding pass, one doesn't? \n@British_Airways ? https://t.co/yLYZf8p1kR",
+      "customer_message": "both need our passport checked, one gets a boarding pass, one doesn't? \r\n@British_Airways ? https://t.co/yLYZf8p1kR",
       "gold_intent": "information_or_policy",
       "pred_intent": "website_or_app_issue",
       "intent_confidence": 0.22,
-      "gold_escalation": "AUTO_HANDLE",
+      "gold_escalation": "UNCERTAIN",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Sorry for the trouble, @British_Airways We usually suggest deleting the App and re-loading to resolve the problem. Hope this helps.",
@@ -4191,9 +4186,9 @@
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": true,
-      "judge_overall": 2,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.22",
+      "judge_escalation_appropriate": false,
+      "judge_overall": 1,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.22; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -4470,7 +4465,7 @@
     {
       "example_id": "BA_567068",
       "customer_message": "@British_Airways could you please tell me how we contact your customer services while abroad without having to call?",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "information_or_policy",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.7284,
       "gold_escalation": "AUTO_HANDLE",
@@ -4484,13 +4479,13 @@
       "top_evidence_brand": "@219700 Hi Kayla, our Sales team are best placed to assist you with any queries you have about making a new booking. You can find their 1/2",
       "gold_reference_reply": "@641092 Just Tweet your details and your question, Kyle. We're here 24/7 and happy to help. we're following you so you can DM your personal info.",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 5,
       "judge_completeness": 4,
       "judge_hallucination": false,
       "judge_escalation_appropriate": true,
-      "judge_overall": 3,
-      "judge_why": "no issues detected",
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold",
       "judge_backend": "offline",
       "sample_slice": "borderline"
     },
@@ -4537,7 +4532,7 @@
       "top_evidence_conv": 648492,
       "top_evidence_brand": "@168170 We do understand your frustration, Joe. We've passed on your comments to our Customer Experience team. ^Karen",
       "gold_reference_reply": "@642148 Hi David, I'm sorry you're unhappy with our seating policy. Passengers value being seated with the rest of their travel party, selecting a specific part of the aircraft because they're nervous flyers and for many other reasons aside from legroom. We offer prepaid seating 1/2",
-      "gold_prior_context": "[CUSTOMER @ 2017-11-16 01:50:47+05:30] @British_Airways long busy day and looking forward to relaxing with extra leg room that I\u2019d paid \u00a310 for on the BA1478 840pm LHR to GLA to find it is no different from the other seats and no extra leg room. #disappointed #falseadvertising\n[BRAND @ 2017-11-16 02:51:56+05:30] @642148 I'm sorry you were disappointed, David. We don't advertise seats as having extra legroom. Can you tell me where you saw this? ^Hel",
+      "gold_prior_context": "[CUSTOMER @ 2017-11-16 01:50:47+05:30] @British_Airways long busy day and looking forward to relaxing with extra leg room that I\u2019d paid \u00a310 for on the BA1478 840pm LHR to GLA to find it is no different from the other seats and no extra leg room. #disappointed #falseadvertising\r\n[BRAND @ 2017-11-16 02:51:56+05:30] @642148 I'm sorry you were disappointed, David. We don't advertise seats as having extra legroom. Can you tell me where you saw this? ^Hel",
       "judge_correctness": 5,
       "judge_groundedness": 4,
       "judge_completeness": 5,
@@ -4635,7 +4630,7 @@
       "gold_intent": "seat_or_upgrade",
       "pred_intent": "seat_or_upgrade",
       "intent_confidence": 0.6943,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for your message, @British_Airways Hi Badr, we're glad we were able to arrange extra legroom for you. Hope you had a great flight.",
@@ -4650,9 +4645,9 @@
       "judge_groundedness": 4,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": false,
-      "judge_overall": 2,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.37; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
+      "judge_escalation_appropriate": true,
+      "judge_overall": 3,
+      "judge_why": "factual auto reply grounded on top evidence sim=0.37",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -4686,7 +4681,7 @@
     {
       "example_id": "BA_579921",
       "customer_message": "@British_Airways is there a toll free numberin the US for contacting regarding my flight. 1-800 247-9297\u00a0is saying calls cannot be completed",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "information_or_policy",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.6,
       "gold_escalation": "AUTO_HANDLE",
@@ -4700,13 +4695,13 @@
       "top_evidence_brand": "@692525 We'll be happy to call you about this to help. Please DM us your full name, email and home address, along with a contact telephone number. You may also want to remove the booking reference from public view.^LW",
       "gold_reference_reply": "@651625 Hi Barrie, sorry you haven't been able to reach us when you called. Maybe we can help. You can DM us the details if you prefer. ^Lindy",
       "gold_prior_context": "",
-      "judge_correctness": 2,
+      "judge_correctness": 5,
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
       "judge_escalation_appropriate": true,
-      "judge_overall": 2,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.18",
+      "judge_overall": 3,
+      "judge_why": "factual auto reply grounded on top evidence sim=0.18",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -4834,7 +4829,7 @@
       "top_evidence_conv": 22866,
       "top_evidence_brand": "@141140 We would recommend to just keep an eye out, NV. Alternatively, speak to our Sales team for any suggestions. Their contact details can be found here: https://t.co/eZHtMInQRK. ^AlexL",
       "gold_reference_reply": "@686978 Hi Ashley. Since the availability is live, you'd be best off checking online, or contacting a member of our sales team. The details for contacting them can be found here https://t.co/eZHtMInQRK ^Paul",
-      "gold_prior_context": "[CUSTOMER @ 2017-11-14 06:11:08+05:30] @British_Airways is it possible to use avios pts to fly @AmericanAir ? seems like it isn\u2019t based on availability, but websites say otherwise...\n[BRAND @ 2017-11-14 12:10:17+05:30] @686978 Hi Ashley, yes, you can book AA flights with Avios. Which route and date are you looking to travel? We can check the availability. ^Chris",
+      "gold_prior_context": "[CUSTOMER @ 2017-11-14 06:11:08+05:30] @British_Airways is it possible to use avios pts to fly @AmericanAir ? seems like it isn\u2019t based on availability, but websites say otherwise...\r\n[BRAND @ 2017-11-14 12:10:17+05:30] @686978 Hi Ashley, yes, you can book AA flights with Avios. Which route and date are you looking to travel? We can check the availability. ^Chris",
       "judge_correctness": 5,
       "judge_groundedness": 3,
       "judge_completeness": 5,
@@ -4878,7 +4873,7 @@
       "gold_intent": "booking_change_or_cancellation",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.6518,
-      "gold_escalation": "AUTO_HANDLE",
+      "gold_escalation": "ESCALATE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, @British_Airways Hi Ben, you'd need to contact the airport to see if this is possible. We don't have a way to repatriate you with restricted items sadly.",
@@ -4893,9 +4888,9 @@
       "judge_groundedness": 4,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": true,
-      "judge_overall": 2,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.31",
+      "judge_escalation_appropriate": false,
+      "judge_overall": 1,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.31; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "borderline"
     },
@@ -4905,7 +4900,7 @@
       "gold_intent": "booking_change_or_cancellation",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.4476,
-      "gold_escalation": "AUTO_HANDLE",
+      "gold_escalation": "ESCALATE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, @British_Airways Hi Lorriane. That\u2019s correct and I don\u2019t think we\u2019ll increase the frequency as yet.",
@@ -4920,9 +4915,9 @@
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": true,
-      "judge_overall": 2,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.17",
+      "judge_escalation_appropriate": false,
+      "judge_overall": 1,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.17; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -4996,7 +4991,7 @@
       "top_evidence_conv": 71866,
       "top_evidence_brand": "@192590 You're welcome, Dazza. Not a bad view, isn't she a beauty? Bet you're glad to be leaving the grey clouds behind. Enjoy your flight. ^Steph",
       "gold_reference_reply": "@440369 We're really pleased to hear those positive comments, Simon. Our cabin crew are a great asset and we're over the moon to learn they looked after you well. ^Julie",
-      "gold_prior_context": "[CUSTOMER @ 2017-11-15 23:58:20+05:30] Oh dear @British_Airways, agent Sandra at J7 in T5 needs a refresher course. Sent me to B32 for 18.45 Belfast but omitted to tell me that passengers would be bussed from A10 \ud83d\ude31. Needless walk back  via tunnel from B terminal. Not good customer service\ud83d\udc4e\ud83d\udc4e\n[BRAND @ 2017-11-16 01:47:46+05:30] @440369 We're really sorry Sandra gave incorrect information, Simon. What a long walk. We've passed on your feedback to her line manager who'll address the issue. Please accept our sincere apologies. Thanks for letting us know. ^Julie",
+      "gold_prior_context": "[CUSTOMER @ 2017-11-15 23:58:20+05:30] Oh dear @British_Airways, agent Sandra at J7 in T5 needs a refresher course. Sent me to B32 for 18.45 Belfast but omitted to tell me that passengers would be bussed from A10 \ud83d\ude31. Needless walk back  via tunnel from B terminal. Not good customer service\ud83d\udc4e\ud83d\udc4e\r\n[BRAND @ 2017-11-16 01:47:46+05:30] @440369 We're really sorry Sandra gave incorrect information, Simon. What a long walk. We've passed on your feedback to her line manager who'll address the issue. Please accept our sincere apologies. Thanks for letting us know. ^Julie",
       "judge_correctness": 5,
       "judge_groundedness": 5,
       "judge_completeness": 5,
@@ -5050,7 +5045,7 @@
       "top_evidence_conv": 124984,
       "top_evidence_brand": "@246038 Hi Mark, I'm sorry for any inconvenience caused. ^Tom",
       "gold_reference_reply": "@716935 We're sorry Shona. If you have a case reference, then someone from our Customer Relations team will contact you shortly. ^Raj",
-      "gold_prior_context": "[CUSTOMER @ 2017-11-16 05:09:28+05:30] @British_Airways after a flight from Heathrow to Vegas listening a noise for the whole journey 1 of my friends has bn given \u00a320 voucher https://t.co/LqQqwiiUI5\n[BRAND @ 2017-11-16 05:22:46+05:30] @716935 We're sorry to hear this, Shona. Was the issue reported to our crew on board? ^Rach",
+      "gold_prior_context": "[CUSTOMER @ 2017-11-16 05:09:28+05:30] @British_Airways after a flight from Heathrow to Vegas listening a noise for the whole journey 1 of my friends has bn given \u00a320 voucher https://t.co/LqQqwiiUI5\r\n[BRAND @ 2017-11-16 05:22:46+05:30] @716935 We're sorry to hear this, Shona. Was the issue reported to our crew on board? ^Rach",
       "judge_correctness": 2,
       "judge_groundedness": 5,
       "judge_completeness": 5,
@@ -5334,7 +5329,7 @@
     {
       "example_id": "BA_689051",
       "customer_message": "im about to cancel @British_Airways all together",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.2149,
       "gold_escalation": "UNCERTAIN",
@@ -5442,7 +5437,7 @@
     {
       "example_id": "BA_705984",
       "customer_message": "If flying BA0545 Bologna to Heathrow today 18:35 on your birthday,it means you get a free upgrade to Club Europe right @British_Airways?\ud83d\ude09\ud83c\udf81\u2708\ufe0f",
-      "gold_intent": "seat_or_upgrade",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "seat_or_upgrade",
       "intent_confidence": 0.8097,
       "gold_escalation": "AUTO_HANDLE",
@@ -5456,19 +5451,19 @@
       "top_evidence_brand": "@148997 Whilst we appreciate the effort, we're afraid it's not something we can offer, Jamie! If you'd like to ask our check-in staff, they'll let you know if we have any promotional prices. ^Charlotte",
       "gold_reference_reply": "@752434 Nice try, David! You could always ask at the airport, you never know. I hope you get you get a nice birthday surprise.  ^Davina",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
       "judge_escalation_appropriate": true,
-      "judge_overall": 3,
-      "judge_why": "factual auto reply grounded on top evidence sim=0.24",
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.24",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
     {
       "example_id": "BA_707914",
-      "customer_message": "Hey @British_Airways my reserved &amp; confirmed seat on NAS-LHR is 4A (I have a screenshot from the website). When I go to checkin it get switched to 15J. Also happened to me on LHR-NAS. I expressly chose 4A for this flight. I'm not happy.\nCan you help please ?",
+      "customer_message": "Hey @British_Airways my reserved &amp; confirmed seat on NAS-LHR is 4A (I have a screenshot from the website). When I go to checkin it get switched to 15J. Also happened to me on LHR-NAS. I expressly chose 4A for this flight. I'm not happy.\r\nCan you help please ?",
       "gold_intent": "seat_or_upgrade",
       "pred_intent": "seat_or_upgrade",
       "intent_confidence": 0.4871,
@@ -5536,7 +5531,7 @@
       "top_evidence_conv": 271622,
       "top_evidence_brand": "@384637 Hello, Mia. There's a chance we may try to take the funds again. If not, please accept your cup of tea on us. ^Danielle.",
       "gold_reference_reply": "@602816 Hi there, this is concerning to hear. Could you DM us with some more info about the issues you have. We can look into this for you. ^Cody",
-      "gold_prior_context": "[BRAND @ 2017-10-03 18:41:16+05:30] Land just in time for a full English Breakfast \u2013 the perfect fuel for a 48-hour tour. \n https://t.co/bSQkyyQU9o",
+      "gold_prior_context": "[BRAND @ 2017-10-03 18:41:16+05:30] Land just in time for a full English Breakfast \u2013 the perfect fuel for a 48-hour tour. \r\n https://t.co/bSQkyyQU9o",
       "judge_correctness": 5,
       "judge_groundedness": 5,
       "judge_completeness": 4,
@@ -5577,10 +5572,10 @@
     {
       "example_id": "BA_71213",
       "customer_message": "It sucks.With Monarch Air going under.Ryan Air cutting their flights &amp; passengers being stranded everywhere Shame on  you @British_Airways https://t.co/tbRbIclm4w",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "flight_disruption",
       "intent_confidence": 0.6,
-      "gold_escalation": "ESCALATE",
+      "gold_escalation": "AUTO_HANDLE",
       "pred_escalation": "ESCALATE",
       "escalation_reason": "account_specific",
       "draft_reply": "We're sorry about the disruption, Please DM us your booking reference and a couple of details and our team will look into it for you.",
@@ -5603,7 +5598,7 @@
     },
     {
       "example_id": "BA_71387",
-      "customer_message": "@British_Airways help pls..\nWant to return from Bcn to Lhr on 5th march.its giving me just one flight and stating all others unavailable",
+      "customer_message": "@British_Airways help pls..\r\nWant to return from Bcn to Lhr on 5th march.its giving me just one flight and stating all others unavailable",
       "gold_intent": "website_or_app_issue",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.7703,
@@ -5806,7 +5801,7 @@
       "top_evidence_conv": 482209,
       "top_evidence_brand": "@570392 Hi Pip. We'll need to investigate why you're getting these emails. We're now following you. Please follow us back and send DM. 1/2",
       "gold_reference_reply": "@771012 We've asked our colleagues at Executive Club to  help you with this, Abdur. ^Hel",
-      "gold_prior_context": "[CUSTOMER @ 2017-11-18 14:33:52+05:30] @British_Airways I never received a user name for my BA Executive club account. Not able to log in. Where can this be retrieved ?\n[BRAND @ 2017-11-18 16:03:42+05:30] @771012 Hi Abdur, have you tried using your Executive Club number for your user name? This should work for you. ^Danielle.",
+      "gold_prior_context": "[CUSTOMER @ 2017-11-18 14:33:52+05:30] @British_Airways I never received a user name for my BA Executive club account. Not able to log in. Where can this be retrieved ?\r\n[BRAND @ 2017-11-18 16:03:42+05:30] @771012 Hi Abdur, have you tried using your Executive Club number for your user name? This should work for you. ^Danielle.",
       "judge_correctness": 5,
       "judge_groundedness": 5,
       "judge_completeness": 4,
@@ -5886,7 +5881,7 @@
       "top_evidence_sim": 0.327,
       "top_evidence_conv": 168320,
       "top_evidence_brand": "@288268 Hi Victoria.  Apologies for the late reply.  I'm sorry, but if you've already booked your car hire outside this time frame, you (1/2)",
-      "gold_reference_reply": "@194690 Hi there, you would need to call our BA holidays team on 0344 493 0787 option 1 \n(calls charged at local rate) for assistance. ^Tom",
+      "gold_reference_reply": "@194690 Hi there, you would need to call our BA holidays team on 0344 493 0787 option 1 \r\n(calls charged at local rate) for assistance. ^Tom",
       "gold_prior_context": "",
       "judge_correctness": 2,
       "judge_groundedness": 4,
@@ -6009,7 +6004,7 @@
     {
       "example_id": "BA_755802",
       "customer_message": "@british_airways customer service officially suck. Clearly do not care too much about their passengers. Sad face!",
-      "gold_intent": "complaint_or_human_assistance",
+      "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.4636,
       "gold_escalation": "UNCERTAIN",
@@ -6023,19 +6018,19 @@
       "top_evidence_brand": "@199437 Hi jenna, which department are you trying to get in touch with? Is there anything we can help you with? ^Linda",
       "gold_reference_reply": "@791231 This doesn't sound good, Kieron. Could you DM us more details so we can feed this back? Thanks. ^Alex",
       "gold_prior_context": "",
-      "judge_correctness": 5,
+      "judge_correctness": 2,
       "judge_groundedness": 5,
       "judge_completeness": 4,
       "judge_hallucination": false,
       "judge_escalation_appropriate": true,
-      "judge_overall": 3,
-      "judge_why": "no issues detected",
+      "judge_overall": 2,
+      "judge_why": "intent mismatch between prediction and gold",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
     {
       "example_id": "BA_756799",
-      "customer_message": "@British_Airways Hi...are small drones allowed in hand luggage on BA flights ?\n\nI have DJI Spark which I would like to take with me for some photography. (Flying out of Heathrow)\n\nThank you",
+      "customer_message": "@British_Airways Hi...are small drones allowed in hand luggage on BA flights ?\r\n\r\nI have DJI Spark which I would like to take with me for some photography. (Flying out of Heathrow)\r\n\r\nThank you",
       "gold_intent": "baggage",
       "pred_intent": "baggage",
       "intent_confidence": 0.8122,
@@ -6089,11 +6084,11 @@
     },
     {
       "example_id": "BA_765259",
-      "customer_message": "@British_Airways I am wanting to cancel my booking today with booking reference as follow :\n\nBooking reference 31863504\n\nPlease help",
+      "customer_message": "@British_Airways I am wanting to cancel my booking today with booking reference as follow :\r\n\r\nBooking reference 31863504\r\n\r\nPlease help",
       "gold_intent": "booking_change_or_cancellation",
       "pred_intent": "complaint_or_human_assistance",
       "intent_confidence": 0.8884,
-      "gold_escalation": "AUTO_HANDLE",
+      "gold_escalation": "ESCALATE",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "We're sorry to hear this, @British_Airways We can certainly have a look, Steven. ^Alex",
@@ -6108,9 +6103,9 @@
       "judge_groundedness": 4,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": true,
-      "judge_overall": 2,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.41",
+      "judge_escalation_appropriate": false,
+      "judge_overall": 1,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.41; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "borderline"
     },
@@ -6255,7 +6250,7 @@
       "gold_intent": "baggage",
       "pred_intent": "information_or_policy",
       "intent_confidence": 0.2196,
-      "gold_escalation": "AUTO_HANDLE",
+      "gold_escalation": "UNCERTAIN",
       "pred_escalation": "AUTO_HANDLE",
       "escalation_reason": "",
       "draft_reply": "Thanks for reaching out, @British_Airways Hi Anas, we're sorry to hear you're unhappy with our response but as previosly advised, the policy has been in place since around March this year. ^Lacey",
@@ -6265,14 +6260,14 @@
       "top_evidence_conv": 144587,
       "top_evidence_brand": "@265219 Hi Anas, we're sorry to hear you're unhappy with our response but as previosly advised, the policy has been in place since around March this year. ^Lacey",
       "gold_reference_reply": "@812916 \u20ac50.00 is correct amount for additional baggage paid at Paphos if you're travelling in Euro Traveller cabin. Please use this link for any further help you need https://t.co/6jdkLEf69T or you please reply if you would like our help. ^Oliver",
-      "gold_prior_context": "[CUSTOMER @ 2017-11-29 15:41:48+05:30] @British_Airways hello, can I pay for an extra bag at pafos airport after checking in online? Many thanks\n[BRAND @ 2017-11-29 19:34:53+05:30] @812916 Hi. Thanks for your Tweet. You should be able to add excess bags at the airport. Hope this helps. ^Kev",
+      "gold_prior_context": "[CUSTOMER @ 2017-11-29 15:41:48+05:30] @British_Airways hello, can I pay for an extra bag at pafos airport after checking in online? Many thanks\r\n[BRAND @ 2017-11-29 19:34:53+05:30] @812916 Hi. Thanks for your Tweet. You should be able to add excess bags at the airport. Hope this helps. ^Kev",
       "judge_correctness": 2,
       "judge_groundedness": 3,
       "judge_completeness": 5,
       "judge_hallucination": false,
-      "judge_escalation_appropriate": true,
-      "judge_overall": 2,
-      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.13",
+      "judge_escalation_appropriate": false,
+      "judge_overall": 1,
+      "judge_why": "intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.13; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE",
       "judge_backend": "offline",
       "sample_slice": "main"
     },
@@ -6494,7 +6489,7 @@
     },
     {
       "example_id": "BA_84220",
-      "customer_message": "When you fly @British_Airways these days, you're treated to security infos by, amongst others, @1765. \nWell done, @117823.",
+      "customer_message": "When you fly @British_Airways these days, you're treated to security infos by, amongst others, @1765. \r\nWell done, @117823.",
       "gold_intent": "non_support_or_acknowledgement",
       "pred_intent": "account_access_or_security",
       "intent_confidence": 0.6633,
@@ -6535,7 +6530,7 @@
       "top_evidence_conv": 744594,
       "top_evidence_brand": "@121167 Hi there, we're sorry to hear about your experience. You can use the following link to contact our Customer Relations team: https://t.co/SIhdl3TbaN. ^David",
       "gold_reference_reply": "",
-      "gold_prior_context": "[CUSTOMER @ 2017-10-09 23:20:12+05:30] Is the @VirginTrains automated announcer the same guy who does @British_Airways?\n[BRAND @ 2017-10-10 02:43:01+05:30] @123240 If so, Alex, this could be a case of \"moonlighting\" and certainly frowned upon by the company! ^David S",
+      "gold_prior_context": "[CUSTOMER @ 2017-10-09 23:20:12+05:30] Is the @VirginTrains automated announcer the same guy who does @British_Airways?\r\n[BRAND @ 2017-10-10 02:43:01+05:30] @123240 If so, Alex, this could be a case of \"moonlighting\" and certainly frowned upon by the company! ^David S",
       "judge_correctness": 5,
       "judge_groundedness": 5,
       "judge_completeness": 5,
@@ -6629,11 +6624,11 @@
     }
   ],
   "failure_top5_ids": [
-    "BA_105364",
+    "BA_248481",
+    "BA_255518",
+    "BA_331684",
     "BA_294773",
-    "BA_32854",
-    "BA_358073",
-    "BA_334633"
+    "BA_150929"
   ],
   "human_agreement": {
     "agreement_computable": false,
@@ -6654,5 +6649,5 @@
     "n_intent_changed": 10,
     "n_escalation_changed": 9
   },
-  "runtime_seconds": 39.8
+  "runtime_seconds": 208.3
 }

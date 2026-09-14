@@ -9,9 +9,13 @@ boundary rules are unchanged):
     noise_or_off_topic_or_ack           -> non_support_or_acknowledgement
     account_or_security                 -> account_access_or_security
 
-The original golden-set file (`evaluation/golden_set.csv`) is LEFT UNTOUCHED and
-still carries the legacy names; evaluation maps them via
-`taxonomy.to_canonical`. Everything the final system builds (weak labels, model
+The shipped golden-set file (`evaluation/golden_set.csv`) stores the final,
+human-reviewed label decisions while keeping the repository-wide legacy
+spellings for these three names; evaluation maps them via
+`taxonomy.to_canonical` so the metrics are computed in the canonical space.
+`analysis/scripts/finalize_golden_set.py` is what promoted the recorded human
+finals into the golden file; the pre-review assistant draft remains archived in
+`evaluation/_labels.tsv`. Everything the final system builds (weak labels, model
 predictions, confusion matrices, reports) uses the canonical names.
 """
 

@@ -111,3 +111,17 @@ during the Phase-3 build.
 - **Why:** an evaluator will question every headline number; fake agreement destroys the entire submission.
 - **Evidence:** `evaluate_judge_agreement_available()` returns `agreement_computable: False`; review script prints `HUMAN REVIEW PENDING`.
 - **Tradeoff:** the headline "accuracy" still depends on assistant-drafted gold — disclosed in the README's mandatory section.
+
+## D16. Finalize the golden set: promote the recorded human finals into the canonical gold (2026-09-15)
+- **Decision:** `analysis/scripts/finalize_golden_set.py` overwrites the assistant-drafted draft labels in `evaluation/golden_set.csv` / `.jsonl` with the reviewer's recorded `human_final_*` decisions (200/200 reviewed; 181 accepted, 19 overridden). 29 rows change (20 intent + 21 escalation; some overlap; 7 ESC/UNC rows gain an explicit `escalation_reason`). The pre-review draft is archived in `evaluation/_labels.tsv` and `evaluation/golden_set_recommendations.pre_human_review_backup.csv`; the script is idempotent (re-run = 0 rows changed) and the golden-set validator still passes.
+- **Alternatives:** keep gold assistant-drafted (rejected: mislabels the shipped gold as verified); have the reviewer hand-edit 200 CSVs; treat recommendations.csv as gold.
+- **Why:** the assignment demands hand-labelled, evaluable ground truth; the recorded finals **are** the human labels. Legacy spellings are preserved in the CSV and mapped at eval time via `taxonomy.to_canonical`, so no validator/architecture change was needed.
+- **Evidence:** validator PASS; `python -X utf8 analysis/scripts/finalize_golden_set.py` reports 29 changed rows on the first run and 0 on replay; `git diff --stat` on the golden files.
+- **Tradeoff:** single reviewer means no IAA is claimed; every metric is re-derivable against the archived pre-review gold aliases.
+
+## D17. Final metrics on the human-final gold + sole external blocker (2026-09-15)
+- **Decision:** after finalization, the full offline evaluation was rerun with `--force` (fresh corpus/models; runtime 208.3 s measured; cached reruns ~40 s). Headline changes vs the draft gold: intent accuracy 0.545→0.510 / macro-F1 0.511→0.477; escalation false-auto 0.275→0.25 (50) and false-ESC 0.09→0.10 (20); overall 2.18→2.20 (groundedness 4.06). Top-5 failures became BA_248481, BA_255518, BA_331684, BA_294773, BA_150929 (booking-change/account-specific boundary family).
+- **Alternatives:** leave numbers on the draft gold (rejected: they would not match the shipped gold); fabricate live-judge results (rejected explicitly).
+- **Why:** shipped artifacts must match the shipped gold, and no number may be invented.
+- **Evidence:** `evaluation/results.json` (generated_utc 2026-09-14T18:41Z, runtime 208.3), `evaluation/EVALUATION_REPORT.md`, `analysis/TOP_5_FAILURES.md`, leakage section all-zero.
+- **Tradeoff:** the live Gemini/OpenAI judge runs remain unexecuted (quota exhausted / no key) — the only external blocker; all shipped numbers are `backend=offline`.

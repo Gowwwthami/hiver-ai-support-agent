@@ -1,22 +1,52 @@
 # Top 5 Failures (real examples from the golden set)
 
 The five worst end-to-end golden-set cases by combined severity (unsafe AUTO_HANDLE + hallucination + intent mismatch + low judge score). Content is pulled verbatim from `evaluation/predictions.csv` and the golden set; nothing is manufactured.
-## 1. BA_105364
+## 1. BA_248481
 
-1. **Real customer message**: @British_Airways not the best performance at JFK flight BA113 from Heathrow
+1. **Real customer message**: @British_Airways hi. I need to change my passport no. on upcoming flight. Asked for help online but haven't heard back. Can you help please?
 2. **Prior context visible to the customer**: (none)
-3. **Expected label**: `complaint_or_human_assistance`
-4. **Predicted label**: `information_or_policy` (confidence 0.3014)
+3. **Expected label**: `booking_change_or_cancellation`
+4. **Predicted label**: `complaint_or_human_assistance` (confidence 0.9783)
 5. **Expected escalation**: `ESCALATE`
 6. **Predicted escalation**: `AUTO_HANDLE` (reason: )
-7. **Golden reference reply**: @226431 Oh, dear! What happened, Andy? ^Beth S.
-8. **Generated response**: Thanks for reaching out, ^Kieran
-9. **Retrieved evidence**: conv 233481 (sim=0.32): @350004 Hi Carolyn, can you please DM us what happened?  ^Kieran
-10. **Judge verdict**: intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.32; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
-11. **Likely root cause**: Intent confusion: gold `complaint_or_human_assistance` vs predicted `information_or_policy` (confidence 0.30). The boundary between these intents is weak in the weak-labelled corpus, so the policy routed by the wrong intent.
-12. **Proposed fix**: Add explicit boundary/deciding rules between `complaint_or_human_assistance` and `information_or_policy` in `weak.py`, and sample gold-set misclassified pairs as reviewer candidates.
+7. **Golden reference reply**: @363665 Hi Hayley, can you DM your booking reference, full name and contact number? Please also include the passport number, expiry date (1/2)
+8. **Generated response**: We're sorry to hear this, Could you also give us more information about what you need help with and we’ll happily look at your booking for you. ^Amy
+9. **Retrieved evidence**: conv 732367 (sim=0.35): @772980 Would you mind sending us a DM including your full name, booking ref and email address please? Could you also give us more information about what you need help with and we’ll happily look at your booking for you.
+10. **Judge verdict**: intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.35; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+11. **Likely root cause**: Intent confusion: gold `booking_change_or_cancellation` vs predicted `complaint_or_human_assistance` (confidence 0.98). The boundary between these intents is weak in the weak-labelled corpus, so the policy routed by the wrong intent.
+12. **Proposed fix**: Add explicit boundary/deciding rules between `booking_change_or_cancellation` and `complaint_or_human_assistance` in `weak.py`, and sample gold-set misclassified pairs as reviewer candidates.
 
-## 2. BA_294773
+## 2. BA_255518
+
+1. **Real customer message**: @British_Airways Who do i contact to get an international flight  datechanged?
+2. **Prior context visible to the customer**: (none)
+3. **Expected label**: `booking_change_or_cancellation`
+4. **Predicted label**: `complaint_or_human_assistance` (confidence 0.8683)
+5. **Expected escalation**: `ESCALATE`
+6. **Predicted escalation**: `AUTO_HANDLE` (reason: )
+7. **Golden reference reply**: @300160 Hi Mike, you should be able to make changes on https://t.co/2Ty8CEO0Dq, under Manage My Booking using your booking reference, or you can 1/2
+8. **Generated response**: We're sorry to hear this, @British_Airways If the passenger would like to reach out to us on twitter, we'd be happy to assist, Rebeca. ^Lisa
+9. **Retrieved evidence**: conv 55894 (sim=0.62): @176421 If the passenger would like to reach out to us on twitter, we'd be happy to assist, Rebeca. Many thanks. ^Lisa
+10. **Judge verdict**: intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.62; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+11. **Likely root cause**: Intent confusion: gold `booking_change_or_cancellation` vs predicted `complaint_or_human_assistance` (confidence 0.87). The boundary between these intents is weak in the weak-labelled corpus, so the policy routed by the wrong intent.
+12. **Proposed fix**: Add explicit boundary/deciding rules between `booking_change_or_cancellation` and `complaint_or_human_assistance` in `weak.py`, and sample gold-set misclassified pairs as reviewer candidates.
+
+## 3. BA_331684
+
+1. **Real customer message**: Filthy seat, careless service and 6500€ wasted on a business class ticket @British_Airways to LA with the new A380. Another disappointment. https://t.co/y8a3WeLnVz
+2. **Prior context visible to the customer**: (none)
+3. **Expected label**: `complaint_or_human_assistance`
+4. **Predicted label**: `seat_or_upgrade` (confidence 0.7835)
+5. **Expected escalation**: `ESCALATE`
+6. **Predicted escalation**: `AUTO_HANDLE` (reason: )
+7. **Golden reference reply**: @286385 That's disappointing to hear, Giovanna! If you let me know your flight number, I'll be happy to feed this back for you. ^BS
+8. **Generated response**: Thanks for your message, @British_Airways Sorry to hear of your disappointment, Daniel. You will be able to select a seat for free at online check-in.
+9. **Retrieved evidence**: conv 46963 (sim=0.30): @166903 Sorry to hear of your disappointment, Daniel. You will be able to select a seat for free at online check-in. ^Anthony
+10. **Judge verdict**: intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.30; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+11. **Likely root cause**: The customer message carries **complaint** wording, but the classifier predicted `seat_or_upgrade` — a safe-by-default intent. escalation.py's complaint markers only fire inside matching intent branches (not globally), so the misclassification routed the message past them; the evidence-sufficiency gate passed (top sim 0.30), so it was auto-handled.
+12. **Proposed fix**: Add boundary-deciding rules between `complaint_or_human_assistance` and `seat_or_upgrade` in `weak.py` (or promote the **complaint** marker family above the intent branches in `escalation.py`), and add a regression test asserting the exact message ESCALATEs.
+
+## 4. BA_294773
 
 1. **Real customer message**: @British_Airways How can I contact you regarding cancelling a return flight? I can not phone as I live abroad and you do not have an email address???
 2. **Prior context visible to the customer**: (none)
@@ -31,48 +61,18 @@ The five worst end-to-end golden-set cases by combined severity (unsafe AUTO_HAN
 11. **Likely root cause**: Intent confusion: gold `booking_change_or_cancellation` vs predicted `complaint_or_human_assistance` (confidence 1.00). The boundary between these intents is weak in the weak-labelled corpus, so the policy routed by the wrong intent.
 12. **Proposed fix**: Add explicit boundary/deciding rules between `booking_change_or_cancellation` and `complaint_or_human_assistance` in `weak.py`, and sample gold-set misclassified pairs as reviewer candidates.
 
-## 3. BA_32854
+## 5. BA_150929
 
-1. **Real customer message**: Well @British_Airways has definitely gone downhill quite sharply recently. This is the current food situation in the Business Class lounge. 📸 by my Dad. https://t.co/3sXtIgLNUz
+1. **Real customer message**: @British_Airways I have a tkt for a flt 2moro fm BHD-LHR AT 0645 which allows me to change the time of flight on the same day if there is1/3
 2. **Prior context visible to the customer**: (none)
-3. **Expected label**: `complaint_or_human_assistance`
-4. **Predicted label**: `non_support_or_acknowledgement` (confidence 0.3023)
+3. **Expected label**: `booking_change_or_cancellation`
+4. **Predicted label**: `information_or_policy` (confidence 0.3501)
 5. **Expected escalation**: `ESCALATE`
 6. **Predicted escalation**: `AUTO_HANDLE` (reason: )
-7. **Golden reference reply**: @151888 Hi Michelle. Sorry for the late reply. I hope the food situation has improved since. Please pass our apologies on to your dad. Which airport are we talking about so we can feed this back? ^Monica
-8. **Generated response**: Thanks for getting in touch! We'll share your feedback with the team — is there anything else we can help with?
-9. **Retrieved evidence**: conv 1893 (sim=0.25): @117980 We're very glad to hear it, Andy! Although we know it's always nice to be away, there's something even nicer about coming home. ^HP
-10. **Judge verdict**: intent mismatch between prediction and gold; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
-11. **Likely root cause**: Intent confusion: gold `complaint_or_human_assistance` vs predicted `non_support_or_acknowledgement` (confidence 0.30). The boundary between these intents is weak in the weak-labelled corpus, so the policy routed by the wrong intent.
-12. **Proposed fix**: Add explicit boundary/deciding rules between `complaint_or_human_assistance` and `non_support_or_acknowledgement` in `weak.py`, and sample gold-set misclassified pairs as reviewer candidates.
-
-## 4. BA_358073
-
-1. **Real customer message**: @British_Airways Shockingly-bleak connection from Montego Bay to Kingston. A disappointing start to my trip back to London today.
-2. **Prior context visible to the customer**: (none)
-3. **Expected label**: `complaint_or_human_assistance`
-4. **Predicted label**: `information_or_policy` (confidence 0.2157)
-5. **Expected escalation**: `UNCERTAIN`
-6. **Predicted escalation**: `AUTO_HANDLE` (reason: )
-7. **Golden reference reply**: @381717 Hi Milla, what was it about the flight that you didn't enjoy? ^Kimbers
-8. **Generated response**: Thanks for reaching out, @British_Airways Hi Rohan. We're sorry to hear this.
-9. **Retrieved evidence**: conv 687031 (sim=0.16): @737637 Hi Rohan.  We're sorry to hear this.  Can you tell us what has gone wrong and at which airport? ^N
-10. **Judge verdict**: intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.16; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
-11. **Likely root cause**: The customer message carries a **complaint** risk, but the classifier predicted `information_or_policy` — a safe-by-default intent whose AUTO_HANDLE branch does not re-run escalation.py's safety markers (those only fire inside the complaint branch). The evidence-sufficiency gate also passed (top sim 0.16), so the request was auto-handled instead of routed to a human.
-12. **Proposed fix**: Move the legal/security/money safety markers in `escalation.py` ABOVE the intent branches so they override every prediction, regardless of intent. Add regression tests asserting a lawsuit/legal sentence always ESCALATEs.
-
-## 5. BA_334633
-
-1. **Real customer message**: @British_Airways flew on your 777 to St Lucia from Gatwick. Big disappointment. Poor food and enterntainment system from the 80’s 👎🏽
-2. **Prior context visible to the customer**: (none)
-3. **Expected label**: `complaint_or_human_assistance`
-4. **Predicted label**: `non_support_or_acknowledgement` (confidence 0.2071)
-5. **Expected escalation**: `ESCALATE`
-6. **Predicted escalation**: `AUTO_HANDLE` (reason: )
-7. **Golden reference reply**: @391303 Hi Rahul.  We're sorry you didn't enjoy your experience with us today.  We hope your child is feeling better soon.  ^N
-8. **Generated response**: Thanks for getting in touch! We'll share your feedback with the team — is there anything else we can help with?
-9. **Retrieved evidence**: conv 517926 (sim=0.25): @600541 Thanks for getting in touch about your St Lucia flight, and for the round of applause! We hope to see you on board again soon. ^Cec
-10. **Judge verdict**: intent mismatch between prediction and gold; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
-11. **Likely root cause**: The customer message carries a **complaint** risk, but the classifier predicted `non_support_or_acknowledgement` — a safe-by-default intent whose AUTO_HANDLE branch does not re-run escalation.py's safety markers (those only fire inside the complaint branch). The evidence-sufficiency gate also passed (top sim 0.25), so the request was auto-handled instead of routed to a human.
-12. **Proposed fix**: Move the legal/security/money safety markers in `escalation.py` ABOVE the intent branches so they override every prediction, regardless of intent. Add regression tests asserting a lawsuit/legal sentence always ESCALATEs.
+7. **Golden reference reply**: @271448 Could we give you a call please, Ryan? We'll need your booking ref, full name, email and contact number. Could you also let us know the 1/2
+8. **Generated response**: Thanks for reaching out, @British_Airways Hi Aga, you would need to speak to some one to make this change, as we would need to split the booking. 1/2
+9. **Retrieved evidence**: conv 464590 (sim=0.29): @555856 Hi Aga, you would need to speak to some one to make this change, as we would need to split the booking. 1/2
+10. **Judge verdict**: intent mismatch between prediction and gold; factual auto reply grounded on top evidence sim=0.29; UNSAFE: gold routed away from AUTO_HANDLE but predicted AUTO_HANDLE
+11. **Likely root cause**: Intent confusion: gold `booking_change_or_cancellation` vs predicted `information_or_policy` (confidence 0.35). The boundary between these intents is weak in the weak-labelled corpus, so the policy routed by the wrong intent.
+12. **Proposed fix**: Add explicit boundary/deciding rules between `booking_change_or_cancellation` and `information_or_policy` in `weak.py`, and sample gold-set misclassified pairs as reviewer candidates.
 

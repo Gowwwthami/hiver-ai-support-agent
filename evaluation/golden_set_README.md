@@ -21,10 +21,13 @@ shipped as `golden_set.jsonl`.
 | `PHASE2_REPORT.md` | `analysis/PHASE2_REPORT.md` — full phase deliverable report |
 | `scripts/_taxonomy.py` | `analysis/scripts/_taxonomy.py` — single source of truth for label enums |
 | `scripts/assemble_golden_set.py` | `analysis/scripts/assemble_golden_set.py` — worksheet + labels → golden_set (with enum/integrity gates) |
+| `scripts/finalize_golden_set.py` | `analysis/scripts/finalize_golden_set.py` — promotes the recorded human-final decisions into `golden_set.csv`/`.jsonl` (idempotent; see *Finalization* below) |
 | `scripts/validate_golden_set.py` | `analysis/scripts/validate_golden_set.py` — re-runnable exit-code validator (files + cache + audit-overlap) |
 | `_candidates_worksheet.csv` | raw sampled worksheet (label columns blank; input artifact) |
-| `_labels.tsv` | drafted labels (assistant-drafted, awaiting independent human review), one row per `example_id` (TSV, 11 columns) |
+| `_labels.tsv` | assistant-drafted labels (pre-review archive; superseded for the canonical set by the human finals), one row per `example_id` (TSV, 11 columns) |
 | `golden_set_review_queue.csv` | **Phase 2.1** human-review queue: 200 rows × 17 cols (`current_*`, `proposed_*`, priority; `human_final_*` blank) |
+| `golden_set_recommendations.csv` | **Phase 2.1** assistant-drafted recommendations + carried-forward recorded human fields (authoritative pre-review draft copy) |
+| `golden_set_reviewed.csv` | **Phase 2.1** recorded human finals: `human_final_intent`, `human_final_escalation`, `human_final_reason`, `human_notes` for 200/200 rows (the audit source of the final gold) |
 | `HUMAN_REVIEW_GUIDE.md` | **Phase 2.1** reviewer instructions (intent → escalation → ambiguity; never use the historical reply as proof) |
 
 ## Schema (golden_set.csv)
@@ -40,7 +43,15 @@ shipped as `golden_set.jsonl`.
   target tweet (never contains a later brand reply).
 
 **Labels (decided on the customer side; see taxonomy_analysis.md §4)**
-- `intent` — one of 10 (`intent_taxonomy.csv`).
+- `intent` — one of 10 (`intent_taxonomy.csv`). These are the **final human
+  decisions** recorded in `golden_set_reviewed.csv`, stored under the
+  repository-wide legacy spellings: the three Phase-2.1 renamed classes
+  (`complaint_or_human_assistance`, `non_support_or_acknowledgement`,
+  `account_access_or_security`) appear here as their legacy aliases
+  (`contact_or_human_escalation_request`, `noise_or_off_topic_or_ack`,
+  `account_or_security`) and are mapped at eval time by
+  `ba_support/taxonomy.to_canonical`. No class decision is altered — only the
+  spelling.
 - `intent_confidence` — high/medium/low.
 - `secondary_intent` — another of the 10, or empty.
 - `resolution_observable` — RESOLVED_IN_THREAD / HANDOFF_OUTCOME_OFF_THREAD /
@@ -70,8 +81,29 @@ shipped as `golden_set.jsonl`.
 
 ```powershell
 python analysis\scripts\assemble_golden_set.py   # rebuilt from _candidates_worksheet.csv + _labels.tsv
+python analysis\scripts\finalize_golden_set.py   # promote recorded human finals (idempotent; see below)
 python analysis\scripts\validate_golden_set.py   # PASS / FAIL, exit code
 ```
+
+## Finalization (Phase 2.1 sign-off)
+
+The canonical labels in `golden_set.csv` / `golden_set.jsonl` are the recorded
+human-final decisions (`evaluation/golden_set_reviewed.csv`, 200/200 rows):
+
+- `intent` = `human_final_intent` (legacy-spelled per the mapping above).
+- `escalation_label` = `human_final_escalation` (final mix 119 AUTO_HANDLE /
+  75 ESCALATE / 6 UNCERTAIN).
+- `escalation_reason` = the taxonomy enum consistent with the label ("" for
+  AUTO_HANDLE; for the 7 rows the review moved AUTO_HANDLE → ESCALATE/UNCERTAIN
+  the enum is `account_specific` or `unresolved_or_insufficient_information`
+  per the reviewer's `human_final_reason`). The reviewer's free-text reasons
+  stay in `golden_set_reviewed.csv`.
+
+Only `intent`, `escalation_label`, `escalation_reason` differ from the
+pre-review file; all other columns are unchanged. The pre-review assistant
+draft remains archived in `_labels.tsv`, `golden_set_review_queue.csv`,
+`golden_set_recommendations.csv` and
+`golden_set_recommendations.pre_human_review_backup.csv`.
 
 ## Headline statistics
 
@@ -84,14 +116,15 @@ python analysis\scripts\validate_golden_set.py   # PASS / FAIL, exit code
 
 ## Limitations (must-read)
 
-- **Labels are assistant-drafted, not human-verified.** No human annotator and
-  no second reviewer have reviewed them; **no inter-annotator agreement was
-  performed** in this phase and none is reported. Confidence + ambiguity +
-  UNCERTAIN routing fields exist so downstream consumers can weight or drop
-  uncertain labels; any future IAA claim requires a real (human) second pass.
-  See `analysis/taxonomy_analysis.md` §4 for the full honest account.
+- **Labels are single-reviewer human decisions, not double-annotated.** The
+  reviewer (the candidate) recorded final decisions for 200/200 rows; no
+  independent second annotator ran, so **no inter-annotator agreement was
+  performed** and none is reported. Confidence + ambiguity + UNCERTAIN routing
+  fields exist so downstream consumers can weight or drop uncertain labels; any
+  future IAA claim requires a real (human) second pass. See
+  `analysis/taxonomy_analysis.md` §4 for the full honest account.
 - `resolution_observable` describes what the **thread** shows, not a real-world
   outcome; most BA resolutions happen off-Twitter (DM / Customer Relations).
-- Intent class imbalance is real (noise 43 vs account_or_security 3) and
+- Intent class imbalance is real (non-support 58 vs account_or_security 3) and
   mirrors the conversation pool; re-weight rather than over-sample.
 - Labels describe the *customer turn*, never company performance.

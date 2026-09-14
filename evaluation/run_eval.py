@@ -240,15 +240,39 @@ def _diagnose_failure(r) -> tuple[str, str]:
         else "complaint" if re.search(r"complaint|worst|awful|disappoint|shock|dreadful|terrible|appall", msg)
         else None)
     if danger:
-        root = (f"The customer message carries a **{danger}** risk, but the classifier "
-                f"predicted `{r.pred_intent}` — a safe-by-default intent whose AUTO_HANDLE "
-                f"branch does not re-run escalation.py's safety markers (those only fire "
-                f"inside the complaint branch). The evidence-sufficiency gate also passed "
-                f"(top sim {r.top_evidence_sim:.2f}), so the request was auto-handled "
-                f"instead of routed to a human.")
-        fix = ("Move the legal/security/money safety markers in `escalation.py` ABOVE the "
-               "intent branches so they override every prediction, regardless of intent. "
-               "Add regression tests asserting a lawsuit/legal sentence always ESCALATEs.")
+        if danger in ("legal/regulatory", "security/identity"):
+            root = (
+                f"The customer message carries a **{danger}** risk, but it still "
+                f"reached AUTO_HANDLE. escalation.py's legal/security markers run "
+                f"GLOBALLY before the intent branches (escalation.py §1), so the "
+                f"regexes did not match this exact wording; the classifier's "
+                f"predicted `{r.pred_intent}` branch then had no escalating rule, "
+                f"and the evidence-sufficiency gate passed (top sim "
+                f"{r.top_evidence_sim:.2f}). The gap is marker recall, not marker "
+                f"placement."
+            )
+            fix = (
+                f"Extend the global **{danger}** marker regex in escalation.py to "
+                f"cover this wording (and add a regression test asserting the exact "
+                f"message ESCALATEs), keeping the markers above the intent branches."
+            )
+        else:
+            root = (
+                f"The customer message carries **{danger}** wording, but the "
+                f"classifier predicted `{r.pred_intent}` — a safe-by-default "
+                f"intent. escalation.py's {danger} markers only fire inside "
+                f"matching intent branches (not globally), so the misclassification "
+                f"routed the message past them; the evidence-sufficiency gate "
+                f"passed (top sim {r.top_evidence_sim:.2f}), so it was "
+                f"auto-handled."
+            )
+            fix = (
+                f"Add boundary-deciding rules between `{r.gold_intent}` and "
+                f"`{r.pred_intent}` in `weak.py` (or promote the **{danger}** "
+                f"marker family above the intent branches in `escalation.py`), "
+                f"and add a regression test asserting the exact message "
+                f"ESCALATEs."
+            )
         return root, fix
     root = (f"Intent confusion: gold `{r.gold_intent}` vs predicted "
             f"`{r.pred_intent}` (confidence {r.intent_confidence:.2f}). The boundary "
@@ -333,8 +357,9 @@ def build_results_md(results: dict) -> str:
     L = ["# British_Airways Support-Agent — Evaluation Report",
          "",
          f"- Golden set evaluated: **{results['overview'].get('n_golden')}** "
-         f"(assistant-drafted labels; human review of the draft recommendations "
-         "is recorded separately — see §G).",
+         f"(final label decisions are the recorded human finals — see §G; the "
+         "three Phase-2.1 renames are stored in legacy spelling and mapped at "
+         "eval time via `taxonomy.to_canonical`).",
          f"- Judge backend: **{results['overview'].get('judge_backend')}** "
          "(offline deterministic unless OPENAI_API_KEY + EVAL_JUDGE=openai).",
          f"- Seed: {results['seed']}; top-k: {results['top_k']}.",
@@ -437,6 +462,13 @@ def build_results_md(results: dict) -> str:
             f"- Escalation agreement (draft vs. human final): "
             f"**{hr['escalation_agreement']:.4f}** "
             f"({hr['n_escalation_changed']} changed).",
+            "",
+            "The canonical golden set now carries those final decisions "
+            "(`analysis/scripts/finalize_golden_set.py`). The pre-review "
+            "assistant draft is preserved in `evaluation/_labels.tsv`, "
+            "`evaluation/golden_set_review_queue.csv`, "
+            "`evaluation/golden_set_recommendations.csv` and "
+            "`golden_set_recommendations.pre_human_review_backup.csv`.",
         ]
     else:
         lines = [

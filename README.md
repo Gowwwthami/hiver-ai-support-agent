@@ -41,22 +41,24 @@ booking/account actions, complaints, and noise. The system must:
 * Conversations reconstructed by the existing, validated Twitter reply-link
   semantics (`analysis/scripts/reconstruct_conversations.py`).
 * Golden set: **200 examples**, 10 intents, escalation labels + reasoning,
-  sampling seed 2026, validator-clean. **Currently assistant-drafted and NOT
-  human-verified** — see §9 and [Human verification](#human-verification).
+  sampling seed 2026, validator-clean. **Labels are the recorded final human
+  decisions** (single reviewer, the candidate — no independent second
+  annotator); the pre-review assistant draft is preserved as an archive (see §9
+  and [Human verification](#human-verification)).
 
 ## 4. Intent taxonomy (canonical)
 
 | intent | golden n |
 |---|---:|
-| `non_support_or_acknowledgement` | 43 |
-| `complaint_or_human_assistance` | 29 |
+| `non_support_or_acknowledgement` | 58 |
 | `flight_disruption` | 27 |
+| `information_or_policy` | 23 |
 | `refund_or_compensation` | 22 |
 | `website_or_app_issue` | 21 |
-| `information_or_policy` | 20 |
 | `baggage` | 16 |
-| `booking_change_or_cancellation` | 12 |
-| `seat_or_upgrade` | 7 |
+| `booking_change_or_cancellation` | 13 |
+| `complaint_or_human_assistance` | 11 |
+| `seat_or_upgrade` | 6 |
 | `account_access_or_security` | 3 |
 
 Boundary rules: complaint ≠ contact-channel query (`information_or_policy`);
@@ -85,18 +87,18 @@ customer, and near-duplicates. `run_eval` asserts zero evidence leakage.
 
 All on the 200-example golden set (offline judge, k=3). Baselines and ablations:
 
-**Intent classification (machine-evaluated):**
+**Intent classification (machine-evaluated, on human-final gold):**
 
 | system | accuracy | macro F1 | weighted F1 |
 |---|---:|---:|---:|
-| majority baseline | 0.145 | 0.025 | 0.037 |
-| keyword/rule baseline | 0.430 | 0.439 | 0.442 |
-| TF-IDF + logistic regression | 0.550 | 0.489 | 0.545 |
-| **hybrid main** | **0.545** | **0.511** | **0.546** |
+| majority baseline | 0.055 | 0.010 | 0.006 |
+| keyword/rule baseline | 0.355 | 0.403 | 0.406 |
+| TF-IDF + logistic regression | 0.505 | 0.449 | 0.518 |
+| **hybrid main** | **0.510** | **0.477** | **0.525** |
 
-Per-class F1 (hybrid): baggage **0.81**, disruption **0.79**, non-support
-0.61, website 0.59, seat 0.56, complaint 0.44, info 0.41, refund 0.40, account
-0.36, booking-change 0.14. Tiny classes carry tiny evidence — read macro-F1
+Per-class F1 (hybrid): baggage **0.82**, disruption **0.79**, website 0.59,
+non-support 0.55, seat 0.47, refund 0.40, info 0.39, account 0.36, complaint
+0.26, booking-change 0.13. Tiny classes carry tiny evidence — read macro-F1
 with §9.
 
 **Retrieval (machine-evaluated):** hit-rate@3 **1.0**, mean top-1 sim 0.25,
@@ -107,19 +109,20 @@ with §9.
 
 | config | groundedness | completeness | overall |
 |---|---:|---:|---:|
-| A — classifier only | 3.00 | 3.58 | 1.78 |
-| B — + retrieval (generation ignores evidence) | 3.33 | 3.58 | 1.64 |
-| C — + grounded generation | 3.61 | 4.13 | 2.06 |
-| D — full + escalation policy | **4.05** | **3.96** | **2.18** |
+| A — classifier only | 3.00 | 3.70 | 1.80 |
+| B — + retrieval (generation ignores evidence) | 3.33 | 3.55 | 1.66 |
+| C — + grounded generation | 3.61 | 4.93 | 2.09 |
+| D — full + escalation policy | **4.06** | **4.70** | **2.20** |
 
 Grounding improves monotonically as each capability is added; retrieval alone
 (B) does **not** raise quality — evidence must be *used* to matter. Reported
 as-is.
 
-**Escalation (full pipeline):** accuracy 0.63; **false-AUTO_HANDLE rate
-0.275** (55 of 200) and false-ESCALATE rate 0.09 (18). 0.72 escalation-
-appropriateness per the offline judge. The 27.5% false-auto is the single most
-important honesty finding of this submission (§8).
+**Escalation (full pipeline):** accuracy 0.645; **false-AUTO_HANDLE rate
+0.25** (50 of 200) and false-ESCALATE rate 0.10 (20). 0.75 escalation-
+appropriateness per the offline judge. The 25% false-auto — concentrated in
+booking-change and complaint cases the human review labelled ESCALATE — is the
+single most important honesty finding of this submission (§8).
 
 ## 7. Headline results
 
@@ -127,60 +130,70 @@ Every number is attributed to its source; nothing is manufactured.
 
 | result | value | measured by |
 |---|---:|---|
-| hybrid intent macro F1 | **0.511** | machine, on assistant-drafted gold |
-| hybrid intent accuracy | **0.545** | machine, on assistant-drafted gold |
-| full-pipeline overall | **2.18 / 5** | offline rubric judge (backend=offline) |
-| full-pipeline groundedness | **4.05 / 5** | offline rubric judge |
+| hybrid intent macro F1 | **0.477** | machine, on human-final gold |
+| hybrid intent accuracy | **0.510** | machine, on human-final gold |
+| full-pipeline overall | **2.20 / 5** | offline rubric judge (backend=offline) |
+| full-pipeline groundedness | **4.06 / 5** | offline rubric judge |
 | hallucination rate (transactional facts) | **0.00** | offline rubric judge |
-| escalation-appropriate | **0.72** | offline rubric judge |
-| eval runtime | **39.0 s** | measured wall-clock on this machine (per run) |
+| escalation-appropriate | **0.75** | offline rubric judge |
+| eval runtime | **208 s** (fresh `--force` run); ~40 s cached | measured wall-clock on this machine (per run) |
 
-**LLM-as-judge:** infrastructure exists and requires `OPENAI_API_KEY` (run with
-`--judge openai`; the backend is a CLI flag, not an env var); live outputs are
-never simulated. The shipped results use
-the offline judge (labelled `backend=offline` in `results.json`).
+**LLM-as-judge:** the report's judge is the **offline deterministic rubric**
+(backend chosen by `--judge`; a live run needs `OPENAI_API_KEY` +
+`EVAL_JUDGE=openai`). Separately, `evaluation/human_validation.py judge
+--backend gemini|openai|offline` scores a fixed 50-example sample for
+judge↔human agreement; live outputs are never simulated. At submission time the
+live runs were **not executed**: no OpenAI key is set, and the Gemini free-tier
+quota was exhausted (all real probe calls returned HTTP 429/RESOURCE_EXHAUSTED
+and the SDK's auto-retry is deliberately disabled so nothing is retried
+silently). The shipped numbers are all backend=offline.
 
 **Human review:** recorded for **200/200** recommendations
 (`evaluation/golden_set_recommendations.csv` → `apply_human_review.py` →
 `evaluation/golden_set_reviewed.csv`). Draft-vs-human agreement: intent
-**0.95**, escalation **0.955** (real numbers, no fabrication). These are the
-candidate's recorded decisions on the *recommended* labels — a single reviewer,
-so no inter-annotator agreement (Cohen's kappa) is claimed. LLM/human
-*response-quality* agreement is still "**not measurable**": `human_final_*`
+**0.95** (10 changed), escalation **0.955** (9 changed) — real numbers, no
+fabrication; versus the pre-review *gold* the finals changed **20 intent + 21
+escalation** labels. The canonical golden set now carries those final
+decisions (`analysis/scripts/finalize_golden_set.py`); the pre-review draft is
+archived in `evaluation/_labels.tsv` and
+`golden_set_recommendations.pre_human_review_backup.csv`. Single reviewer, so
+no inter-annotator agreement (Cohen's kappa) is claimed. LLM/human
+*response-quality* agreement remains "**not computable**": `human_final_*`
 are label decisions, not response-ratings (see §9 and
 `evaluation/HUMAN_REVIEW_GUIDE.md`).
 
 ## 8. Top 5 failures
 
 `analysis/TOP_5_FAILURES.md` (also logged in `results.json → failure_top5_ids`).
-The dominant failure family is **intent-boundary confusion producing unsafe
-auto-handling** (complaints and legal-adjacent venting routed to a
-safe-by-default intent). Cases (current run): `BA_105364`, `BA_294773`,
-`BA_32854`, `BA_358073`, `BA_334633`. Each entry lists the customer message,
-prior context, gold vs predicted labels, generated reply, retrieved evidence,
-judge verdict, root cause and proposed fix. (BA_351856, the previous #4
-lawsuit auto-handled case, is fixed: legal/security markers now run before
-intent branches.)
+The five worst cases of the final run are `BA_248481`, `BA_255518`, `BA_331684`,
+`BA_294773`, `BA_150929` — four of five are booking-change requests that the
+human review labelled ESCALATE (account-specific) and the system AUTO_HANDLED,
+i.e. **intent-boundary confusion producing unsafe auto-handling**. Each entry
+lists the customer message, prior context, gold vs predicted labels, generated
+reply, retrieved evidence, judge verdict, root cause and proposed fix.
+(`BA_351856`, the lawsuit auto-handled case, is fixed: legal/security markers
+now run before intent branches.)
 
 ## 9. What is misleading about my headline number?
 
 Read this before quoting any number above.
 
-* **The gold labels are assistant-drafted; human review touches the
-  recommendations, not the gold mix.** Every metric is correct *given the golden
-  set's labels*, which are machine-validated assistant drafts. The recorded human
-  review (200/200 rows) re-decides the *recommended* labels: intent agreement
-  0.95, escalation agreement 0.955. The golden set itself was deliberately left
-  untouched. If the reviewer had changed gold labels, the headline numbers would
-  shift — that decision is still open.
-* **200 examples is tiny.** Intent macro-F1 (0.51) has wide error bars; per-class
-  numbers on 3–12 samples (`account_access_or_security` n=3,
-  `booking_change_or_cancellation` n=12) are not statistically meaningful.
-* **Class imbalance.** `non_support_or_acknowledgement` (43) dominates; the
-  majority baseline only reaches 0.145 accuracy because the *golden* mix differs
+* **The gold labels are single-human-reviewed, not independently annotated.**
+  The 200 golden labels are the candidate's recorded final decisions (200/200
+  reviewed; 181 accepted, 19 overridden — 20 intent + 21 escalation gold labels
+  differ from the pre-review draft). No second annotator ran, so no
+  inter-annotator agreement is reported and the headline numbers are entangled
+  with one reviewer's judgement. The assistant-drafted pre-review labels are
+  archived (`_labels.tsv`, `golden_set_recommendations.pre_human_review_backup.csv`),
+  so every metric can be re-derived against either label set.
+* **200 examples is tiny.** Intent macro-F1 (0.477) has wide error bars; per-class
+  numbers on 3–13 samples (`account_access_or_security` n=3,
+  `booking_change_or_cancellation` n=13) are not statistically meaningful.
+* **Class imbalance.** `non_support_or_acknowledgement` (58) dominates; the
+  majority baseline only reaches 0.055 accuracy because the *golden* mix differs
   from the corpus prior — so even the trivial baseline is entangled with
   sampling.
-* **Weak supervision, not human labels.** Training uses 11,987 keyword-priored,
+* **Weak supervision, not human labels.** Training uses keyword-priored,
   weakly-labelled rows. The model inherits the priors' blind spots (e.g.
   complaint-vs-info confusion) — visible in the top failures.
 * **2017 archive, not current policy.** Historical BA replies are evidence, not
@@ -193,34 +206,36 @@ Read this before quoting any number above.
 * **Retrieval metrics overstate usefulness.** R@3 intent-consistency 1.0 only
   means *some* same-intent example was retrieved within 3; mean top-1 similarity
   0.25 and reference-overlap 0.16 show semantic relevance is modest.
-* **A single aggregate (overall 2.18) hides the real risk.** The system's
-  bottleneck is escalation safety (28% false-auto), not raw answer quality.
+* **A single aggregate (overall 2.20) hides the real risk.** The system's
+  bottleneck is escalation safety (25% false-auto), not raw answer quality.
   Quoting only "overall" would mislead.
 * **Test-set construction effects.** The golden set was stratified by design
   (main vs borderline slices); the borderline slice behaves worse
-  (false-auto 0.31 vs 0.27) and any equal-weight average mixes two different
+  (false-auto 0.345 vs 0.234) and any equal-weight average mixes two different
   difficulties.
-* **Runtime is this machine's runtime.** 39.0 s was measured here (per run; a
-  prior run measured 34.8 s) with cached corpus/models; a cold run from the raw
-  CSV takes longer (still under the 15-minute budget on a normal dev box).
+* **Runtime is this machine's runtime.** 208 s was measured for the fresh
+  `--force` run (corpus + model rebuild); the cached rerun is ~40 s. A cold run
+  from the raw CSV takes longer (still under the 15-minute budget on a normal
+  dev box).
 
 ## 10. One-week next steps
 
-1. **Finalize the human review.** The 200/200 recommendation decisions are
-   recorded (`golden_set_reviewed.csv`); the last personal sign-off on those
-   decisions and on whether the *gold* set should adopt any changed label
-   remains, plus a second independent annotator if IAA is wanted
-   (`--annotator2`).
-2. **Safety markers above intent routing** — done in `escalation.py`, with
-   regression tests for legal/money/security sentences.
-3. Add complaint-vs-info boundary rules and more `seat_or_upgrade` /
-   `account_access_or_security` review candidates (currently the thinnest
-   classes).
-4. Swap the offline judge for a live LLM judge with a fixed rubric and audit
-   judge-human agreement once human response-quality ratings exist.
-5. Embedding retrieval (SBERT is wired but optional) and a real human-relevance
-   evaluation for retrieval.
-6. Track confidence → escalate threshold selection on the borderline slice.
+1. Add a **second independent annotator** and compute **Cohen's kappa / IAA**;
+   then decide boundary rules between the complaint, information and
+   booking-change intents — the four-of-five top-failure family.
+2. Promote **complaint / money-family markers globally** (like legal/security
+   already are), or lock in explicit booking-change boundary rules, and add
+   regression tests.
+3. Expand review candidates for the thinnest classes (`account_access_or_security`
+   n=3, `seat_or_upgrade` n=6) to reduce the per-class error bars.
+4. Wire a **live LLM judge** (`evaluation/human_validation.py judge
+   --backend gemini` or `--backend openai`) on the 50-example sample and
+   measure judge↔human response-quality agreement once human response-quality
+   ratings exist.
+5. Swap TF-IDF cosine for **embedding retrieval** (SBERT is wired but
+   optional) and add a real human-relevance retrieval evaluation.
+6. Calibrate the **confidence → escalation threshold** on the borderline slice
+   (false-auto 34.5% vs 23.4% on main) instead of the current fixed rule.
 
 ---
 
@@ -233,6 +248,10 @@ Read this before quoting any number above.
   evidence, judge).
 * `analysis/TOP_5_FAILURES.md`, `analysis/DECISION_LOG.md`,
   `analysis/IMPLEMENTATION_AUDIT.md`, `analysis/DATA_CONTRACT.md`.
+* `analysis/scripts/finalize_golden_set.py` — the idempotent script that
+  promoted the recorded human final decisions into the canonical golden set.
+* `evaluation/golden_set_reviewed.csv` — the reviewer's own recorded final
+  decisions, the audit source of the final gold.
 * `ba_support/` — the implementation; `evaluation/run_eval.py` — the harness.
 * `evaluation/golden_set_recommendations.csv`,
   `evaluation/golden_set_review_queue.csv`, `evaluation/HUMAN_REVIEW_GUIDE.md`.
@@ -247,26 +266,31 @@ pip install -r requirements.txt
 # 2) dataset (download Twcs: https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter)
 #    place the CSV at  data_extracted/twcs/twcs.csv
 
-# 3) full evaluation (headline) — measured ~33 s with caches on this machine
-python -X utf8 -m evaluation.run_eval --judge offline
+# 3) full evaluation (headline) — ~40 s with caches on this machine
+python -X utf8 -m evaluation.run_eval --judge offline --force
 
-# 4) optional live LLM judge (backend chosen by --judge; only OPENAI_API_KEY is read from env)
-python -X utf8 -m evaluation.run_eval --judge openai   # requires OPENAI_API_KEY set
+# 4) optional live LLM judge (backend chosen by --judge; a key must be set)
+python -X utf8 -m evaluation.run_eval --judge openai     # OPENAI_API_KEY
+python -X utf8 -m evaluation.run_eval --judge gemini     # GEMINI_API_KEY
 
-# 5) tests (stdlib unittest)
+# 5) 50-example judge-human agreement probe
+python -X utf8 -m evaluation.human_validation judge --backend offline|openai|gemini
+
+# 6) tests (stdlib unittest)
 python -X utf8 -m unittest discover -s tests -v
 ```
 
 Outputs: `evaluation/results.json`, `evaluation/EVALUATION_REPORT.md`,
 `evaluation/predictions.csv`, `analysis/TOP_5_FAILURES.md`, plus the review
 artifacts. Rebuilding from scratch (delete `analysis/cache/retrieval_corpus.parquet`,
-then `--force`) stays inside the 15-minute budget; the headline run measured
-**39.0 s** (prior run 34.8 s).
+then `--force`) stays inside the 15-minute budget; the fresh `--force` run
+measured **208 s** (cached reruns ~40 s).
 
 ## Human verification
 
-Status: **recorded (single reviewer, the candidate); final personal sign-off
-pending.** The 200 recommendation decisions have been applied:
+Status: **complete (single reviewer, the candidate); final sign-off applied.**
+
+The 200 recommendation decisions have been applied:
 `human_decision_accept` / `human_final_intent` / `human_final_escalation` /
 `human_notes` are filled in `evaluation/golden_set_recommendations.csv`, and
 
@@ -274,13 +298,21 @@ pending.** The 200 recommendation decisions have been applied:
 python -X utf8 analysis/scripts/apply_human_review.py
 ```
 
-wrote `evaluation/golden_set_reviewed.csv` (intent agreement 0.95, escalation
-agreement 0.955 vs. the assistant draft). A second independent reviewer, if one
-is added, produces inter-annotator agreement:
+wrote `evaluation/golden_set_reviewed.csv` (draft-vs-final intent agreement
+0.95, escalation 0.955). The golden set itself was then promoted to carry
+those finals by:
+
+```bash
+python -X utf8 analysis/scripts/finalize_golden_set.py
+```
+
+Draft-vs-gold: 20 intent + 21 escalation labels changed; the pre-review
+assistant-drafted gold remains archived in `_labels.tsv` and
+`golden_set_recommendations.pre_human_review_backup.csv` for full reproducibility.
+Single reviewer, so no independent annotation or inter-annotator agreement is
+claimed. A second independent reviewer, if one is added, produces
+inter-annotator agreement:
 
 ```bash
 python -X utf8 analysis/scripts/apply_human_review.py --annotator2 <second_reviewer.csv>
 ```
-
-The golden set itself is untouched and its labels remain
-`ASSISTANT-RECOMMENDED / AWAITING HUMAN CONFIRMATION`.

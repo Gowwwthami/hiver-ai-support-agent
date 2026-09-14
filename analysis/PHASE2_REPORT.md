@@ -1,7 +1,10 @@
 # Phase 2 Report — Golden Evaluation Set for British_Airways
 
 **Hiver SDE Intern assignment · British_Airways**
-**Status: PHASE 2 COMPLETE — AWAITING HUMAN REVIEW**
+**Status: PHASE 2 COMPLETE — AWAITING HUMAN REVIEW** *(superseded 2026-09-15:
+human review has since been recorded and applied; the canonical golden set now
+carries the recorded final decisions — see README "Human verification" and
+`analysis/scripts/finalize_golden_set.py`.)*
 
 This report answers the Phase-2 requirements in order. Every number is
 computed from the generated artifacts (`evaluation/golden_set.csv`,

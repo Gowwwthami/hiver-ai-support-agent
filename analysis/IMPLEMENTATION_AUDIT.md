@@ -3,6 +3,17 @@
 **Audit date:** 2026-09-11 (performed at the start of the Phase-3 build, and
 re-verified after each major step).
 
+> **Addendum (2026-09-15, post-audit):** the "user verification pending",
+> "assistant-drafted", "human_final_* blank" and "golden set untouched" claims
+> below describe the state at audit time. Since then the reviewer's recorded
+> final decisions were promoted into the canonical golden set
+> (`analysis/scripts/finalize_golden_set.py`; 20 intent + 21 escalation gold
+> labels differ from the pre-review draft, which stays archived in
+> `evaluation/_labels.tsv` and
+> `evaluation/golden_set_recommendations.pre_human_review_backup.csv`). The
+> shipped `evaluation/golden_set.csv` therefore **carries the human finals**,
+> not an untouched draft.
+
 Audited primary sources:
 
 * `analysis/PHASE2_REPORT.md`, `analysis/PHASE2_1_LABEL_AUDIT.md`,

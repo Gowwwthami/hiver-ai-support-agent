@@ -99,10 +99,14 @@ def write_review_summary(recommendations: pd.DataFrame) -> str:
              f"**Human review is recorded: `human_final_intent` populated for "
              f"{n_human}/{n} rows and `human_decision_accept`=FALSE on "
              f"{n_rejected} of them (see `evaluation/golden_set_reviewed.csv`, "
-             f"produced by `apply_human_review.py`). This artifact preserves each "
-             f"recorded human decision; the golden set and its draft labels are "
-             f"unchanged.**")
+             f"produced by `apply_human_review.py`). The canonical golden set "
+             f"(`evaluation/golden_set.csv`) now carries those final decisions — "
+             f"applied by `analysis/scripts/finalize_golden_set.py` — while the "
+             f"pre-review assistant draft stays archived in `evaluation/_labels.tsv`, "
+             f"`evaluation/golden_set_review_queue.csv` and "
+             f"`evaluation/golden_set_recommendations.pre_human_review_backup.csv`.**")
 
+    review_or_pending = ("" if n_human else " (awaiting human decision)")
     lines = [
         "# Golden-Set Review Summary (Phase 2.1)",
         "",
@@ -116,32 +120,47 @@ def write_review_summary(recommendations: pd.DataFrame) -> str:
         "",
         state,
         "",
-        "## Proposed taxonomy renames (awaiting human decision)",
+        "## Taxonomy renames" + review_or_pending,
         "",
-        "| current label | proposed label | examples touched |",
+        "| current label | canonical label | examples touched |",
         "|---|---|---|",
     ]
     for cur, new in RENAME_PROPOSALS.items():
         count = int((recommendations["recommended_intent"].map(
             lambda x: x == new)).sum())
         lines.append(f"| `{cur}` | `{new}` | {count} recommended rows |")
-    lines += [
-        "",
-        "## How to act",
-        "",
-        "1. Open `evaluation/golden_set_recommendations.csv` and scan by "
-        "`review_priority`. For each row set `human_decision_accept` = "
-        "ACCEPT/REJECT and, when rejecting, fill `human_final_intent` / "
-        "`human_final_escalation` + `human_notes`.",
-        "2. Apply the taxonomy renames ONLY after you confirm them, and re-cut "
-        "boundaries (`contact → information/noise`, etc.) as the "
-        "`review_reason` column notes.",
-        "3. The draft error rate vs human finals is computable once `human_final_*` "
-        "is populated (see `evaluation/HUMAN_REVIEW_GUIDE.md` §After review).",
-        "",
-        "Until a human fills `human_final_*` for every row, the set remains "
-        "**assistant-drafted / human-unverified proposed gold set**.",
-    ]
+    if n_human:
+        lines += [
+            "",
+            "## Final state",
+            "",
+            "The recorded human-final decisions are now the canonical gold: `intent` "
+            "and `escalation_label` in `evaluation/golden_set.csv` equal the human "
+            "finals (the three renamed classes stored in their legacy spelling and "
+            "mapped at eval time by `ba_support/taxonomy.to_canonical`). Final "
+            "escalation mix: AUTO_HANDLE / ESCALATE / UNCERTAIN match "
+            "`golden_set_reviewed.csv`. No independent (second) annotator ran, so no "
+            "inter-annotator agreement is claimed.",
+        ]
+    else:
+        lines += [
+            "",
+            "## How to act",
+            "",
+            "1. Open `evaluation/golden_set_recommendations.csv` and scan by "
+            "`review_priority`. For each row set `human_decision_accept` = "
+            "ACCEPT/REJECT and, when rejecting, fill `human_final_intent` / "
+            "`human_final_escalation` + `human_notes`.",
+            "2. Apply the taxonomy renames ONLY after you confirm them, and re-cut "
+            "boundaries (`contact → information/noise`, etc.) as the "
+            "`review_reason` column notes.",
+            "3. Once `human_final_*` is populated for every row, finalize the golden "
+            "set with `analysis/scripts/finalize_golden_set.py`, then re-run the "
+            "validator and the evaluation.",
+            "",
+            "Until a human fills `human_final_*` for every row, the set remains "
+            "**assistant-drafted / human-unverified proposed gold set**.",
+        ]
     text = "\n".join(lines)
     paths.REVIEW_SUMMARY_MD.parent.mkdir(parents=True, exist_ok=True)
     paths.REVIEW_SUMMARY_MD.write_text(text, encoding="utf-8")
